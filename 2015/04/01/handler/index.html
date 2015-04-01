@@ -4,22 +4,49 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Oak`s blog</title>
+    <title>handler | Oak`s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Oak_zmm">
     
 
     
-    <meta name="description" content="bruce sha&apos;s blog | java | scala | bi">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Oak`s blog">
-<meta property="og:url" content="http://macouen.github.io/index.html">
+    <meta name="description" content="文章转载自 android Asynctask的优缺点？是否能同一时候并发100+asynctask呢？
+
+AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.
+长处:
+简单,快捷
+
+过程可控
+
+
+缺点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="handler">
+<meta property="og:url" content="http://macouen.github.io/2015/04/01/handler/index.html">
 <meta property="og:site_name" content="Oak`s blog">
-<meta property="og:description" content="bruce sha&apos;s blog | java | scala | bi">
+<meta property="og:description" content="文章转载自 android Asynctask的优缺点？是否能同一时候并发100+asynctask呢？
+
+AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.
+长处:
+简单,快捷
+
+过程可控
+
+
+缺点">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oak`s blog">
-<meta name="twitter:description" content="bruce sha&apos;s blog | java | scala | bi">
+<meta name="twitter:title" content="handler">
+<meta name="twitter:description" content="文章转载自 android Asynctask的优缺点？是否能同一时候并发100+asynctask呢？
+
+AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.
+长处:
+简单,快捷
+
+过程可控
+
+
+缺点">
 <link rel="publisher" href="117252156899076720000">
 
     
@@ -77,12 +104,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2015/04/01/handler/" title="handler" itemprop="url">handler</a>
@@ -96,9 +121,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <blockquote>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AsyncTask实现的原理和适用的优缺点"><span class="toc-number">1.</span> <span class="toc-text">AsyncTask实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处:"><span class="toc-number">1.1.</span> <span class="toc-text">长处:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点："><span class="toc-number">1.2.</span> <span class="toc-text">缺点：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#doInBackground(Params…):"><span class="toc-number">1.2.1.</span> <span class="toc-text">doInBackground(Params…):</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#onPostExecute(Result):"><span class="toc-number">1.2.2.</span> <span class="toc-text">onPostExecute(Result):</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有必要的话你还得重写下面这三个方法，但不是必须的："><span class="toc-number">1.3.</span> <span class="toc-text">有必要的话你还得重写下面这三个方法，但不是必须的：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用AsyncTask类，下面是几条必须遵守的准则："><span class="toc-number">1.4.</span> <span class="toc-text">使用AsyncTask类，下面是几条必须遵守的准则：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Handler异步实现的原理和适用的优缺点"><span class="toc-number">2.</span> <span class="toc-text">Handler异步实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处："><span class="toc-number">2.1.</span> <span class="toc-text">长处：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点：-1"><span class="toc-number">2.2.</span> <span class="toc-text">缺点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？"><span class="toc-number">2.3.</span> <span class="toc-text">这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是否能同一时候并发100+asynctask呢？"><span class="toc-number">2.4.</span> <span class="toc-text">是否能同一时候并发100+asynctask呢？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#声明："><span class="toc-number"></span> <span class="toc-text">声明：</span></a>
+		
+		</div>
+		
+		<blockquote>
 <p>文章转载自 <a href="http://www.cnblogs.com/mengfanrong/p/3884196.html" target="_blank" rel="external">android Asynctask的优缺点？是否能同一时候并发100+asynctask呢？</a></p>
 </blockquote>
 <h2 id="AsyncTask实现的原理和适用的优缺点">AsyncTask实现的原理和适用的优缺点</h2><p><strong>AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.</strong></p>
@@ -146,14 +178,9 @@ Result 后台运行任务终于返回的结果，比方<span class="built_in">St
 <li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请邮件macouen@gmail.com说明。</li>
 <li>欢迎转载，但请注明文章原始出处。</li>
 </ol>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -171,98 +198,47 @@ Result 后台运行任务终于返回的结果，比方<span class="built_in">St
 
 
 
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://macouen.github.io/2015/04/01/handler/" data-title="handler | Oak`s blog" data-tsina="2060747551" class="share clearfix">
+	  </div>
+	
+	</div>
 
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/04/01/handler/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/04/01/handler/" data-count-type="comments">&nbsp;</a>
-	
-</div>
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/04/01/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/117252156899076720000?rel=author" title="Oak_zmm" target="_blank" itemprop="author">Oak_zmm</a>
-		
-  <p class="article-time">
-    <time datetime="2015-04-01T03:38:21.814Z" itemprop="datePublished"> 发表于 Apr 1 2015</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/hexo/">hexo</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/hexo/">hexo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
-	  	<span></span>
-		<a href="/2015/04/01/hello-world/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/04/01/hello-world/" data-count-type="comments">&nbsp;</a>
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/04/01/hello-world/"  title="Hello World">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
+
+</nav>
+
 	
-</div>
-
-</footer>
-
-
-    </article>
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/04/01/handler/" data-title="handler" data-url="http://macouen.github.io/2015/04/01/handler/"></div>
+</section>
 
 
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AsyncTask实现的原理和适用的优缺点"><span class="toc-number">1.</span> <span class="toc-text">AsyncTask实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处:"><span class="toc-number">1.1.</span> <span class="toc-text">长处:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点："><span class="toc-number">1.2.</span> <span class="toc-text">缺点：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#doInBackground(Params…):"><span class="toc-number">1.2.1.</span> <span class="toc-text">doInBackground(Params…):</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#onPostExecute(Result):"><span class="toc-number">1.2.2.</span> <span class="toc-text">onPostExecute(Result):</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有必要的话你还得重写下面这三个方法，但不是必须的："><span class="toc-number">1.3.</span> <span class="toc-text">有必要的话你还得重写下面这三个方法，但不是必须的：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用AsyncTask类，下面是几条必须遵守的准则："><span class="toc-number">1.4.</span> <span class="toc-text">使用AsyncTask类，下面是几条必须遵守的准则：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Handler异步实现的原理和适用的优缺点"><span class="toc-number">2.</span> <span class="toc-text">Handler异步实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处："><span class="toc-number">2.1.</span> <span class="toc-text">长处：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点：-1"><span class="toc-number">2.2.</span> <span class="toc-text">缺点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？"><span class="toc-number">2.3.</span> <span class="toc-text">这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是否能同一时候并发100+asynctask呢？"><span class="toc-number">2.4.</span> <span class="toc-text">是否能同一时候并发100+asynctask呢？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#声明："><span class="toc-number"></span> <span class="toc-text">声明：</span></a>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -394,6 +370,8 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
@@ -413,6 +391,62 @@ $(document).ready(function(){
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+    
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
 
 
 
@@ -433,6 +467,27 @@ $(document).ready(function(){
 
 
 
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
 
 
 
@@ -464,4 +519,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
