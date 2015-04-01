@@ -13,40 +13,19 @@
     
     <meta name="description" content="文章转载自 android Asynctask的优缺点？是否能同一时候并发100+asynctask呢？
 
-AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.
-长处:
-简单,快捷
-
-过程可控
-
-
-缺点">
+AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AsyncTask和Handler的解析">
 <meta property="og:url" content="http://macouen.github.io/2015/04/01/handler/index.html">
 <meta property="og:site_name" content="Oak`s blog">
 <meta property="og:description" content="文章转载自 android Asynctask的优缺点？是否能同一时候并发100+asynctask呢？
 
-AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.
-长处:
-简单,快捷
-
-过程可控
-
-
-缺点">
+AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AsyncTask和Handler的解析">
 <meta name="twitter:description" content="文章转载自 android Asynctask的优缺点？是否能同一时候并发100+asynctask呢？
 
-AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.
-长处:
-简单,快捷
-
-过程可控
-
-
-缺点">
+AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.">
 <link rel="publisher" href="117252156899076720000">
 
     
@@ -126,7 +105,7 @@ AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AsyncTask实现的原理和适用的优缺点"><span class="toc-number">1.</span> <span class="toc-text">AsyncTask实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处:"><span class="toc-number">1.1.</span> <span class="toc-text">长处:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点："><span class="toc-number">1.2.</span> <span class="toc-text">缺点：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#doInBackground(Params…):"><span class="toc-number">1.2.1.</span> <span class="toc-text">doInBackground(Params…):</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#onPostExecute(Result):"><span class="toc-number">1.2.2.</span> <span class="toc-text">onPostExecute(Result):</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有必要的话你还得重写下面这三个方法，但不是必须的："><span class="toc-number">1.3.</span> <span class="toc-text">有必要的话你还得重写下面这三个方法，但不是必须的：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用AsyncTask类，下面是几条必须遵守的准则："><span class="toc-number">1.4.</span> <span class="toc-text">使用AsyncTask类，下面是几条必须遵守的准则：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Handler异步实现的原理和适用的优缺点"><span class="toc-number">2.</span> <span class="toc-text">Handler异步实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处："><span class="toc-number">2.1.</span> <span class="toc-text">长处：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点：-1"><span class="toc-number">2.2.</span> <span class="toc-text">缺点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？"><span class="toc-number">2.3.</span> <span class="toc-text">这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是否能同一时候并发100+asynctask呢？"><span class="toc-number">2.4.</span> <span class="toc-text">是否能同一时候并发100+asynctask呢？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#声明："><span class="toc-number"></span> <span class="toc-text">声明：</span></a>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AsyncTask实现的原理和适用的优缺点"><span class="toc-number">1.</span> <span class="toc-text">AsyncTask实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处:"><span class="toc-number">1.1.</span> <span class="toc-text">长处:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点："><span class="toc-number">1.2.</span> <span class="toc-text">缺点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用AsyncTask类，下面是几条必须遵守的准则："><span class="toc-number">1.3.</span> <span class="toc-text">使用AsyncTask类，下面是几条必须遵守的准则：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Handler异步实现的原理和适用的优缺点"><span class="toc-number">2.</span> <span class="toc-text">Handler异步实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处："><span class="toc-number">2.1.</span> <span class="toc-text">长处：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点：-1"><span class="toc-number">2.2.</span> <span class="toc-text">缺点：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？"><span class="toc-number">3.</span> <span class="toc-text">这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#是否能同一时候并发100+asynctask呢？"><span class="toc-number">4.</span> <span class="toc-text">是否能同一时候并发100+asynctask呢？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#声明："><span class="toc-number"></span> <span class="toc-text">声明：</span></a>
 		
 		</div>
 		
@@ -134,6 +113,7 @@ AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量
 <p>文章转载自 <a href="http://www.cnblogs.com/mengfanrong/p/3884196.html" target="_blank" rel="external">android Asynctask的优缺点？是否能同一时候并发100+asynctask呢？</a></p>
 </blockquote>
 <h2 id="AsyncTask实现的原理和适用的优缺点">AsyncTask实现的原理和适用的优缺点</h2><p><strong>AsyncTask,是android提供的轻量级的异步类,能够直接继承AsyncTask,在类中实现异步操作,并提供接口反馈当前异步运行的程度(能够通过接口实现UI进度更新),最后反馈运行的结果给UI主线程.</strong></p>
+<a id="more"></a>
 <h3 id="长处:">长处:</h3><ul>
 <li><p>简单,快捷</p>
 </li>
@@ -153,9 +133,10 @@ AsyncTask实现的原理和适用的优缺点AsyncTask,是android提供的轻量
 Progress 后台任务运行的百分比。
 Result 后台运行任务终于返回的结果，比方<span class="built_in">String</span>。  
 </code></pre><p>使用过AsyncTask 的同学都知道一个异步载入数据最少要重写下面这两个方法：</p>
-<h4 id="doInBackground(Params…):"><code>doInBackground(Params…)</code>:</h4><p>后台运行，比較耗时的操作都能够放在这里。注意这里不能直接操作UI。此方法在后台线程运行，完毕任务的主要工作，通常须要较长的时间。在运行过程中能够调用<code>publicProgress(Progress…)</code>来更新任务的进度。</p>
-<h4 id="onPostExecute(Result):"><code>onPostExecute(Result)</code>:</h4><p>相当于Handler 处理UI的方式，在这里面能够使用在<code>doInBackground</code> 得到的结果处理操作UI。 此方法在主线程运行，任务运行的结果作为此方法的參数返回</p>
-<h3 id="有必要的话你还得重写下面这三个方法，但不是必须的：">有必要的话你还得重写下面这三个方法，但不是必须的：</h3><p><strong><code>onProgressUpdate(Progress…)</code></strong> 能够使用进度条添加用户体验度。 此方法在主线程运行，用于显示任务运行的进度。<br><strong><code>onPreExecute()</code></strong> 这里是终于用户调用Excute时的接口，当任务运行之前開始调用此方法，能够在这里显示运行进度对话框。<br><strong><code>onCancelled()</code></strong> 用户调用取消时，要做的操作</p>
+<p> <code>doInBackground(Params…)</code>:</p>
+<p>后台运行，比較耗时的操作都能够放在这里。注意这里不能直接操作UI。此方法在后台线程运行，完毕任务的主要工作，通常须要较长的时间。在运行过程中能够调用<code>publicProgress(Progress…)</code>来更新任务的进度。<br> <code>onPostExecute(Result)</code>:<br>相当于Handler 处理UI的方式，在这里面能够使用在<code>doInBackground</code> 得到的结果处理操作UI。 此方法在主线程运行，任务运行的结果作为此方法的參数返回</p>
+<p>有必要的话你还得重写下面这三个方法，但不是必须的：</p>
+<p><strong><code>onProgressUpdate(Progress…)</code></strong> 能够使用进度条添加用户体验度。 此方法在主线程运行，用于显示任务运行的进度。<br><strong><code>onPreExecute()</code></strong> 这里是终于用户调用Excute时的接口，当任务运行之前開始调用此方法，能够在这里显示运行进度对话框。<br><strong><code>onCancelled()</code></strong> 用户调用取消时，要做的操作</p>
 <h3 id="使用AsyncTask类，下面是几条必须遵守的准则：">使用AsyncTask类，下面是几条必须遵守的准则：</h3><p>Task的实例必须在UI thread中创建；<br>execute方法必须在UI thread中调用；<br>不要手动的调用<code>onPreExecute()</code>, <code>onPostExecute(Result)</code>，<code>doInBackground(Params...)</code>, <code>onProgressUpdate(Progress...)</code>这几个方法；<br>该task仅仅能被运行一次，否则多次调用时将会出现异常；</p>
 <h2 id="Handler异步实现的原理和适用的优缺点">Handler异步实现的原理和适用的优缺点</h2><p>在Handler 异步实现时,涉及到<code>Handler</code>, <code>Looper</code>, <code>Message</code>,<code>Thread</code>四个对象，实现异步的流程是<br>主线程启动Thread（子线程）—thread(子线程)执行并生成Message—Looper获取Message并传递给Handler—Handler逐个获取Looper中的Message，并进行UI变更。</p>
 <h3 id="长处：">长处：</h3><ul>
@@ -167,13 +148,13 @@ Result 后台运行任务终于返回的结果，比方<span class="built_in">St
 <h3 id="缺点：-1">缺点：</h3><p>1.在单个后台异步处理时，显得代码过多，结构过于复杂（相对性）</p>
 <p>AsyncTask 与 thread 运行异步任务的优缺点在哪里？ 參考案例  以下有总结</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span></span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="annotation">@Override</span></span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">          setContentView(R.layout.main);</span><br><span class="line">      	(newLoadAsyncTask()).execute(<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="javadoc">/** </span><br><span class="line">        * 生成该类的对象，并调用execute方法之后 </span><br><span class="line">        * 首先运行的是onProExecute方法 </span><br><span class="line">        * 其次运行doInBackgroup方法 </span><br><span class="line">        */</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">LoadAsyncTask</span> <span class="keyword">extends</span> <span class="title">AsyncTask</span>&lt;<span class="title">Integer</span>,<span class="title">Integer</span>,<span class="title">String</span>&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">          <span class="annotation">@Override</span></span><br><span class="line"></span><br><span class="line">          <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPreExecute</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">             Log.v(<span class="string">"TestActivity"</span>,<span class="string">"開始运行异步线程"</span>);</span><br><span class="line"></span><br><span class="line">          &#125;     </span><br><span class="line"></span><br><span class="line">          <span class="javadoc">/** </span><br><span class="line">            * 这里的Integer參数相应AsyncTask中的第一个參数 </span><br><span class="line">            * 这里的String返回值相应AsyncTask的第三个參数 </span><br><span class="line">            * 该方法并不执行在UI线程其中，主要用于异步操作，全部在该方法中不能对UI其中的空间进行设置和改动 </span><br><span class="line">            */</span></span><br><span class="line"></span><br><span class="line">          <span class="annotation">@Override</span></span><br><span class="line"></span><br><span class="line">          <span class="function"><span class="keyword">protected</span> String <span class="title">doInBackground</span><span class="params">(Integer...params)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">             <span class="comment">// 载入网络数据</span></span><br><span class="line">          &#125; </span><br><span class="line">          <span class="annotation">@Override</span></span><br><span class="line"></span><br><span class="line">          <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPostExecute</span><span class="params">(Stringresult)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">             Log.v(<span class="string">"TestActivity"</span>,<span class="string">"结束运行异步线程"</span>);</span><br><span class="line">             <span class="comment">// 更新UI</span></span><br><span class="line">          &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   通过thread+Runnable+handler</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestActivityextends</span> <span class="title">Activity</span></span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">private</span> threadHandler handler;</span><br><span class="line">       <span class="annotation">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span></span>&#123;</span><br><span class="line">          <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">          setContentView(R.layout.main);</span><br><span class="line">           <span class="comment">// 初始化句柄</span></span><br><span class="line">          handler=<span class="keyword">new</span> threadHandler(<span class="keyword">this</span>);  </span><br><span class="line">          <span class="comment">// 开启新线程</span></span><br><span class="line">          newThread(newRunnable()&#123;</span><br><span class="line">             <span class="annotation">@Override</span></span><br><span class="line">             <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">                  <span class="comment">// 载入网络数据</span></span><br><span class="line">               updateUI();</span><br><span class="line">             &#125;</span><br><span class="line">          &#125;).start(); </span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">threadHandler</span> <span class="keyword">extends</span> <span class="title">Handler</span></span>&#123;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">private</span> WeakReference&lt;TestActivity&gt;testReference;</span><br><span class="line">          <span class="function"><span class="keyword">public</span> <span class="title">threadHandler</span><span class="params">(TestActivity activity)</span></span>&#123;</span><br><span class="line">              testReference=<span class="keyword">new</span> WeakReference&lt;TestActivity&gt;(activity);</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="annotation">@Override</span></span><br><span class="line">          <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span></span>&#123;</span><br><span class="line">             <span class="keyword">super</span>.handleMessage(msg);</span><br><span class="line">             TestActivity test= testReference.get();</span><br><span class="line">             <span class="comment">// 更新UI</span></span><br><span class="line">          &#125;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="title">voidupdateUI</span><span class="params">()</span></span>&#123;</span><br><span class="line">          <span class="comment">// 其它处理</span></span><br><span class="line">          handler.sendEmptyMessage(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？">这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？</h3><ul>
+<h2 id="这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？">这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？</h2><ul>
 <li><p>AsyncTask是封装好的线程池，比起Thread+Handler的方式，AsyncTask在操作UI线程上更方便，由于onPreExecute()、onPostExecute()及更新UI方法onProgressUpdate()均执行在主线程中，这样就不用Handler发消息处理了；</p>
 </li>
 <li><p>我不太允许封装好就会影响性能的说法，在我实际的运用中，真正的缺点来自于AsyncTask的全局线程池仅仅有5个工作线程，也就是说，一个APP假设运用AsyncTask技术来运行线程，那么同一时间最多仅仅能有5个线程同一时候运行，其它线程将被堵塞（注：不运用AsyncTask运行的线程，也就是自己new出来的线程不受此限制），所以AsyncTask不要用于多线程取网络数据，由于非常可能这样会产生堵塞，从而减少效率。</p>
 </li>
 </ul>
-<h3 id="是否能同一时候并发100+asynctask呢？">是否能同一时候并发100+asynctask呢？</h3><p><strong>AsyncTask用的是线程池机制，容量是128，最多同一时候执行5个core线程，剩下的排队。</strong></p>
+<h2 id="是否能同一时候并发100+asynctask呢？">是否能同一时候并发100+asynctask呢？</h2><p><strong>AsyncTask用的是线程池机制，容量是128，最多同一时候执行5个core线程，剩下的排队。</strong></p>
 <h1 id="声明：">声明：</h1><ol>
 <li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请邮件macouen@gmail.com说明。</li>
 <li>欢迎转载，但请注明文章原始出处。</li>
@@ -213,14 +194,14 @@ Result 后台运行任务终于返回的结果，比方<span class="built_in">St
 	
 <nav class="article-nav clearfix">
  
-
-<div class="next">
-<a href="/2015/04/01/hello-world/"  title="Hello World">
- <strong>下一篇：</strong><br/> 
- <span>Hello World
-</span>
+ <div class="prev" >
+ <a href="/2015/04/01/hello-world/" title="Hello World">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Hello World</span>
 </a>
 </div>
+
 
 </nav>
 
@@ -236,7 +217,7 @@ Result 后台运行任务终于返回的结果，比方<span class="built_in">St
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AsyncTask实现的原理和适用的优缺点"><span class="toc-number">1.</span> <span class="toc-text">AsyncTask实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处:"><span class="toc-number">1.1.</span> <span class="toc-text">长处:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点："><span class="toc-number">1.2.</span> <span class="toc-text">缺点：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#doInBackground(Params…):"><span class="toc-number">1.2.1.</span> <span class="toc-text">doInBackground(Params…):</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#onPostExecute(Result):"><span class="toc-number">1.2.2.</span> <span class="toc-text">onPostExecute(Result):</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有必要的话你还得重写下面这三个方法，但不是必须的："><span class="toc-number">1.3.</span> <span class="toc-text">有必要的话你还得重写下面这三个方法，但不是必须的：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用AsyncTask类，下面是几条必须遵守的准则："><span class="toc-number">1.4.</span> <span class="toc-text">使用AsyncTask类，下面是几条必须遵守的准则：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Handler异步实现的原理和适用的优缺点"><span class="toc-number">2.</span> <span class="toc-text">Handler异步实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处："><span class="toc-number">2.1.</span> <span class="toc-text">长处：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点：-1"><span class="toc-number">2.2.</span> <span class="toc-text">缺点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？"><span class="toc-number">2.3.</span> <span class="toc-text">这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是否能同一时候并发100+asynctask呢？"><span class="toc-number">2.4.</span> <span class="toc-text">是否能同一时候并发100+asynctask呢？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#声明："><span class="toc-number"></span> <span class="toc-text">声明：</span></a>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AsyncTask实现的原理和适用的优缺点"><span class="toc-number">1.</span> <span class="toc-text">AsyncTask实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处:"><span class="toc-number">1.1.</span> <span class="toc-text">长处:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点："><span class="toc-number">1.2.</span> <span class="toc-text">缺点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用AsyncTask类，下面是几条必须遵守的准则："><span class="toc-number">1.3.</span> <span class="toc-text">使用AsyncTask类，下面是几条必须遵守的准则：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Handler异步实现的原理和适用的优缺点"><span class="toc-number">2.</span> <span class="toc-text">Handler异步实现的原理和适用的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#长处："><span class="toc-number">2.1.</span> <span class="toc-text">长处：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点：-1"><span class="toc-number">2.2.</span> <span class="toc-text">缺点：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？"><span class="toc-number">3.</span> <span class="toc-text">这2种方式都能够实现，可是他们的差别在哪里？优缺点各是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#是否能同一时候并发100+asynctask呢？"><span class="toc-number">4.</span> <span class="toc-text">是否能同一时候并发100+asynctask呢？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#声明："><span class="toc-number"></span> <span class="toc-text">声明：</span></a>
  
   </div>
 
