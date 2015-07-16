@@ -5,7 +5,7 @@
   <subtitle><![CDATA[你信不信，我这都是瞎写的。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://oakzmm.com//"/>
-  <updated>2015-07-16T08:50:31.548Z</updated>
+  <updated>2015-07-16T08:53:52.736Z</updated>
   <id>http://oakzmm.com//</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://oakzmm.com/2015/07/16/live-templates/"/>
     <id>http://oakzmm.com/2015/07/16/live-templates/</id>
     <published>2015-07-16T08:47:27.000Z</published>
-    <updated>2015-07-16T08:50:31.548Z</updated>
+    <updated>2015-07-16T08:53:52.736Z</updated>
     <content type="html"><![CDATA[<p><em>Android studio 默认的是按Tab 自动生成代码块的，用户可以自己在setting—&gt;Live Templates里面进行设置expand style</em></p>
-<h2 id="下面是一常用的Live_Templates的汇总说明">下面是一常用的Live Templates的汇总说明</h2><ul>
+<h2 id="下面是一常用的Live_Templates的汇总说明">下面是一常用的Live Templates的汇总说明</h2><a id="more"></a>
+<ul>
 <li><h4 id="输出打印_Groovy(常规部分)">输出打印  Groovy(常规部分)</h4></li>
 </ul>
 <figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">serr ---&gt;<span class="constant">System.</span>err.println(<span class="string">"example"</span>)</span><br><span class="line">souf ---&gt;printf <span class="string">"example"</span></span><br><span class="line">sout ---&gt;println <span class="string">"example"</span></span><br><span class="line">soutm ---&gt;<span class="constant">System.</span>out.println(<span class="string">"MainActivity.onCreate"</span>);<span class="regexp">//</span>当前类的当前方法名</span><br><span class="line">soutp ---&gt;<span class="constant">System.</span>out.println(<span class="string">"savedInstanceState = ["</span> + savedInstanceState + <span class="string">"]"</span>);<span class="regexp">//</span>这个好，可以打印出当前方法的所有参数列表及其值</span><br><span class="line">soutv ---&gt;<span class="constant">System.</span>out.println(<span class="string">"params"</span>,params);<span class="regexp">//</span>即 你可以输出打印一个变量值</span><br></pre></td></tr></table></figure>
@@ -45,7 +46,8 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p><em>Android studio 默认的是按Tab 自动生成代码块的，用户可以自己在setting—&gt;Live Templates里面进行设置expand style</em></p>
-<h2 id="下面是一常用的Live_Templates的汇总说明">下面是]]>
+<h2 id="下面是一常用的Live_Templates的汇总说明">下面是一常用的Live Templates的汇总说明</h2>]]>
+    
     </summary>
     
       <category term="studio" scheme="http://oakzmm.com/tags/studio/"/>
