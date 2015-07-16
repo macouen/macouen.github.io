@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://oakzmm.com/2015/07/16/live-templates/</loc>
+    <lastmod>2015-07-16T08:50:31.548Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oakzmm.com/2015/07/16/hello-world/</loc>
+    <lastmod>2015-07-16T08:44:36.264Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://oakzmm.com/about/index.html</loc>
     <lastmod>2015-07-16T08:16:38.735Z</lastmod>
   </url>
@@ -29,11 +39,6 @@
   <url>
     <loc>http://oakzmm.com/search/index.html</loc>
     <lastmod>2015-04-16T07:20:14.452Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://oakzmm.com/2015/04/01/hello-world/</loc>
-    <lastmod>2015-04-01T09:04:30.502Z</lastmod>
   </url>
   
   <url>

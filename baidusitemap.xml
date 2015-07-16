@@ -2,19 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
-    
-    
-    
-    
-    
+  <url>
+    <loc>http://oakzmm.com/2015/07/16/live-templates/</loc>
+    <lastmod>2015-07-16T08:50:31.548Z</lastmod>
+    <data>
+        <display>
+        <title>常用的Android studio的live templates汇总</title>
+        <pubTime>2015-07-16T08:47:27.000Z</pubTime>
+        
+        <tag>studio </tag>
+         
+         
+           
+             
+              <breadCrumb title="Android Studio" url="http://oakzmm.com/categories/Android-Studio/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
-    <loc>http://oakzmm.com/2015/04/01/hello-world/</loc>
-    <lastmod>2015-04-01T09:04:30.502Z</lastmod>
+    <loc>http://oakzmm.com/2015/07/16/hello-world/</loc>
+    <lastmod>2015-07-16T08:44:36.264Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
-        <pubTime>2015-04-01T09:04:30.502Z</pubTime>
+        <pubTime>2015-07-16T08:44:36.264Z</pubTime>
         
         <tag>hexo </tag>
          
@@ -27,5 +41,11 @@
     </data>
     </url>
 
+    
+    
+    
+    
+    
+    
     
 </urlset>
