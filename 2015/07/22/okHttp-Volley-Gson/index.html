@@ -42,27 +42,27 @@
 
 
 <meta name="description" content="什么？你还不知道这3个货什么东西？好吧，请移步这里 OkHttp使用介绍 、Android库Volley的使用介绍 、 GSON使用的学习笔记，入门篇 。 
-Foreword:
+Foreword
 这并不是一篇特别有营养的技术博客，对于相关库的使用并没有做深入的解释，因为网上有很多翔实的解析和介绍，我会给出连接。 
 
-服务端返回的是是json格式的数据。使用Android Studio 1.2.2 &amp;amp; Gra">
+服务端返回的是是json格式的数据。使用Android Studio 1.2.2 &amp;amp; Grad">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用okHttp,Volley,Gson快速组装简易网络通信工具">
 <meta property="og:url" content="http://oakzmm.com/2015/07/22/okHttp-Volley-Gson/index.html">
 <meta property="og:site_name" content="Oak_Zmm的技术博客">
 <meta property="og:description" content="什么？你还不知道这3个货什么东西？好吧，请移步这里 OkHttp使用介绍 、Android库Volley的使用介绍 、 GSON使用的学习笔记，入门篇 。 
-Foreword:
+Foreword
 这并不是一篇特别有营养的技术博客，对于相关库的使用并没有做深入的解释，因为网上有很多翔实的解析和介绍，我会给出连接。 
 
-服务端返回的是是json格式的数据。使用Android Studio 1.2.2 &amp;amp; Gra">
-<meta property="og:image" content="oakzmm.com/image/okhttp01.jpg">
+服务端返回的是是json格式的数据。使用Android Studio 1.2.2 &amp;amp; Grad">
+<meta property="og:image" content="!--￼6-->image/okhttp01.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用okHttp,Volley,Gson快速组装简易网络通信工具">
 <meta name="twitter:description" content="什么？你还不知道这3个货什么东西？好吧，请移步这里 OkHttp使用介绍 、Android库Volley的使用介绍 、 GSON使用的学习笔记，入门篇 。 
-Foreword:
+Foreword
 这并不是一篇特别有营养的技术博客，对于相关库的使用并没有做深入的解释，因为网上有很多翔实的解析和介绍，我会给出连接。 
 
-服务端返回的是是json格式的数据。使用Android Studio 1.2.2 &amp;amp; Gra">
+服务端返回的是是json格式的数据。使用Android Studio 1.2.2 &amp;amp; Grad">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -249,7 +249,7 @@ Foreword:
 
       
         <span itemprop="articleBody"><p>什么？你还不知道这3个货什么东西？<br>好吧，请移步这里 <a href="http://www.cnblogs.com/ct2011/p/4001708.html" target="_blank" rel="external">OkHttp使用介绍</a> 、<a href="https://bxbxbai.github.io/2014/09/14/android-working-with-volley/" target="_blank" rel="external">Android库Volley的使用介绍</a> 、 <a href="http://blog.csdn.net/jackie_xiaonan/article/details/14498187" target="_blank" rel="external">GSON使用的学习笔记，入门篇</a> 。 </p>
-<h2 id="Foreword:">Foreword:</h2><ul>
+<h2 id="Foreword">Foreword</h2><ul>
 <li><p>这并不是一篇特别有营养的技术博客，对于相关库的使用并没有做深入的解释，因为网上有很多翔实的解析和介绍，我会给出连接。 </p>
 </li>
 <li><p>服务端返回的是是json格式的数据。使用Android Studio 1.2.2 &amp; Gradle。</p>
@@ -259,7 +259,7 @@ Foreword:
 <h2 id="为什么是OKHttp，Volley，Gson_?">为什么是OKHttp，Volley，Gson ?</h2><p>原因有二：<br>一、水平不够，不能自己写出牛逼高效简单易用万人称赞而且代码好看的网络通信模块。<br>二、因为他们的优点。</p>
 <p> <code>OKhttp</code>： 如果你看了上面第一篇的Blog，你就会发现OKHttp使用起来方便而且我们不用去考虑<code>HttpURLConnection</code>和<code>HttpClient</code>的那点破事。</p>
 <p> <code>Volley</code>: 对于Volley深层次的解析和源码的讲解可以看这里 <a href="http://www.codekk.com/open-source-project-analysis/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90" target="_blank" rel="external">Volley 源码解析</a>（<strong>如果你对Volley了解不多，请务必看下这篇文章</strong>），Volley各种牛逼介绍我就不再重复。我们看重的是他的优点：“<em>扩展性强，Volley 中大多是基于接口的设计，可配置性强。</em>”。 作为一个强大的CV战士，既然是要动手组装，那么优秀的扩展性，就是必须的了。</p>
-<p> <code>Gson</code>: 其实Gson并不是目前来说最好用的Json解析的工具，看图， Gson的解析能力并不是最优秀的，而且据说还有些小坑。但是你要知道Gson的lib只有几百k，另外Android Studio中竟然有GsonFormat的插件，分分中快速生成Model。就是要做快。枪。。手。。。<br> <img src="oakzmm.com/image/okhttp01.jpg" alt="hello"></p>
+<p> <code>Gson</code>: 其实Gson并不是目前来说最好用的Json解析的工具，看图， Gson的解析能力并不是最优秀的，而且据说还有些小坑。但是你要知道Gson的lib只有几百k，另外Android Studio中竟然有GsonFormat的插件，分分中快速生成Model。就是要做快。枪。。手。。。<br> <img src="!--￼6--&gt;image/okhttp01.jpg" alt="hello"></p>
 <h2 id="怎么组装？">怎么组装？</h2><p>对于Volley，处理Http请求使用的是<code>HttpURLConnection</code>和<code>HttpClient</code> ：</p>
 <blockquote>
 <p>Android2.3 及以上基于 HttpURLConnection，2.3 以下基于 HttpClient 实现 。</p>
@@ -285,7 +285,7 @@ Foreword:
 <p>封装方法的时候这样写,另外加上取消请求的方法。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">	 <span class="javadoc">/**</span><br><span class="line">     * Returns a Volley request queue for creating network requests</span><br><span class="line">     *</span><br><span class="line">     *<span class="javadoctag"> @return</span> &#123;@link com.android.volley.RequestQueue&#125;</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RequestQueue <span class="title">getRequestQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (mRequestQueue == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// getApplicationContext() is key, it keeps you from leaking the</span></span><br><span class="line">            <span class="comment">// Activity or BroadcastReceiver if someone passes one in.</span></span><br><span class="line">            <span class="comment">// use  custom okhttpStack, make better work .</span></span><br><span class="line">            mRequestQueue = Volley.newRequestQueue(mCtx.getApplicationContext(),</span><br><span class="line">                    <span class="keyword">new</span> OkHttpStack(<span class="keyword">new</span> OkHttpClient()));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> mRequestQueue;</span><br><span class="line">    &#125;</span><br><span class="line">     * Adds a request to the Volley request queue</span><br><span class="line">     *</span><br><span class="line">     * <span class="annotation">@param</span> request is the request to add to the Volley queue</span><br><span class="line">     */</span><br><span class="line">    <span class="keyword">public</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">addRequest</span><span class="params">(Request&lt;T&gt; request)</span> </span>&#123;</span><br><span class="line">        getRequestQueue().add(request);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * Adds a request to the Volley request queue</span><br><span class="line">     *</span><br><span class="line">     *<span class="javadoctag"> @param</span> request is the request to add to the Volley queuest</span><br><span class="line">     *<span class="javadoctag"> @param</span> tag is the tag identifying the request</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">public</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">addRequest</span><span class="params">(Request&lt;T&gt; request, String tag)</span> </span>&#123;</span><br><span class="line">        request.setTag(tag);</span><br><span class="line">        getRequestQueue().add(request);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="javadoc">/**</span><br><span class="line">     * 使用和参数配置范例</span><br><span class="line">     *</span><br><span class="line">     *<span class="javadoctag"> @param</span> param1</span><br><span class="line">     *<span class="javadoctag"> @param</span> param2</span><br><span class="line">     *<span class="javadoctag"> @param</span> listener</span><br><span class="line">     *<span class="javadoctag"> @param</span> errorListener</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getDemoData</span><span class="params">(String param1,</span><br><span class="line">                            String param2,</span><br><span class="line">                            Response.Listener listener,</span><br><span class="line">                            Response.ErrorListener errorListener,String tag)</span> </span>&#123;</span><br><span class="line">        Map&lt;String, String&gt; params = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        params.put(<span class="string">"param1"</span>, param1);</span><br><span class="line">        params.put(<span class="string">"param2"</span>, param2);</span><br><span class="line"></span><br><span class="line">        CustomRequest request = <span class="keyword">new</span> CustomRequest.RequestBuilder()</span><br><span class="line"><span class="comment">//                .post()//不设置的话默认GET 但是设置了参数就不需要了。。。</span></span><br><span class="line">                .url(<span class="string">""</span>)<span class="comment">//url会统一配置到requestUrl类中 </span></span><br><span class="line">                .addMethodParams(<span class="string">""</span>) <span class="comment">//请求的方法名</span></span><br><span class="line">                        <span class="comment">// 添加参数方法1 适用参数比较多的情况下</span></span><br><span class="line"><span class="comment">//                .params(params)</span></span><br><span class="line">                        <span class="comment">// 添加参数方法2</span></span><br><span class="line">                .addParams(<span class="string">"param1"</span>, param1)<span class="comment">//添加参数1</span></span><br><span class="line">                .addParams(<span class="string">"param2"</span>, param2)<span class="comment">//添加参数2</span></span><br><span class="line"><span class="comment">//                .clazz(Test.calss) //如果设置了返回类型，会自动解析返回model 如果不设置会直接返回json数据;</span></span><br><span class="line">                .successListener(listener)<span class="comment">//获取数据成功的listener</span></span><br><span class="line">                .errorListener(errorListener)<span class="comment">//获取数据异常的listener</span></span><br><span class="line">                .build();</span><br><span class="line">        addRequest(request,tag);</span><br><span class="line">        <span class="comment">//将请求add到队列中。并设置tag  并需要相应activity onStop方法中调用cancel方法</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>ok，大功告成，组装完毕。</p>
-<h2 id="参考资料：">参考资料：</h2><ul>
+<h2 id="参考资料">参考资料</h2><ul>
 <li><a href="http://www.cnblogs.com/ct2011/p/4001708.html" target="_blank" rel="external">OkHttp使用介绍</a> </li>
 <li><a href="https://bxbxbai.github.io/2014/09/14/android-working-with-volley/" target="_blank" rel="external">Android库Volley的使用介绍</a> </li>
 <li><a href="http://blog.csdn.net/guolin_blog/article/details/17482095" target="_blank" rel="external">Android Volley完全解析</a></li>
@@ -293,7 +293,7 @@ Foreword:
 <li><a href="http://blog.csdn.net/jackie_xiaonan/article/details/14498187" target="_blank" rel="external">GSON使用的学习笔记，入门篇</a> </li>
 <li><a href="https://medium.com/@sotti/android-networking-i-okhttp-volley-and-gson-72004efff196" target="_blank" rel="external">Android Networking I: OkHttp, Volley and Gson</a></li>
 </ul>
-<h2 id="声明：">声明：</h2><ol>
+<h2 id="声明">声明</h2><ol>
 <li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件macouen@gmail.com说明。 </li>
 <li>欢迎转载，但请注明文章原始出处。 </li>
 </ol>
@@ -489,7 +489,7 @@ Foreword:
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword:"><span class="nav-number">1.</span> <span class="nav-text">Foreword:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么是OKHttp，Volley，Gson_?"><span class="nav-number">2.</span> <span class="nav-text">为什么是OKHttp，Volley，Gson ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么组装？"><span class="nav-number">3.</span> <span class="nav-text">怎么组装？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_添加相关的支持库"><span class="nav-number">3.1.</span> <span class="nav-text">1. 添加相关的支持库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_配置Volley"><span class="nav-number">3.2.</span> <span class="nav-text">2. 配置Volley</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-_自定义Request"><span class="nav-number">3.3.</span> <span class="nav-text">4. 自定义Request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">4.</span> <span class="nav-text">参考资料：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明："><span class="nav-number">5.</span> <span class="nav-text">声明：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么是OKHttp，Volley，Gson_?"><span class="nav-number">2.</span> <span class="nav-text">为什么是OKHttp，Volley，Gson ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么组装？"><span class="nav-number">3.</span> <span class="nav-text">怎么组装？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_添加相关的支持库"><span class="nav-number">3.1.</span> <span class="nav-text">1. 添加相关的支持库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_配置Volley"><span class="nav-number">3.2.</span> <span class="nav-text">2. 配置Volley</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-_自定义Request"><span class="nav-number">3.3.</span> <span class="nav-text">4. 自定义Request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">5.</span> <span class="nav-text">声明</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
