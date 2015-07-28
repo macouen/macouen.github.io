@@ -5,7 +5,7 @@
   <subtitle><![CDATA[你信不信，我这都是瞎写的。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://oakzmm.com//"/>
-  <updated>2015-07-28T09:32:28.111Z</updated>
+  <updated>2015-07-28T09:34:48.890Z</updated>
   <id>http://oakzmm.com//</id>
   
   <author>
@@ -20,13 +20,14 @@
     <link href="http://oakzmm.com/2015/07/28/InterviewQuestion/"/>
     <id>http://oakzmm.com/2015/07/28/InterviewQuestion/</id>
     <published>2015-07-28T09:26:01.000Z</published>
-    <updated>2015-07-28T09:32:28.111Z</updated>
+    <updated>2015-07-28T09:34:48.890Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <h2 id="原文转载自_leerduo/InterviewQuestion">原文转载自 <a href="https://github.com/leerduo/InterviewQuestion" target="_blank" rel="external">leerduo/InterviewQuestion</a></h2></blockquote>
 <hr>
 <h1 id="InterviewQuestion">InterviewQuestion</h1><p>整理的常见的问题   <a href="http://chenfuduo.me" target="_blank" rel="external">http://chenfuduo.me</a></p>
 <p><a href="https://github.com/android-cn/android-discuss" target="_blank" rel="external">整理来自这里</a></p>
 <p>水平有限，有错误请提出来。</p>
+<a id="more"></a>
 <h1 id="Android常见的问题">Android常见的问题</h1><hr>
 <blockquote>
 <ul>
@@ -36,7 +37,6 @@
 <p><a href="https://github.com/pedrovgs/Algorithms" target="_blank" rel="external">资料可见</a></p>
 <p><a href="http://blog.csdn.net/v_JULY_v" target="_blank" rel="external">算法介绍可见</a></p>
 <p>算法是很多公司面试必须，国内 BAT 基本面试中都会有，尤以百度为盛。</p>
-<a id="more"></a>
 <hr>
 <blockquote>
 <ul>
@@ -1112,16 +1112,7 @@ dispatchDraw会调用drawChild
 <hr>
 <h1 id="InterviewQuestion">InterviewQuestion</h1><p>整理的常见的问题   <a href="http://chenfuduo.me">http://chenfuduo.me</a></p>
 <p><a href="https://github.com/android-cn/android-discuss">整理来自这里</a></p>
-<p>水平有限，有错误请提出来。</p>
-<h1 id="Android常见的问题">Android常见的问题</h1><hr>
-<blockquote>
-<ul>
-<li>常见算法问题的 Java 实现</li>
-</ul>
-</blockquote>
-<p><a href="https://github.com/pedrovgs/Algorithms">资料可见</a></p>
-<p><a href="http://blog.csdn.net/v_JULY_v">算法介绍可见</a></p>
-<p>算法是很多公司面试必须，国内 BAT 基本面试中都会有，尤以百度为盛。</p>]]>
+<p>水平有限，有错误请提出来。</p>]]>
     
     </summary>
     
