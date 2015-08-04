@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,Oak" />
+  <meta name="keywords" content="api," />
 
 
 
@@ -41,15 +41,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/oak.ico?v=0.4.4" />
 
 
-<meta name="description" content="oak&apos;s blog | java | android |">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Oak_Zmm的技术博客">
-<meta property="og:url" content="http://oakzmm.com/index.html">
+<meta name="description" content="Foreword首先，整理这些知识点来自于知乎问题：Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？ 中前排回答  StephenLee、macro hard、Rocko 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 Rocko答案中提到的 Android Tips Round-Up 系列文章。本文主要整理 Cool Android APIs ，对于知乎问题中不少回答者">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android APIs 整理（一）">
+<meta property="og:url" content="http://oakzmm.com/2015/08/04/cool-Android-api/index.html">
 <meta property="og:site_name" content="Oak_Zmm的技术博客">
-<meta property="og:description" content="oak&apos;s blog | java | android |">
+<meta property="og:description" content="Foreword首先，整理这些知识点来自于知乎问题：Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？ 中前排回答  StephenLee、macro hard、Rocko 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 Rocko答案中提到的 Android Tips Round-Up 系列文章。本文主要整理 Cool Android APIs ，对于知乎问题中不少回答者">
+<meta property="og:image" content="/image/api01.jpg">
+<meta property="og:image" content="/image/api02.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oak_Zmm的技术博客">
-<meta name="twitter:description" content="oak&apos;s blog | java | android |">
+<meta name="twitter:title" content="Android APIs 整理（一）">
+<meta name="twitter:description" content="Foreword首先，整理这些知识点来自于知乎问题：Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？ 中前排回答  StephenLee、macro hard、Rocko 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 Rocko答案中提到的 Android Tips Round-Up 系列文章。本文主要整理 Cool Android APIs ，对于知乎问题中不少回答者">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -59,7 +61,7 @@
   };
 </script>
 
-    <title> Oak_Zmm的技术博客 </title>
+    <title> Android APIs 整理（一） // Oak_Zmm的技术博客 </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -84,9 +86,7 @@
 
 
 
-<div class="container one-column 
-   page-home 
-">
+<div class="container one-column page-post-detail">
     <div class="headband"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-inner"><h1 class="site-meta">
@@ -178,9 +178,9 @@
         <div class="main-inner">
             <div id="content" class="content">
                 
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -191,9 +191,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/08/04/cool-Android-api/" itemprop="url">
-                Android APIs 整理（一）
-              </a>
+              Android APIs 整理（一）
             
           
         </h1>
@@ -239,8 +237,7 @@
       
 
       
-        
-          <span itemprop="articleBody"><h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> 中前排回答  <a href="http://www.zhihu.com/people/stephenlee2014" target="_blank" rel="external">StephenLee</a>、<a href="http://www.zhihu.com/people/hard-macro" target="_blank" rel="external">macro hard</a>、<a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a> 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 <a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a>答案中提到的 <a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。本文主要整理 <code>Cool Android APIs</code> ，对于知乎问题中不少回答者提到的一些Android开发的技巧、第三方框架之类的不作整理。</p>
+        <span itemprop="articleBody"><h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> 中前排回答  <a href="http://www.zhihu.com/people/stephenlee2014" target="_blank" rel="external">StephenLee</a>、<a href="http://www.zhihu.com/people/hard-macro" target="_blank" rel="external">macro hard</a>、<a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a> 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 <a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a>答案中提到的 <a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。本文主要整理 <code>Cool Android APIs</code> ，对于知乎问题中不少回答者提到的一些Android开发的技巧、第三方框架之类的不作整理。</p>
 <h2 id="Content">Content</h2><ul>
 <li><h3 id="Activity-startActivities())"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]" target="_blank" rel="external">Activity.startActivities()</a>)</h3></li>
 </ul>
@@ -281,381 +278,76 @@
 <p>所谓的ITU E.161 标准的键盘就是我们常用的T9键盘。也就是这样<br><img src="/image/api02.jpg" alt=""></p>
 <p>* </p>
 </span>
-        
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
+        <div class="post-tags">
           
+            <a href="/tags/api/" rel="tag">#api</a>
           
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
             
-              <a class="post-title-link" href="/2015/07/28/InterviewQuestion/" itemprop="url">
-                [转]Android常见的问题
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-07-28T17:26:01+08:00" content="Jul 28 2015">
-            Jul 28 2015
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/28/InterviewQuestion/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/28/InterviewQuestion/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p> 原文转载自 <a href="https://github.com/leerduo/InterviewQuestion">leerduo/InterviewQuestion</a> </p>
-</blockquote>
-<hr>
-<h1 id="InterviewQuestion">InterviewQuestion</h1><p>整理的常见的问题   <a href="http://chenfuduo.me">http://chenfuduo.me</a></p>
-<p><a href="https://github.com/android-cn/android-discuss">整理来自这里</a></p>
-<p>水平有限，有错误请提出来。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/28/InterviewQuestion/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
+          <div class="post-nav-next post-nav-item">
             
-              <a class="post-title-link" href="/2015/07/22/okHttp-Volley-Gson/" itemprop="url">
-                使用okHttp、Volley、Gson快速组装HttpClinet
-              </a>
+              <a href="/2015/07/28/InterviewQuestion/" rel="next">[转]Android常见的问题</a>
             
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-07-22T14:24:33+08:00" content="Jul 22 2015">
-            Jul 22 2015
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/22/okHttp-Volley-Gson/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/22/okHttp-Volley-Gson/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>什么？你还不知道这3个货什么东西？<br>好吧，请移步这里 <a href="http://www.cnblogs.com/ct2011/p/4001708.html">OkHttp使用介绍</a> 、<a href="https://bxbxbai.github.io/2014/09/14/android-working-with-volley/">Android库Volley的使用介绍</a> 、 <a href="http://blog.csdn.net/jackie_xiaonan/article/details/14498187">GSON使用的学习笔记，入门篇</a> 。 </p>
-<h2 id="Foreword">Foreword</h2><ul>
-<li><p>这并不是一篇特别有营养的技术博客，对于相关库的使用并没有做深入的解释，因为网上有很多翔实的解析和介绍，我会给出连接。 </p>
-</li>
-<li><p>服务端返回的是是json格式的数据。使用Android Studio 1.2.2 &amp; Gradle。</p>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/22/okHttp-Volley-Gson/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
+
+    <div class="post-spread">
       
+        <div class="ds-share flat" data-thread-key="2015/08/04/cool-Android-api/"
+     data-title="Android APIs 整理（一）"
+     data-content=""
+     data-url="http://oakzmm.com/2015/08/04/cool-Android-api/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/16/live-templates/" itemprop="url">
-                常用的Android studio的live templates汇总
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-07-16T16:47:27+08:00" content="Jul 16 2015">
-            Jul 16 2015
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Android-Studio/" itemprop="url" rel="index"><span itemprop="name">Android Studio</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/16/live-templates/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/16/live-templates/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p><em>Android studio 默认的是按Tab 自动生成代码块的，用户可以自己在setting—&gt;Live Templates里面进行设置expand style</em></p>
-<h2 id="下面是一常用的Live_Templates的汇总说明">下面是一常用的Live Templates的汇总说明</h2>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/16/live-templates/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
       
     </div>
+  </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/16/hello-world/" itemprop="url">
-                Hello World
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-07-16T16:44:36+08:00" content="Jul 16 2015">
-            Jul 16 2015
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/16/hello-world/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/16/hello-world/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/16/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
 
             </div>
 
             
 
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="2015/08/04/cool-Android-api/"
+                       data-title="Android APIs 整理（一）" data-url="http://oakzmm.com/2015/08/04/cool-Android-api/">
+                  </div>
+                
+              </div>
             
         </div>
 
@@ -672,6 +364,15 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <section class="site-overview">
@@ -766,6 +467,17 @@
       </section>
 
       
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Content"><span class="nav-number">2.</span> <span class="nav-text">Content</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity-startActivities())"><span class="nav-number">2.1.</span> <span class="nav-text">Activity.startActivities())</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TextUtils-isEmpty())"><span class="nav-number">2.2.</span> <span class="nav-text">TextUtils.isEmpty())</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Html-fromHtml())"><span class="nav-number">2.3.</span> <span class="nav-text">Html.fromHtml())</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TextView-setError()"><span class="nav-number">2.4.</span> <span class="nav-text">TextView.setError()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build-VERSION_CODES"><span class="nav-number">2.5.</span> <span class="nav-text">Build.VERSION_CODES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PhoneNumberUtils-convertKeypadLettersToDigits"><span class="nav-number">2.6.</span> <span class="nav-text">PhoneNumberUtils.convertKeypadLettersToDigits</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
 
     </div>
   </aside>
@@ -814,7 +526,7 @@
   
   
   
-  
+    
 
   
     
@@ -832,8 +544,8 @@
     })();
   </script>
 
+    
   
-
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
   <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
@@ -850,6 +562,144 @@
 
 
   <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
 
 
 
@@ -884,26 +734,6 @@
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"oak"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
 
 
 
