@@ -5,7 +5,7 @@
   <subtitle><![CDATA[你信不信，我这都是瞎写的。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://oakzmm.com//"/>
-  <updated>2015-08-04T10:09:05.784Z</updated>
+  <updated>2015-08-04T10:22:30.127Z</updated>
   <id>http://oakzmm.com//</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://oakzmm.com/2015/08/04/cool-Android-api/"/>
     <id>http://oakzmm.com/2015/08/04/cool-Android-api/</id>
     <published>2015-08-04T02:21:59.000Z</published>
-    <updated>2015-08-04T10:09:05.784Z</updated>
+    <updated>2015-08-04T10:22:30.127Z</updated>
     <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> 中前排回答  <a href="http://www.zhihu.com/people/stephenlee2014" target="_blank" rel="external">StephenLee</a>、<a href="http://www.zhihu.com/people/hard-macro" target="_blank" rel="external">macro hard</a>、<a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a> 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 <a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a>答案中提到的 <a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。本文主要整理 <code>Cool Android Apis</code> ，对于知乎问题中不少回答者提到的一些Android开发的技巧、第三方框架之类的不作整理。</p>
 <h2 id="Content">Content</h2><ul>
-<li><h3 id="Activity-startActivities()_)"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]" target="_blank" rel="external">Activity.startActivities()</a> )</h3></li>
+<li><h3 id="Activity-startActivities()"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]" target="_blank" rel="external">Activity.startActivities()</a></h3></li>
 </ul>
 <p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。除了个方法最直接的理解就是使用intent开启多个Activity，在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到出了StartActivity之外更多的信息。于是我继续扒源码，果然在在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。</p>
 <p>Context，以及 <a href="http://developer.android.com/intl/zh-cn/reference/android/support/v4/content/ContextCompat.html#startActivities%28android.content.Context,%20android.content.Intent%5B%5D%29" target="_blank" rel="external">documentation of ContextCompat </a></p>
@@ -37,9 +37,9 @@
 </code></pre><p>从上面我们理解到的，<code>startActiviyies</code> 会创建一个新的Task Stack，任务栈里Activity的位置基于我们传入的Intent数组。当我们按返回键时，就会将栈顶的Activity移除。。其实这也是framework管理用户开启的activity的方式。这里结合<code>Activity</code>的启动模式来理解，就简单多了。</p>
 <p>至于应用场景，我目前能想到的就是点击通知栏来开启应用的Activities，而开启哪些Activity以及相应顺序，我们就可以用到这个方法了。</p>
 <ul>
-<li><h3 id="TextUtils-isEmpty())"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/TextUtils.html#isEmpty(java.lang.CharSequence" target="_blank" rel="external">TextUtils.isEmpty()</a>)</h3><p>这个我想应该大部分同学都应该用过，具体些的说明： 如果传入的<code>String</code> 为NULL或者Length为0的话就返回false。</p>
+<li><h3 id="TextUtils-isEmpty()"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/TextUtils.html#isEmpty(java.lang.CharSequence" target="_blank" rel="external">TextUtils.isEmpty()</a></h3><p>这个我想应该大部分同学都应该用过，具体些的说明： 如果传入的<code>String</code> 为NULL或者Length为0的话就返回false。</p>
 </li>
-<li><h3 id="Html-fromHtml())"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/Html.html#fromHtml(java.lang.String" target="_blank" rel="external">Html.fromHtml()</a>)</h3><p>如果你对<code>Html</code>熟悉的话，可以很迅速通过这个方法处理一些富文本操作。比如超链接和图文排版等处理。</p>
+<li><h3 id="Html-fromHtml()"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/Html.html#fromHtml(java.lang.String" target="_blank" rel="external">Html.fromHtml()</a></h3><p>如果你对<code>Html</code>熟悉的话，可以很迅速通过这个方法处理一些富文本操作。比如超链接和图文排版等处理。</p>
 <p>  Example:</p>
 </li>
 </ul>
