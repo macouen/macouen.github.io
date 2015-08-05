@@ -263,7 +263,9 @@
 </blockquote>
 <p>所以说严格来讲这篇文章基本不是原创，但是我对每个Tip都加入或官方文档或使用方法或效果之类的补充。整个来说算是 <strong>“把书读厚”</strong> 的过程吧。</p>
 <h2 id="Content">Content</h2><ul>
-<li><h3 id="Activity-startActivities())"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]">Activity.startActivities()</a>)</h3><p>其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。除了个方法最直接的理解就是使用intent开启多个Activity，在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到出了StartActivity之外更多的信息。于是我继续扒源码，果然在在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。</p>
+<li><h3 id="Activity-startActivities()"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]">Activity.startActivities()</a></h3></li>
+</ul>
+<p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。除了个方法最直接的理解就是使用intent开启多个Activity，在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到出了StartActivity之外更多的信息。于是我继续扒源码，果然在在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/08/04/cool-Android-api/#more" rel="contents">
               阅读全文 &raquo;
