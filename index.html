@@ -240,56 +240,12 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> 中前排回答  <a href="http://www.zhihu.com/people/stephenlee2014" target="_blank" rel="external">StephenLee</a>、<a href="http://www.zhihu.com/people/hard-macro" target="_blank" rel="external">macro hard</a>、<a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a> 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 <a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a>答案中提到的 <a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。本文主要整理 <code>Cool Android Apis</code> ，对于知乎问题中不少回答者提到的一些Android开发的技巧、第三方框架之类的不作整理。</p>
-<h2 id="Content">Content</h2><ul>
-<li><h3 id="Activity-startActivities()"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]" target="_blank" rel="external">Activity.startActivities()</a></h3></li>
-</ul>
-<p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。除了个方法最直接的理解就是使用intent开启多个Activity，在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到出了StartActivity之外更多的信息。于是我继续扒源码，果然在在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。</p>
-<p>Context，以及 <a href="http://developer.android.com/intl/zh-cn/reference/android/support/v4/content/ContextCompat.html#startActivities%28android.content.Context,%20android.content.Intent%5B%5D%29" target="_blank" rel="external">documentation of ContextCompat </a></p>
-<pre><code>* Launch multiple <span class="built_in">new</span> activities.  This is generally <span class="operator">the</span> same <span class="keyword">as</span> calling
-* {@link <span class="comment">#startActivity(Intent)} for the first Intent in the array,</span>
-* that activity during its creation calling {@link <span class="comment">#startActivity(Intent)}</span>
-* <span class="keyword">for</span> <span class="operator">the</span> <span class="keyword">second</span> entry, etc.  Note that unlike that approach, generally
-* <span class="constant">none</span> <span class="operator">of</span> <span class="operator">the</span> activities except <span class="operator">the</span> <span class="keyword">last</span> <span class="operator">in</span> <span class="operator">the</span> array will be created
-* <span class="keyword">at</span> this point, but rather will be created when <span class="operator">the</span> user <span class="keyword">first</span> visits
-* them (due <span class="built_in">to</span> pressing back <span class="built_in">from</span> <span class="operator">the</span> activity <span class="command"><span class="keyword">on</span> <span class="title">top</span>).</span>
-</code></pre><p>从上面我们理解到的，<code>startActiviyies</code> 会创建一个新的Task Stack，任务栈里Activity的位置基于我们传入的Intent数组。当我们按返回键时，就会将栈顶的Activity移除。。其实这也是framework管理用户开启的activity的方式。这里结合<code>Activity</code>的启动模式来理解，就简单多了。</p>
-<p>至于应用场景，我目前能想到的就是点击通知栏来开启应用的Activities，而开启哪些Activity以及相应顺序，我们就可以用到这个方法了。</p>
-<ul>
-<li><h3 id="TextUtils-isEmpty()"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/TextUtils.html#isEmpty(java.lang.CharSequence" target="_blank" rel="external">TextUtils.isEmpty()</a></h3><p>这个我想应该大部分同学都应该用过，具体些的说明： 如果传入的<code>String</code> 为NULL或者Length为0的话就返回false。</p>
-</li>
-<li><h3 id="Html-fromHtml()"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/Html.html#fromHtml(java.lang.String" target="_blank" rel="external">Html.fromHtml()</a></h3><p>如果你对<code>Html</code>熟悉的话，可以很迅速通过这个方法处理一些富文本操作。比如超链接和图文排版等处理。</p>
-<p>  Example:</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">linkView.setText(</span><br><span class="line">              Html.fromHtml(</span><br><span class="line">                      <span class="string">"&lt;b&gt;fromHtml:&lt;/b&gt;  \t Click "</span> +</span><br><span class="line">                              <span class="string">"&lt;a href=\"http://oakzmm.com\"&gt;here&lt;/a&gt; "</span> +</span><br><span class="line">                              <span class="string">"to visit my website "</span></span><br><span class="line">              )</span><br><span class="line">      );</span><br></pre></td></tr></table></figure>
-<ul>
-<li><h3 id="TextView-setError()"><a href="http://developer.android.com/intl/zh-cn/reference/android/widget/TextView.html#setError%28java.lang.CharSequence%29" target="_blank" rel="external">TextView.setError()</a></h3></li>
-</ul>
-<p>这个还是直接上图吧 <img src="/image/api01.jpg" alt=""></p>
-<ul>
-<li><h3 id="Build-VERSION_CODES"><a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Build.VERSION_CODES</a></h3></li>
-</ul>
-<p>有些时候我们的app需要根据不同的SDK版本进行执行不同的操作</p>
-<p>Example:<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.HONEYCOMB) &#123;</span><br><span class="line">       ActionBar actionBar = getActionBar();</span><br><span class="line">       actionBar.setDisplayHomeAsUpEnabled(<span class="keyword">true</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><h3 id="PhoneNumberUtils-convertKeypadLettersToDigits"><a href="http://developer.android.com/intl/zh-cn/reference/android/telephony/PhoneNumberUtils.html#convertKeypadLettersToDigits%28java.lang.String%29" target="_blank" rel="external">PhoneNumberUtils.convertKeypadLettersToDigits</a></h3>这个方法简单粗暴，但是我没用过。这个方法会将输入的字母根据键盘上的映射转换为数字。<blockquote>
-<p>Translates any alphabetic letters (i.e. [A-Za-z]) in the specified phone number into the equivalent numeric digits, according to the phone keypad letter mapping described in ITU E.161 and ISO/IEC 9995-8.</p>
-</blockquote>
-</li>
-</ul>
-<p>所谓的ITU E.161 标准的键盘就是我们常用的T9键盘。也就是这样<br><img src="/image/api02.jpg" alt=""></p>
-<ul>
-<li><h3 id="ArgbEvaluator"><a href="http://developer.android.com/intl/zh-cn/reference/android/animation/ArgbEvaluator.html" target="_blank" rel="external">ArgbEvaluator</a></h3>!!重点这个方法简直不要太吊。。<br><code>ArgbEvaluator.evaluate(float fraction, Object startValue, Object endValue);</code>根据一个起始颜色值和一个结束颜色值以及一个偏移量生成一个新的颜色，分分钟实现类似于微信底部栏滑动颜色渐变。</li>
-</ul>
-<hr>
-<p>待续。</p>
-<h2 id="声明">声明</h2><ol>
-<li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件macouen@gmail.com说明。 </li>
-<li>欢迎转载，但请注明文章原始出处。 </li>
-</ol>
-<p>作者：Oak_Zmm<br>出处：<a href="http://oakzmm.com/" target="_blank" rel="external">http://oakzmm.com/</a></p>
-</span>
+          <h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> 中前排回答  <a href="http://www.zhihu.com/people/stephenlee2014">StephenLee</a>、<a href="http://www.zhihu.com/people/hard-macro">macro hard</a>、<a href="http://www.zhihu.com/people/rocko">Rocko</a> 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 <a href="http://www.zhihu.com/people/rocko">Rocko</a>答案中提到的 <a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/">Android Tips Round-Up</a> 系列文章。本文主要整理 <code>Cool Android Apis</code> ，对于知乎问题中不少回答者提到的一些Android开发的技巧、第三方框架之类的不作整理。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/08/04/cool-Android-api/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

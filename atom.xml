@@ -5,7 +5,7 @@
   <subtitle><![CDATA[你信不信，我这都是瞎写的。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://oakzmm.com//"/>
-  <updated>2015-08-04T10:22:30.127Z</updated>
+  <updated>2015-08-05T01:18:21.183Z</updated>
   <id>http://oakzmm.com//</id>
   
   <author>
@@ -20,8 +20,8 @@
     <link href="http://oakzmm.com/2015/08/04/cool-Android-api/"/>
     <id>http://oakzmm.com/2015/08/04/cool-Android-api/</id>
     <published>2015-08-04T02:21:59.000Z</published>
-    <updated>2015-08-04T10:22:30.127Z</updated>
-    <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> 中前排回答  <a href="http://www.zhihu.com/people/stephenlee2014" target="_blank" rel="external">StephenLee</a>、<a href="http://www.zhihu.com/people/hard-macro" target="_blank" rel="external">macro hard</a>、<a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a> 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 <a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a>答案中提到的 <a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。本文主要整理 <code>Cool Android Apis</code> ，对于知乎问题中不少回答者提到的一些Android开发的技巧、第三方框架之类的不作整理。</p>
+    <updated>2015-08-05T01:18:21.183Z</updated>
+    <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> 中前排回答  <a href="http://www.zhihu.com/people/stephenlee2014" target="_blank" rel="external">StephenLee</a>、<a href="http://www.zhihu.com/people/hard-macro" target="_blank" rel="external">macro hard</a>、<a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a> 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 <a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a>答案中提到的 <a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。本文主要整理 <code>Cool Android Apis</code> ，对于知乎问题中不少回答者提到的一些Android开发的技巧、第三方框架之类的不作整理。<br><a id="more"></a></p>
 <h2 id="Content">Content</h2><ul>
 <li><h3 id="Activity-startActivities()"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]" target="_blank" rel="external">Activity.startActivities()</a></h3></li>
 </ul>
@@ -72,7 +72,8 @@
 <p>作者：Oak_Zmm<br>出处：<a href="http://oakzmm.com/" target="_blank" rel="external">http://oakzmm.com/</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开]]>
+    <![CDATA[<h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> 中前排回答  <a href="http://www.zhihu.com/people/stephenlee2014">StephenLee</a>、<a href="http://www.zhihu.com/people/hard-macro">macro hard</a>、<a href="http://www.zhihu.com/people/rocko">Rocko</a> 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 <a href="http://www.zhihu.com/people/rocko">Rocko</a>答案中提到的 <a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/">Android Tips Round-Up</a> 系列文章。本文主要整理 <code>Cool Android Apis</code> ，对于知乎问题中不少回答者提到的一些Android开发的技巧、第三方框架之类的不作整理。<br>]]>
+    
     </summary>
     
       <category term="api" scheme="http://oakzmm.com/tags/api/"/>
