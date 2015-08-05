@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="api," />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -41,17 +41,47 @@
   <link rel="shorticon icon" type="image/x-icon" href="/oak.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Foreword首先，整理这些知识点来自于知乎问题：Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？ 中前排回答  StephenLee、macro hard、Rocko 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 Rocko答案中提到的 Android Tips Round-Up 系列文章。本文主要整理 Cool Android Apis ，对于知乎问题中不少回答者">
+<meta name="description" content="Foreword本文主要整理 Cool Android Apis。
+
+整理来源 
+
+Dan Lew 的Android Tips Round-Up 系列文章。尤其感谢 Gracker 对上面系列文章的 翻译和部分解释。
+
+知乎问题：Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？ 
+
+
+
+所以说严格来讲这篇文章基本不是原创，但是我对每个Tip都加入或官方文档或使用方法或效果之类的补充。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Apis 整理（一）">
+<meta property="og:title" content="Cool Android Apis 整理">
 <meta property="og:url" content="http://oakzmm.com/2015/08/04/cool-Android-api/index.html">
 <meta property="og:site_name" content="Oak_Zmm的技术博客">
-<meta property="og:description" content="Foreword首先，整理这些知识点来自于知乎问题：Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？ 中前排回答  StephenLee、macro hard、Rocko 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 Rocko答案中提到的 Android Tips Round-Up 系列文章。本文主要整理 Cool Android Apis ，对于知乎问题中不少回答者">
+<meta property="og:description" content="Foreword本文主要整理 Cool Android Apis。
+
+整理来源 
+
+Dan Lew 的Android Tips Round-Up 系列文章。尤其感谢 Gracker 对上面系列文章的 翻译和部分解释。
+
+知乎问题：Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？ 
+
+
+
+所以说严格来讲这篇文章基本不是原创，但是我对每个Tip都加入或官方文档或使用方法或效果之类的补充。">
 <meta property="og:image" content="/image/api01.jpg">
 <meta property="og:image" content="/image/api02.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Apis 整理（一）">
-<meta name="twitter:description" content="Foreword首先，整理这些知识点来自于知乎问题：Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？ 中前排回答  StephenLee、macro hard、Rocko 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 Rocko答案中提到的 Android Tips Round-Up 系列文章。本文主要整理 Cool Android Apis ，对于知乎问题中不少回答者">
+<meta name="twitter:title" content="Cool Android Apis 整理">
+<meta name="twitter:description" content="Foreword本文主要整理 Cool Android Apis。
+
+整理来源 
+
+Dan Lew 的Android Tips Round-Up 系列文章。尤其感谢 Gracker 对上面系列文章的 翻译和部分解释。
+
+知乎问题：Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？ 
+
+
+
+所以说严格来讲这篇文章基本不是原创，但是我对每个Tip都加入或官方文档或使用方法或效果之类的补充。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +91,7 @@
   };
 </script>
 
-  <title> Android Apis 整理（一） | Oak_Zmm的技术博客 </title>
+  <title> Cool Android Apis 整理 | Oak_Zmm的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -198,7 +228,7 @@
           
           
             
-              Android Apis 整理（一）
+              Cool Android Apis 整理
             
           
         </h1>
@@ -248,12 +278,21 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="Foreword">Foreword</h2><p>首先，整理这些知识点来自于知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> 中前排回答  <a href="http://www.zhihu.com/people/stephenlee2014" target="_blank" rel="external">StephenLee</a>、<a href="http://www.zhihu.com/people/hard-macro" target="_blank" rel="external">macro hard</a>、<a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a> 以及其他部分回答者的答案（见谅不能一一注明）。主要的来源是 <a href="http://www.zhihu.com/people/rocko" target="_blank" rel="external">Rocko</a>答案中提到的 <a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。本文主要整理 <code>Cool Android Apis</code> ，对于知乎问题中不少回答者提到的一些Android开发的技巧、第三方框架之类的不作整理。<br><a id="more"></a></p>
+        <span itemprop="articleBody"><h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。</p>
+<blockquote>
+<p>整理来源 </p>
+<ul>
+<li><p><code>Dan Lew</code> 的<a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。<br>尤其感谢 <a href="http://www.jianshu.com/users/FK4sc4/latest_articles" target="_blank" rel="external">Gracker</a> 对上面系列文章的 <a href="http://www.jianshu.com/notebooks/571559/latest" target="_blank" rel="external">翻译和部分解释</a>。</p>
+</li>
+<li><p>知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> </p>
+</li>
+</ul>
+</blockquote>
+<p>所以说严格来讲这篇文章基本不是原创，但是我对每个Tip都加入或官方文档或使用方法或效果之类的补充。整个来说算是 <strong>“把书读厚”</strong> 的过程吧。</p>
 <h2 id="Content">Content</h2><ul>
 <li><h3 id="Activity-startActivities()"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]" target="_blank" rel="external">Activity.startActivities()</a></h3></li>
 </ul>
-<p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。除了个方法最直接的理解就是使用intent开启多个Activity，在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到出了StartActivity之外更多的信息。于是我继续扒源码，果然在在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。</p>
-<p>Context，以及 <a href="http://developer.android.com/intl/zh-cn/reference/android/support/v4/content/ContextCompat.html#startActivities%28android.content.Context,%20android.content.Intent%5B%5D%29" target="_blank" rel="external">documentation of ContextCompat </a></p>
+<p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。除了个方法最直接的理解就是使用intent开启多个Activity，在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到出了StartActivity之外更多的信息。于是我继续扒源码，果然在在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。<br><a id="more"></a><br>Context，以及 <a href="http://developer.android.com/intl/zh-cn/reference/android/support/v4/content/ContextCompat.html#startActivities%28android.content.Context,%20android.content.Intent%5B%5D%29" target="_blank" rel="external">documentation of ContextCompat </a></p>
 <pre><code>* Launch multiple <span class="built_in">new</span> activities.  This is generally <span class="operator">the</span> same <span class="keyword">as</span> calling
 * {@link <span class="comment">#startActivity(Intent)} for the first Intent in the array,</span>
 * that activity during its creation calling {@link <span class="comment">#startActivity(Intent)}</span>
@@ -276,6 +315,16 @@
 </ul>
 <p>这个还是直接上图吧 <img src="/image/api01.jpg" alt=""></p>
 <ul>
+<li><h3 id="View-isShown())"><a href="http://developer.android.com/intl/zh-cn/reference/android/view/View.html#isShown(" target="_blank" rel="external">View.isShown()</a>)</h3><p>有不少人在知乎提到这个知识点，说是可以代替 <code>view.getVisibility() == View.VISIBLE</code> 这样的判断。<br>但是，但是，我做了下测试：</p>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">editText = (EditText) findViewById(R.id.text);</span><br><span class="line">   System.out.println(<span class="string">"------------------"</span> + editText.isShown());</span><br><span class="line">   System.out.println(<span class="string">"------------------"</span> + (editText.getVisibility() == View.VISIBLE));</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>log：<br>    <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="number">08</span>-<span class="number">05</span> <span class="number">16</span>:<span class="number">47</span>:<span class="number">29.822</span>  <span class="number">12720</span>-<span class="number">12720</span>/com<span class="class">.macouen</span><span class="class">.testdemo</span> I/System.out﹕ ------------------false</span><br><span class="line"><span class="number">08</span>-<span class="number">05</span> <span class="number">16</span>:<span class="number">47</span>:<span class="number">29.822</span>  <span class="number">12720</span>-<span class="number">12720</span>/com<span class="class">.macouen</span><span class="class">.testdemo</span> I/System.out﹕ ------------------true</span><br></pre></td></tr></table></figure></p>
+<p>然而<a href="http://developer.android.com/intl/zh-cn/reference/android/view/View.html#isShown(" target="_blank" rel="external">Google文档</a>)：</p>
+<pre><code><span class="comment"><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isShown</span> <span class="params">()</span>                  Added in API level 1</span><br><span class="line"></span><br><span class="line">Returns the visibility of <span class="keyword">this</span> view and all of its ancestors</span><br><span class="line"></span><br><span class="line">Returns</span><br><span class="line">True <span class="keyword">if</span> <span class="keyword">this</span> view and all of its ancestors are VISIBLE</span></span><br></pre></td></tr></table></figure></span>
+
+摔！老老实实用 `view.getVisibility() == View.VISIBLE` 吧。
+</code></pre><ul>
 <li><h3 id="Build-VERSION_CODES"><a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Build.VERSION_CODES</a></h3></li>
 </ul>
 <p>有些时候我们的app需要根据不同的SDK版本进行执行不同的操作</p>
@@ -288,12 +337,38 @@
 </ul>
 <p>所谓的ITU E.161 标准的键盘就是我们常用的T9键盘。也就是这样<br><img src="/image/api02.jpg" alt=""></p>
 <ul>
-<li><h3 id="ArgbEvaluator"><a href="http://developer.android.com/intl/zh-cn/reference/android/animation/ArgbEvaluator.html" target="_blank" rel="external">ArgbEvaluator</a></h3>!!重点这个方法简直不要太吊。。<br><code>ArgbEvaluator.evaluate(float fraction, Object startValue, Object endValue);</code>根据一个起始颜色值和一个结束颜色值以及一个偏移量生成一个新的颜色，分分钟实现类似于微信底部栏滑动颜色渐变。</li>
+<li><h3 id="ArgbEvaluator"><a href="http://developer.android.com/intl/zh-cn/reference/android/animation/ArgbEvaluator.html" target="_blank" rel="external">ArgbEvaluator</a></h3><p>!!重点这个方法简直不要太吊。。<br><code>ArgbEvaluator.evaluate(float fraction, Object startValue, Object endValue);</code>根据一个起始颜色值和一个结束颜色值以及一个偏移量生成一个新的颜色，分分钟实现类似于微信底部栏滑动颜色渐变。<br>这里提供另一个颜色渐变的版本 </p>
+<blockquote>
+<p>From Google Sample <a href="https://developer.android.com/intl/zh-cn/samples/SlidingTabsColors/src/com.example.android.common/view/SlidingTabStrip.html" target="_blank" rel="external">SlidingTabsColors</a>下的 <code>SlidingTabStrip.java</code></p>
+</blockquote>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="javadoc">/**</span><br><span class="line">    * Blend &#123;@code color1&#125; and &#123;@code color2&#125; using the given ratio.</span><br><span class="line">    *</span><br><span class="line">    *<span class="javadoctag"> @param</span> ratio of which to blend. 1.0 will return &#123;@code color1&#125;, 0.5 will give an even blend,</span><br><span class="line">    *              0.0 will return &#123;@code color2&#125;.</span><br><span class="line">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">blendColors</span><span class="params">(<span class="keyword">int</span> color1, <span class="keyword">int</span> color2, <span class="keyword">float</span> ratio)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">final</span> <span class="keyword">float</span> inverseRation = <span class="number">1f</span> - ratio;</span><br><span class="line">       <span class="keyword">float</span> r = (Color.red(color1) * ratio) + (Color.red(color2) * inverseRation);</span><br><span class="line">       <span class="keyword">float</span> g = (Color.green(color1) * ratio) + (Color.green(color2) * inverseRation);</span><br><span class="line">       <span class="keyword">float</span> b = (Color.blue(color1) * ratio) + (Color.blue(color2) * inverseRation);</span><br><span class="line">       <span class="keyword">return</span> Color.rgb((<span class="keyword">int</span>) r, (<span class="keyword">int</span>) g, (<span class="keyword">int</span>) b);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>PS：这里说到ARGB，简单的提一下关于Alpha的问题 (和这个Tip并没有联系)。在Google I/O 2013大会上 <code>Romain Guy</code> 在<code>Android Graphics Performance</code> 这部分提到了 <code>use alpha with care</code> 。具体的可以参考：</p>
+<blockquote>
+<ul>
+<li><a href="http://www.curious-creature.com/2015/03/25/android-performance-case-study-follow-up/?utm_source=Android+Weekly&amp;utm_campaign=0692ef161b-Android_Weekly_146&amp;utm_medium=email&amp;utm_term=0_4eb677ad19-0692ef161b-337850757" target="_blank" rel="external">Android Performance Case Study Follow-up</a></li>
+<li><a href="http://www.stormzhang.com/android/2014/03/16/best-practices-for-using-alpha/" target="_blank" rel="external">Best Practices for Using Alpha</a></li>
+</ul>
+</blockquote>
+<ul>
+<li><h3 id="Space"><a href="http://developer.android.com/intl/zh-cn/reference/android/widget/Space.html" target="_blank" rel="external">Space</a></h3><blockquote>
+<p><strong>Added in API level 14</strong></p>
+<p>Space is a lightweight View subclass that may be used to create gaps between components in general purpose layouts.</p>
+</blockquote>
+<p>  最棒的一点是Space可以跳过 <code>Draw</code> 这个过程。</p>
+</li>
+<li><h3 id="ValueAnimator-reverse()"><a href="http://developer.android.com/intl/zh-cn/reference/android/animation/ValueAnimator.html#reverse%28%29" target="_blank" rel="external">ValueAnimator.reverse()</a></h3><p>之前见不少人提过这个方法，都是说可以顺畅的取消动画效果。文档中是这样说的。</p>
+<blockquote>
+<p>Plays the ValueAnimator in reverse. If the animation is already running, it will stop itself and play backwards from the point reached when reverse was called. If the animation is not currently running, then it will start from the end and play backwards. This behavior is only set for the current animation; future playing of the animation will use the default behavior of playing forward.</p>
+</blockquote>
+<p>  也就是说这个方法其实是反转动画，如果动画正在播放，这个方法停止动画，并从当前点往回播。如果动画已经播放完毕那就反过来一遍。那么也就是说 “顺畅的取消动画效果” ，是动画还在播放的是时候来调用 <code>reverse</code> 这个方法。</p>
+</li>
 </ul>
 <hr>
 <p>待续。</p>
 <h2 id="声明">声明</h2><ol>
-<li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件macouen@gmail.com说明。 </li>
+<li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件<code>macouen@gmail.com</code>说明。 </li>
 <li>欢迎转载，但请注明文章原始出处。 </li>
 </ol>
 <p>作者：Oak_Zmm<br>出处：<a href="http://oakzmm.com/" target="_blank" rel="external">http://oakzmm.com/</a></p>
@@ -305,7 +380,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/api/" rel="tag">#api</a>
+            <a href="/tags/Android/" rel="tag">#Android</a>
           
         </div>
       
@@ -334,7 +409,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2015/08/04/cool-Android-api/"
-     data-title="Android Apis 整理（一）"
+     data-title="Cool Android Apis 整理"
      data-content=""
      data-url="http://oakzmm.com/2015/08/04/cool-Android-api/">
   <div class="ds-share-inline">
@@ -367,7 +442,7 @@
           <div class="comments" id="comments">
             
               <div class="ds-thread" data-thread-key="2015/08/04/cool-Android-api/"
-                   data-title="Android Apis 整理（一）" data-url="http://oakzmm.com/2015/08/04/cool-Android-api/">
+                   data-title="Cool Android Apis 整理" data-url="http://oakzmm.com/2015/08/04/cool-Android-api/">
               </div>
             
           </div>
@@ -421,7 +496,7 @@
 
           <div class="site-state-item site-state-tags">
             
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               
           </div>
@@ -495,7 +570,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Content"><span class="nav-number">2.</span> <span class="nav-text">Content</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity-startActivities()"><span class="nav-number">2.1.</span> <span class="nav-text">Activity.startActivities()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TextUtils-isEmpty()"><span class="nav-number">2.2.</span> <span class="nav-text">TextUtils.isEmpty()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Html-fromHtml()"><span class="nav-number">2.3.</span> <span class="nav-text">Html.fromHtml()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TextView-setError()"><span class="nav-number">2.4.</span> <span class="nav-text">TextView.setError()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build-VERSION_CODES"><span class="nav-number">2.5.</span> <span class="nav-text">Build.VERSION_CODES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PhoneNumberUtils-convertKeypadLettersToDigits"><span class="nav-number">2.6.</span> <span class="nav-text">PhoneNumberUtils.convertKeypadLettersToDigits</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArgbEvaluator"><span class="nav-number">2.7.</span> <span class="nav-text">ArgbEvaluator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">3.</span> <span class="nav-text">声明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Content"><span class="nav-number">2.</span> <span class="nav-text">Content</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity-startActivities()"><span class="nav-number">2.1.</span> <span class="nav-text">Activity.startActivities()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TextUtils-isEmpty()"><span class="nav-number">2.2.</span> <span class="nav-text">TextUtils.isEmpty()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Html-fromHtml()"><span class="nav-number">2.3.</span> <span class="nav-text">Html.fromHtml()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TextView-setError()"><span class="nav-number">2.4.</span> <span class="nav-text">TextView.setError()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#View-isShown())"><span class="nav-number">2.5.</span> <span class="nav-text">View.isShown())</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build-VERSION_CODES"><span class="nav-number">2.6.</span> <span class="nav-text">Build.VERSION_CODES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PhoneNumberUtils-convertKeypadLettersToDigits"><span class="nav-number">2.7.</span> <span class="nav-text">PhoneNumberUtils.convertKeypadLettersToDigits</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArgbEvaluator"><span class="nav-number">2.8.</span> <span class="nav-text">ArgbEvaluator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Space"><span class="nav-number">2.9.</span> <span class="nav-text">Space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ValueAnimator-reverse()"><span class="nav-number">2.10.</span> <span class="nav-text">ValueAnimator.reverse()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">3.</span> <span class="nav-text">声明</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
