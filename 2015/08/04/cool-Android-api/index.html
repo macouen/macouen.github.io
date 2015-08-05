@@ -358,14 +358,13 @@ Dan Lew 的Android Tips Round-Up 系列文章。尤其感谢 Gracker 对上面�
 </blockquote>
 <p>  最棒的一点是Space可以跳过 <code>Draw</code> 这个过程。</p>
 </li>
-<li><h3 id="ValueAnimator-reverse()"><a href="http://developer.android.com/intl/zh-cn/reference/android/animation/ValueAnimator.html#reverse%28%29" target="_blank" rel="external">ValueAnimator.reverse()</a></h3><p>之前见不少人提过这个方法，都是说可以顺畅的取消动画效果。文档中是这样说的。</p>
+</ul>
+<h3 id="ValueAnimator-reverse()"><a href="http://developer.android.com/intl/zh-cn/reference/android/animation/ValueAnimator.html#reverse%28%29" target="_blank" rel="external">ValueAnimator.reverse()</a></h3><p>之前见不少人提过这个方法，都是说可以顺畅的取消动画效果。文档中是这样说的。</p>
 <blockquote>
 <p>Plays the ValueAnimator in reverse. If the animation is already running, it will stop itself and play backwards from the point reached when reverse was called. If the animation is not currently running, then it will start from the end and play backwards. This behavior is only set for the current animation; future playing of the animation will use the default behavior of playing forward.</p>
 </blockquote>
-<p>  也就是说这个方法其实是反转动画，如果动画正在播放，这个方法停止动画，并从当前点往回播。如果动画已经播放完毕那就反过来一遍。那么也就是说 “顺畅的取消动画效果” ，是动画还在播放的是时候来调用 <code>reverse</code> 这个方法。</p>
-</li>
-</ul>
-<hr>
+<pre><code>也就是说这个方法其实是反转动画，如果动画正在播放，这个方法停止动画，并从当前点往回播。如果动画已经播放完毕那就反过来一遍。那么也就是说 “顺畅的取消动画效果” ，是动画还在播放的是时候来调用 <span class="escape">`r</span>everse<span class="escape">` </span>这个方法。
+</code></pre><hr>
 <p>待续。</p>
 <h2 id="声明">声明</h2><ol>
 <li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件<code>macouen@gmail.com</code>说明。 </li>
