@@ -5,7 +5,7 @@
   <subtitle><![CDATA[你信不信，我这都是瞎写的。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://oakzmm.com//"/>
-  <updated>2015-08-05T10:23:01.264Z</updated>
+  <updated>2015-08-05T10:28:00.544Z</updated>
   <id>http://oakzmm.com//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://oakzmm.com/2015/08/04/cool-Android-api/"/>
     <id>http://oakzmm.com/2015/08/04/cool-Android-api/</id>
     <published>2015-08-04T02:21:59.000Z</published>
-    <updated>2015-08-05T10:23:01.264Z</updated>
+    <updated>2015-08-05T10:28:00.544Z</updated>
     <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。</p>
 <blockquote>
 <p>整理来源 </p>
@@ -66,10 +66,9 @@
 <pre><code><span class="comment"><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">editText = (EditText) findViewById(R.id.text);</span><br><span class="line">   System.out.println(<span class="string">"------------------"</span> + editText.isShown());</span><br><span class="line">   System.out.println(<span class="string">"------------------"</span> + (editText.getVisibility() == View.VISIBLE));</span><br></pre></td></tr></table></figure></span>
 </code></pre><p>log：<br>    <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="number">08</span>-<span class="number">05</span> <span class="number">16</span>:<span class="number">47</span>:<span class="number">29.822</span>  <span class="number">12720</span>-<span class="number">12720</span>/com<span class="class">.macouen</span><span class="class">.testdemo</span> I/System.out﹕ ------------------false</span><br><span class="line"><span class="number">08</span>-<span class="number">05</span> <span class="number">16</span>:<span class="number">47</span>:<span class="number">29.822</span>  <span class="number">12720</span>-<span class="number">12720</span>/com<span class="class">.macouen</span><span class="class">.testdemo</span> I/System.out﹕ ------------------true</span><br></pre></td></tr></table></figure></p>
 <p>然而<a href="http://developer.android.com/intl/zh-cn/reference/android/view/View.html#isShown(" target="_blank" rel="external">Google文档</a>)：</p>
-<pre><code><span class="comment"><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isShown</span> <span class="params">()</span>                  Added in API level 1</span><br><span class="line"></span><br><span class="line">Returns the visibility of <span class="keyword">this</span> view and all of its ancestors</span><br><span class="line"></span><br><span class="line">Returns</span><br><span class="line">True <span class="keyword">if</span> <span class="keyword">this</span> view and all of its ancestors are VISIBLE</span></span><br></pre></td></tr></table></figure></span>
-
-摔！老老实实用 `view.getVisibility() == View.VISIBLE` 吧。
-</code></pre><ul>
+<pre><code><span class="comment"><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isShown</span> <span class="params">()</span>                  Added in API level 1</span><br><span class="line">Returns the visibility of <span class="keyword">this</span> view and all of its ancestors</span><br><span class="line">Returns</span><br><span class="line">True <span class="keyword">if</span> <span class="keyword">this</span> view and all of its ancestors are VISIBLE</span></span><br></pre></td></tr></table></figure></span>
+</code></pre><p>摔！老老实实用 <code>view.getVisibility() == View.VISIBLE</code> 吧。</p>
+<ul>
 <li><h3 id="Build-VERSION_CODES"><a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Build.VERSION_CODES</a></h3></li>
 </ul>
 <p>有些时候我们的app需要根据不同的SDK版本进行执行不同的操作</p>
