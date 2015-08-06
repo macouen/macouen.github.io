@@ -5,7 +5,7 @@
   <subtitle><![CDATA[你信不信，我这都是瞎写的。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://oakzmm.com//"/>
-  <updated>2015-08-06T02:38:00.938Z</updated>
+  <updated>2015-08-06T07:42:02.732Z</updated>
   <id>http://oakzmm.com//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://oakzmm.com/2015/08/04/cool-Android-api/"/>
     <id>http://oakzmm.com/2015/08/04/cool-Android-api/</id>
     <published>2015-08-04T02:21:59.000Z</published>
-    <updated>2015-08-06T02:38:00.938Z</updated>
+    <updated>2015-08-06T07:42:02.732Z</updated>
     <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。</p>
 <blockquote>
 <p>整理来源 </p>
@@ -35,7 +35,7 @@
 <h2 id="Content">Content</h2><ul>
 <li><h3 id="Activity-startActivities()"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]" target="_blank" rel="external">Activity.startActivities()</a></h3></li>
 </ul>
-<p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。除了个方法最直接的理解就是使用intent开启多个Activity，在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到出了StartActivity之外更多的信息。于是我继续扒源码，果然在在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。<br><a id="more"></a><br>Context，以及 <a href="http://developer.android.com/intl/zh-cn/reference/android/support/v4/content/ContextCompat.html#startActivities%28android.content.Context,%20android.content.Intent%5B%5D%29" target="_blank" rel="external">documentation of ContextCompat </a></p>
+<p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。这个方法最直接的理解就是使用intent开启多个Activity，我在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到除了StartActivity之外更多的信息。于是我继续扒源码，果然在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。<br><a id="more"></a><br>Context，以及 <a href="http://developer.android.com/intl/zh-cn/reference/android/support/v4/content/ContextCompat.html#startActivities%28android.content.Context,%20android.content.Intent%5B%5D%29" target="_blank" rel="external">documentation of ContextCompat </a></p>
 <pre><code>* Launch multiple <span class="built_in">new</span> activities.  This is generally <span class="operator">the</span> same <span class="keyword">as</span> calling
 * {@link <span class="comment">#startActivity(Intent)} for the first Intent in the array,</span>
 * that activity during its creation calling {@link <span class="comment">#startActivity(Intent)}</span>
@@ -43,7 +43,7 @@
 * <span class="constant">none</span> <span class="operator">of</span> <span class="operator">the</span> activities except <span class="operator">the</span> <span class="keyword">last</span> <span class="operator">in</span> <span class="operator">the</span> array will be created
 * <span class="keyword">at</span> this point, but rather will be created when <span class="operator">the</span> user <span class="keyword">first</span> visits
 * them (due <span class="built_in">to</span> pressing back <span class="built_in">from</span> <span class="operator">the</span> activity <span class="command"><span class="keyword">on</span> <span class="title">top</span>).</span>
-</code></pre><p>从上面我们理解到的，<code>startActiviyies</code> 会创建一个新的Task Stack，任务栈里Activity的位置基于我们传入的Intent数组。当我们按返回键时，就会将栈顶的Activity移除。。其实这也是framework管理用户开启的activity的方式。这里结合<code>Activity</code>的启动模式来理解，就简单多了。</p>
+</code></pre><p>从上面两处文档解释我们可以理解到的，<code>startActiviyies</code> 会创建一个新的Task Stack，任务栈里Activity的位置基于我们传入的Intent数组。当我们按返回键时，就会将栈顶的Activity移除。。其实这也是framework管理用户开启的activity的方式。这里结合<code>Activity</code>的启动模式来理解，就简单多了。</p>
 <p>至于应用场景，我目前能想到的就是点击通知栏来开启应用的Activities，而开启哪些Activity以及相应顺序，我们就可以用到这个方法了。</p>
 <ul>
 <li><h3 id="TextUtils-isEmpty()"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/TextUtils.html#isEmpty(java.lang.CharSequence" target="_blank" rel="external">TextUtils.isEmpty()</a></h3></li>
@@ -135,7 +135,7 @@
 <h2 id="Content">Content</h2><ul>
 <li><h3 id="Activity-startActivities()"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]">Activity.startActivities()</a></h3></li>
 </ul>
-<p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。除了个方法最直接的理解就是使用intent开启多个Activity，在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到出了StartActivity之外更多的信息。于是我继续扒源码，果然在在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。<br>]]>
+<p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。这个方法最直接的理解就是使用intent开启多个Activity，我在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到除了StartActivity之外更多的信息。于是我继续扒源码，果然在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。<br>]]>
     
     </summary>
     
