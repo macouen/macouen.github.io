@@ -1,0 +1,947 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+  <meta name="google-site-verification" content="7wEQlgTnbMQH0szfXBpWJ241oRPTiUASFH6lxEfDZLw" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+    <meta name="description" content="oak's blog | java | android |" />
+
+
+
+  <meta name="keywords" content="Android," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Oak_Zmm的技术博客" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/oak.ico?v=0.4.4" />
+
+
+<meta name="description" content="Foreword本文主要整理 Cool Android Apis。这是这个系列的第二篇，第一篇 Cool Android Apis 整理（一）。
+多说几句：原本的想法是目前整理的知识点多分几篇来梳理，篇幅短些，这样大家看起来不累。但是也有弊端，就是不利于知识的整理。所以我对这些TIPS做了简单的筛选分类整理，在保证可读性的前提下，尽量的不割裂知识点间的联系。接下来会用两篇来总结完，请大家持续关注。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cool Android Apis 整理（二）">
+<meta property="og:url" content="http://oakzmm.com/2015/08/11/cool-Android-api-2/index.html">
+<meta property="og:site_name" content="Oak_Zmm的技术博客">
+<meta property="og:description" content="Foreword本文主要整理 Cool Android Apis。这是这个系列的第二篇，第一篇 Cool Android Apis 整理（一）。
+多说几句：原本的想法是目前整理的知识点多分几篇来梳理，篇幅短些，这样大家看起来不累。但是也有弊端，就是不利于知识的整理。所以我对这些TIPS做了简单的筛选分类整理，在保证可读性的前提下，尽量的不割裂知识点间的联系。接下来会用两篇来总结完，请大家持续关注。">
+<meta property="og:image" content="/image/api03.jpg">
+<meta property="og:image" content="/image/api04.gif">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cool Android Apis 整理（二）">
+<meta name="twitter:description" content="Foreword本文主要整理 Cool Android Apis。这是这个系列的第二篇，第一篇 Cool Android Apis 整理（一）。
+多说几句：原本的想法是目前整理的知识点多分几篇来梳理，篇幅短些，这样大家看起来不累。但是也有弊端，就是不利于知识的整理。所以我对这些TIPS做了简单的筛选分类整理，在保证可读性的前提下，尽量的不割裂知识点间的联系。接下来会用两篇来总结完，请大家持续关注。">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title> Cool Android Apis 整理（二） // Oak_Zmm的技术博客 </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-65214557-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Oak_Zmm的技术博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'LYep3yGa4a2n65zPtkj9','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Cool Android Apis 整理（二）
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-08-11T12:27:45+08:00" content="Aug 11 2015">
+            Aug 11 2015
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/08/11/cool-Android-api-2/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/11/cool-Android-api-2/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。<br>这是这个系列的第二篇，第一篇 <a href="http://oakzmm.com/2015/08/04/cool-Android-api/" target="_blank" rel="external">Cool Android Apis 整理（一）</a>。</p>
+<p><strong>多说几句：<br>原本的想法是目前整理的知识点多分几篇来梳理，篇幅短些，这样大家看起来不累。但是也有弊端，就是不利于知识的整理。所以我对这些<code>TIPS</code>做了简单的筛选分类整理，在保证可读性的前提下，尽量的不割裂知识点间的联系。接下来会用两篇来总结完，请大家持续关注。如果有好的<code>tip</code>可以推荐给我。</strong></p>
+<blockquote>
+<p>整理来源 </p>
+<ul>
+<li><p><code>Dan Lew</code> 的<a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。<br>尤其感谢 <a href="http://www.jianshu.com/users/FK4sc4/latest_articles" target="_blank" rel="external">Gracker</a> 对上面系列文章的 <a href="http://www.jianshu.com/notebooks/571559/latest" target="_blank" rel="external">翻译和部分解释</a>。</p>
+</li>
+<li><p>知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> </p>
+</li>
+</ul>
+</blockquote>
+<p>所以说严格来讲这篇文章基本不是原创，但是我对每个Tip都加入或官方文档或使用方法或效果之类的补充。整个来说算是 <strong>“把书读厚”</strong> 的过程吧。<br><a id="more"></a>  </p>
+<h2 id="Content">Content</h2><ul>
+<li><h3 id="DateUtils-formatDateTime())"><del><a href="http://developer.android.com/intl/zh-cn/reference/android/text/format/DateUtils.html#formatDateTime(android.content.Context, long, int" target="_blank" rel="external">DateUtils.formatDateTime()</a>)</del></h3></li>
+</ul>
+<p>这个方法可以输出相应格式化的时间或者日期。这个方法提供足够多的格式化的形式，并且有一点:</p>
+<blockquote>
+<p>date formats in these examples are shown using the US date format convention but that may change depending on the local settings</p>
+</blockquote>
+<p>也就是这个输出的格式化的时间格式会根据本地语言设置来处理，但是中文的可能处理的并不能尽如人意，并不能像英文那样有很丰富的显示格式。 这里给大家看一些简单格式。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">FORMAT_ABBREV_ALL</td>
+<td style="text-align:center">8月10日</td>
+</tr>
+<tr>
+<td style="text-align:left">FORMAT_SHOW_TIME:</td>
+<td style="text-align:center">下午10:19</td>
+</tr>
+<tr>
+<td style="text-align:left">FORMAT_SHOW_DATE:</td>
+<td style="text-align:center">8月10日</td>
+</tr>
+<tr>
+<td style="text-align:left">FORMAT_SHOW_YEAR:</td>
+<td style="text-align:center">2015年8月10日</td>
+</tr>
+<tr>
+<td style="text-align:left">FORMAT_SHOW_WEEKDAY:</td>
+<td style="text-align:center">星期一</td>
+</tr>
+<tr>
+<td style="text-align:left">FORMAT_NUMERIC_DATE:</td>
+<td style="text-align:center">8/10</td>
+</tr>
+</tbody>
+</table>
+<p>但是我在看文档的过程中，很多格式在Google的文档中都提示过时了。并且推荐我们使用 <a href="http://developer.android.com/intl/zh-cn/reference/java/text/SimpleDateFormat.html" target="_blank" rel="external">SimpleDateFormat</a><br>这个类大家应该用的比较多，而且使用更方便。我个人也比较推荐大家使用这个。当然了，过时并不是不能使用。有些情况下还是可以用的。</p>
+<p>Official Example：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> String[] formats = <span class="keyword">new</span> String[] &#123;</span><br><span class="line">   <span class="string">"yyyy-MM-dd"</span>,</span><br><span class="line">   <span class="string">"yyyy-MM-dd HH:mm"</span>,</span><br><span class="line">   <span class="string">"yyyy-MM-dd HH:mmZ"</span>,</span><br><span class="line">   <span class="string">"yyyy-MM-dd HH:mm:ss.SSSZ"</span>,</span><br><span class="line">   <span class="string">"yyyy-MM-dd'T'HH:mm:ss.SSSZ"</span>,</span><br><span class="line"> &#125;;</span><br><span class="line"> <span class="keyword">for</span> (String format : formats) &#123;</span><br><span class="line">   SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(format, Locale.US);</span><br><span class="line">   System.out.format(<span class="string">"%30s %s\n"</span>, format, sdf.format(<span class="keyword">new</span> Date(<span class="number">0</span>)));</span><br><span class="line">   sdf.setTimeZone(TimeZone.getTimeZone(<span class="string">"UTC"</span>));</span><br><span class="line">   System.out.format(<span class="string">"%30s %s\n"</span>, format, sdf.format(<span class="keyword">new</span> Date(<span class="number">0</span>)));</span><br><span class="line"> &#125;</span><br><span class="line"><span class="comment">//---------------result----------------------------------------//</span></span><br><span class="line"> 					yyyy-MM-dd <span class="number">1969</span>-<span class="number">12</span>-<span class="number">31</span></span><br><span class="line">                     yyyy-MM-dd <span class="number">1970</span>-<span class="number">01</span>-<span class="number">01</span></span><br><span class="line">               yyyy-MM-dd HH:mm <span class="number">1969</span>-<span class="number">12</span>-<span class="number">31</span> <span class="number">16</span>:<span class="number">00</span></span><br><span class="line">               yyyy-MM-dd HH:mm <span class="number">1970</span>-<span class="number">01</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span></span><br><span class="line">              yyyy-MM-dd HH:mmZ <span class="number">1969</span>-<span class="number">12</span>-<span class="number">31</span> <span class="number">16</span>:<span class="number">00</span>-<span class="number">0800</span></span><br><span class="line">              yyyy-MM-dd HH:mmZ <span class="number">1970</span>-<span class="number">01</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>+<span class="number">0000</span></span><br><span class="line">       yyyy-MM-dd HH:mm:ss.SSSZ <span class="number">1969</span>-<span class="number">12</span>-<span class="number">31</span> <span class="number">16</span>:<span class="number">00</span>:<span class="number">00.000</span>-<span class="number">0800</span></span><br><span class="line">       yyyy-MM-dd HH:mm:ss.SSSZ <span class="number">1970</span>-<span class="number">01</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00.000</span>+<span class="number">0000</span></span><br><span class="line">     yyyy-MM-dd<span class="string">'T'</span>HH:mm:ss.SSSZ <span class="number">1969</span>-<span class="number">12</span>-<span class="number">31</span>T16:<span class="number">00</span>:<span class="number">00.000</span>-<span class="number">0800</span></span><br><span class="line">     yyyy-MM-dd<span class="string">'T'</span>HH:mm:ss.SSSZ <span class="number">1970</span>-<span class="number">01</span>-<span class="number">01</span>T00:<span class="number">00</span>:<span class="number">00.000</span>+<span class="number">0000</span></span><br></pre></td></tr></table></figure>
+<p>部分语法对照,完整版可以参考<a href="http://developer.android.com/intl/zh-cn/reference/java/text/SimpleDateFormat.html" target="_blank" rel="external">Google文档</a> ，注意大小写。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字母</th>
+<th style="text-align:center">含义</th>
+<th style="text-align:center">示例</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">y</td>
+<td style="text-align:center">Year</td>
+<td style="text-align:center">1996;96</td>
+<td style="text-align:center">哪一年</td>
+</tr>
+<tr>
+<td style="text-align:left">M</td>
+<td style="text-align:center">Month in year</td>
+<td style="text-align:center">July;Jul;07</td>
+<td style="text-align:center">一年中的哪一月</td>
+</tr>
+<tr>
+<td style="text-align:left">m</td>
+<td style="text-align:center">Minute in hour</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">一个小时中的第几分钟  </td>
+</tr>
+<tr>
+<td style="text-align:left">w</td>
+<td style="text-align:center">Week in year</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">一年中的第几个星期  </td>
+</tr>
+<tr>
+<td style="text-align:left">W</td>
+<td style="text-align:center">Week in month</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">一个月中的第几个星期  </td>
+</tr>
+<tr>
+<td style="text-align:left">D</td>
+<td style="text-align:center">Day in year</td>
+<td style="text-align:center">189</td>
+<td style="text-align:center">一年中的第几天  </td>
+</tr>
+<tr>
+<td style="text-align:left">d</td>
+<td style="text-align:center">Day in month</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">一个月中的第几天  </td>
+</tr>
+<tr>
+<td style="text-align:left">H</td>
+<td style="text-align:center">Hour in day (0-23)</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">一天中的第几个小时（24小时制）  </td>
+</tr>
+<tr>
+<td style="text-align:left">h</td>
+<td style="text-align:center">Hour in am/pm (1-12）</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">一天中上午、下午的第几个小时（12小时制）  </td>
+</tr>
+<tr>
+<td style="text-align:left">S</td>
+<td style="text-align:center">Millisecond</td>
+<td style="text-align:center">978</td>
+<td style="text-align:center">毫秒数  </td>
+</tr>
+<tr>
+<td style="text-align:left">s</td>
+<td style="text-align:center">Second in minute</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">一分钟的第几秒  </td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><h3 id="Formatter-formatFileSize()"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/format/Formatter.html" target="_blank" rel="external">Formatter.formatFileSize()</a></h3></li>
+</ul>
+<blockquote>
+<p>Formats a content size to be in the form of bytes, kilobytes, megabytes, etc</p>
+</blockquote>
+<p>这个方法会格式化数据的大小，根据输入的字节大小，返回 B KB MB GB 等等（最大支持到 PB）。当然要注意的是输入的最大值是 <code>Long.MAX_VALUE</code>.  以前不知道有这个方法 都是自己写的。。。摔！</p>
+<p>注意： 这个类在 <code>android.text.format</code> 包下。</p>
+<ul>
+<li><h3 id="TypedValue-applyDimension()"><a href="http://developer.android.com/intl/zh-cn/reference/android/util/TypedValue.html" target="_blank" rel="external">TypedValue.applyDimension()</a></h3></li>
+</ul>
+<p>首先这个方法我们可以用来对sp dp 和 px 之间的单位转换。应该是有不少同学用过的。</p>
+<p>我们来看下源码然后做下简单的分析：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="javadoc">/**</span><br><span class="line">    * Converts an unpacked complex data value holding a dimension to its final floating point value. The two parameters &lt;var&gt;unit&lt;/var&gt; and &lt;var&gt;value&lt;/var&gt;</span><br><span class="line">    * are as in &#123;@link #TYPE_DIMENSION&#125;.</span><br><span class="line">    *  </span><br><span class="line">    *<span class="javadoctag"> @param</span> unit The unit to convert from.</span><br><span class="line">    *<span class="javadoctag"> @param</span> value The value to apply the unit to.</span><br><span class="line">    *<span class="javadoctag"> @param</span> metrics Current display metrics to use in the conversion -- </span><br><span class="line">    *                supplies display density and scaling information.</span><br><span class="line">    * </span><br><span class="line">    *<span class="javadoctag"> @return</span> The complex floating point value multiplied by the appropriate </span><br><span class="line">    * metrics depending on its unit. </span><br><span class="line">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">float</span> <span class="title">applyDimension</span><span class="params">(<span class="keyword">int</span> unit, <span class="keyword">float</span> value,</span><br><span class="line">                                      DisplayMetrics metrics)</span></span><br><span class="line">   </span>&#123;</span><br><span class="line">       <span class="keyword">switch</span> (unit) &#123;</span><br><span class="line">       <span class="keyword">case</span> COMPLEX_UNIT_PX:</span><br><span class="line">           <span class="keyword">return</span> value;</span><br><span class="line">       <span class="keyword">case</span> COMPLEX_UNIT_DIP:</span><br><span class="line">           <span class="keyword">return</span> value * metrics.density;</span><br><span class="line">       <span class="keyword">case</span> COMPLEX_UNIT_SP:</span><br><span class="line">           <span class="keyword">return</span> value * metrics.scaledDensity;</span><br><span class="line">       <span class="keyword">case</span> COMPLEX_UNIT_PT:</span><br><span class="line">           <span class="keyword">return</span> value * metrics.xdpi * (<span class="number">1.0f</span>/<span class="number">72</span>);</span><br><span class="line">       <span class="keyword">case</span> COMPLEX_UNIT_IN:</span><br><span class="line">           <span class="keyword">return</span> value * metrics.xdpi;</span><br><span class="line">       <span class="keyword">case</span> COMPLEX_UNIT_MM:</span><br><span class="line">           <span class="keyword">return</span> value * metrics.xdpi * (<span class="number">1.0f</span>/<span class="number">25.4f</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Converts an unpacked complex data value holding a dimension to its final floating point value.</p>
+</blockquote>
+<p>先看下说明，这句话是说 将一个对应的数值转换为屏幕上实际的点的值，屏幕上实际的点的位置，就是像素值。</p>
+<p>再来看 输入的参数：<br><code>Unit</code><br>The unit to convert from. 也就是要转换的数值的单位 （这个地方不要搞错了 ）<br><code>value</code><br>he value to apply the unit to. 也就是要转换的数值。<br><code>metrics</code>:<br>Current display metrics to use in the conversion — supplies display density and scaling information.</p>
+<p><code>DisplayMetrics</code> 这个类提供一些和屏幕分辨率以及 显示的大小 或者字体大小之类的信息。这里不做深究（其实是因为看的并不很懂。。。捂脸）。<strong>但是还是推荐大家能去认真研究下这个类，因为这个类对于理解自定义View还是挺重要的。</strong></p>
+<p>我们可以看到下面关于 转换的方法。可以得到的是：<br>Sp -&gt; px; dp -&gt; px ;以及 pt、in、mm、等转换为px。</p>
+<blockquote>
+<p>关于这些单位以及 density 和scaledDensity 详细的解析说明 可以参考这里 <a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1129/647.html" target="_blank" rel="external">Android屏幕密度（Density）和分辨率概念详解</a> ;</p>
+</blockquote>
+<p><code>scaledDensity</code> 和 <code>density</code>:<br><strong> 根据DisplayMetrics源码的说明，<code>scaledDensity</code> 和 <code>density</code>, 一个是叫做显示密度,一个叫做缩放参数(和字体有关) 。而且对同一个设备来讲 density = scaledDensity = dpi/160f.</strong><br>对于不同dpi的设备来讲：</p>
+<blockquote>
+<p>0.75 on ldpi (120 dpi)<br>1.0 on mdpi (160 dpi; baseline)<br>1.5 on hdpi (240 dpi)<br>2.0 on xhdpi (320 dpi)<br>3.0 on xxhdpi (480 dpi)<br>4.0 on xxxhdpi (640 dpi)</p>
+</blockquote>
+<ul>
+<li><h3 id="Pair-create()"><a href="http://developer.android.com/intl/zh-cn/reference/android/util/Pair.html" target="_blank" rel="external">Pair.create()</a></h3></li>
+</ul>
+<p>这个类 可以用来存储存储一”组”数据。但不是key和value的关系。</p>
+<p>Example：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Pair&lt;String, String&gt; pair = Pair.create(<span class="string">"android开发"</span>, <span class="string">"自定view"</span>);</span><br><span class="line">Log.d(TAG, pair.first); <span class="comment">// android开发</span></span><br><span class="line">Log.d(TAG, pair.second); <span class="comment">// 自定view</span></span><br></pre></td></tr></table></figure></p>
+<p>至于怎么使用，暂时，我没有想到什么合适场景使用，我个人并没有在项目使用过这个类。但是pair中数据的类型可以随便玩，可以是基本数据类型，可以是集合，可以是Bean，可以是Context等等。。。也就是说它可能合适在很多地方使用。而且在某些情况下会有很好的效果。如果有那位用过或者对这个类有更多的理解，可以留言告知。</p>
+<ul>
+<li><h3 id="SparseArray"><a href="http://developer.android.com/intl/zh-cn/reference/android/util/SparseArray.html" target="_blank" rel="external">SparseArray</a></h3></li>
+</ul>
+<p>目前有很多地方从性能优化方说使用SparseArray来替换hashMap，来节省内存，提高性能。<br>Google 文档中是这么说的。</p>
+<blockquote>
+<p>SparseArrays map integers to Objects. Unlike a normal array of Objects, there can be gaps in the indices. It is intended to be more memory efficient than using a HashMap to map Integers to Objects, both because it avoids auto-boxing keys and its data structure doesn’t rely on an extra entry object for each mapping.</p>
+<p>Note that this container keeps its mappings in an array data structure, using a binary search to find keys. The implementation is not intended to be appropriate for data structures that may contain large numbers of items. It is generally slower than a traditional HashMap, since lookups require a binary search and adds and removes require inserting and deleting entries in the array. For containers holding up to hundreds of items, the performance difference is not significant, less than 50%.</p>
+</blockquote>
+<p>按照官方文档的解释，因为SparseArray不需要对key和value进行auto-boxing（将原始类型封装为对象类型，比如把int类型封装成Integer类型），结构比HashMap简单（SparseArray内部主要使用两个一维数组来保存数据，一个用来存key，一个用来存value）不需要额外的额外的数据结构（主要是针对HashMap中的HashMapEntry而言的）。</p>
+<p>但是，在大量数据的情况下，<code>SparseArray</code> 的查询速度要慢很多。可能是 <code>SparseArray</code> 查询方法的问题。但是在数据量不特别的大的情况下还是推荐使用<code>SparseArray</code>。</p>
+<ul>
+<li><h3 id="Linkify-addLinks()"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/util/Linkify.html" target="_blank" rel="external">Linkify.addLinks()</a></h3></li>
+</ul>
+<p>在整理（一）中我们提到可以使用Html的方式给文本添加超链接。而这个类可以更方便的为文本添加超链接。<br>Example: </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">linkView0.setText(<span class="string">"http://oakzmm.com"</span>);</span><br><span class="line">Linkify.addLinks(linkView0, Linkify.WEB_URLS);</span><br><span class="line">linkView0.setMovementMethod(LinkMovementMethod.getInstance());</span><br></pre></td></tr></table></figure>
+<p>超链接支持 <code>WEB</code>、<code>EMAIL</code>、<code>PHONE</code>、<code>MAP</code> 四种形式。</p>
+<p>另外 <code>Linkify</code> 可以自定义约束和正则匹配 ,这是LInkify要比其他几种方式更加强大的地方。<br>详细可以参考这里：<a href="http://my.oschina.net/fengheju/blog/176105" target="_blank" rel="external">TextView 借助Linkify，使用自定义模式设置链接</a></p>
+<p>说到这里就简单的说下实现超链接的几种方式 （可以匹配 <code>WEB</code>、<code>EMAIL</code>、<code>PHONE</code>、<code>MAP</code>）：</p>
+<p>0.Linkify.addLinks()</p>
+<p>1.直接在xml中TextView下直接设置:<br><figure class="highlight nimrod"><table><tr><td class="code"><pre><span class="line">android:text=<span class="string">"web:http://oakzmm.com \n tel:123457534 \n mail:macouen@gmail.com "</span></span><br></pre></td></tr></table></figure></p>
+<p>2.Html方式：<br><figure class="highlight nimrod"><table><tr><td class="code"><pre><span class="line">//-----<span class="number">1</span>--<span class="type">Html</span></span><br><span class="line"></span><br><span class="line">linkView1.setText(</span><br><span class="line">        <span class="type">Html</span>.fromHtml(</span><br><span class="line">                <span class="string">"&lt;b&gt;fromHtml:&lt;/b&gt;  \t Click "</span> +</span><br><span class="line">                        <span class="string">"&lt;a href=\"http:/oakzmm.com\"&gt;here&lt;/a&gt; "</span> +</span><br><span class="line">                        <span class="string">"to visit my website "</span></span><br><span class="line">        )</span><br><span class="line">);</span><br><span class="line">linkView1.setMovementMethod(<span class="type">LinkMovementMethod</span>.getInstance());</span><br></pre></td></tr></table></figure></p>
+<p>3.使用在TextView中使用&lt; a &gt; 标签，和上面的这种方式类似。</p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">&lt;<span class="type">string</span> <span class="property">name</span>=<span class="string">"aText"</span>&gt;</span><br><span class="line">      String_a标签: Click &lt;a href=<span class="string">"http://oakzmm.com"</span>&gt;here&lt;/a&gt; <span class="keyword">to</span> visit <span class="keyword">my</span> website&lt;/<span class="type">string</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>4.使用强大的<code>Spans</code>来实现(下面会说到这个)。<br><figure class="highlight ocaml"><table><tr><td class="code"><pre><span class="line"><span class="type">SpannableString</span> ss = <span class="keyword">new</span> <span class="type">SpannableString</span>(<span class="string">"fromSpan:\t Click here to dial the phone."</span>);</span><br><span class="line">ss.setSpan(<span class="keyword">new</span> <span class="type">StyleSpan</span>(<span class="type">Typeface</span>.<span class="type">BOLD</span>), <span class="number">0</span>, <span class="number">9</span>,<span class="type">Spanned</span>.<span class="type">SPAN_EXCLUSIVE_EXCLUSIVE</span>);</span><br><span class="line">ss.setSpan(<span class="keyword">new</span> <span class="type">URLSpan</span>(<span class="string">"tel:4155551212"</span>), <span class="number">17</span>, <span class="number">21</span>,<span class="type">Spanned</span>.<span class="type">SPAN_EXCLUSIVE_EXCLUSIVE</span>);</span><br><span class="line">linkView2.setText(ss);</span><br><span class="line">linkView2.setMovementMethod(<span class="type">LinkMovementMethod</span>.getInstance<span class="literal">()</span>);</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><h3 id="android-text-Spanned"><a href="http://developer.android.com/intl/zh-cn/reference/android/text/style/package-summary.html" target="_blank" rel="external"> android.text.Spanned</a></h3></li>
+</ul>
+<p>Span非常之强大，但是并没有得到充分的使用。<br>这里，不再做详细的说明和介绍，因为有人全面的总结过，这里给大家贴出文章连接。</p>
+<blockquote>
+<ul>
+<li><a href="http://blog.csdn.net/lixin84915/article/details/8110667" target="_blank" rel="external">Android文本样式——上</a></li>
+<li><a href="http://blog.csdn.net/lixin84915/article/details/8111337" target="_blank" rel="external">Android文本样式——下</a></li>
+<li><a href="http://zhengxiaopeng.com/2015/03/04/%E3%80%90%E8%AF%91%E3%80%91Spans%EF%BC%8C%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%A6%82%E5%BF%B5/" target="_blank" rel="external">Spans，一个强大的概念</a></li>
+<li><a href="http://flavienlaurent.com/blog/2014/01/31/spans/" target="_blank" rel="external">Spans, a Powerful Concept.</a></li>
+</ul>
+</blockquote>
+<p>我自己简单的写了部分效果的代码 , 包括上面的超链接的。</p>
+<p>Example：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//-----0--autolink---</span></span><br><span class="line">       linkView0.setText(<span class="string">"http://oakzmm.com"</span>);</span><br><span class="line">       Linkify.addLinks(linkView0, Linkify.WEB_URLS);</span><br><span class="line">       linkView0.setMovementMethod(LinkMovementMethod.getInstance());</span><br><span class="line">       <span class="comment">//-----1--Html</span></span><br><span class="line"></span><br><span class="line">       linkView1.setText(</span><br><span class="line">               Html.fromHtml(</span><br><span class="line">                       <span class="string">"&lt;b&gt;fromHtml:&lt;/b&gt;  \t Click "</span> +</span><br><span class="line">                               <span class="string">"&lt;a href=\"http://macouen.github.io\"&gt;here&lt;/a&gt; "</span> +</span><br><span class="line">                               <span class="string">"to visit my website "</span></span><br><span class="line">               )</span><br><span class="line">       );</span><br><span class="line">       linkView1.setMovementMethod(LinkMovementMethod.getInstance());</span><br><span class="line">       <span class="comment">//-----2--span</span></span><br><span class="line">       <span class="javadoc">/**</span><br><span class="line">        * Spanned.SPAN_EXCLUSIVE_EXCLUSIVE(前后都不包括) (a,b);</span><br><span class="line">        * Spanned.SPAN_INCLUSIVE_EXCLUSIVE(前面包括，后面不包括) [a,b);</span><br><span class="line">        * Spanned.SPAN_EXCLUSIVE_INCLUSIVE(前面不包括，后面包括) (a,b];</span><br><span class="line">        * Spanned.SPAN_INCLUSIVE_INCLUSIVE(前后都包括) [a,b];</span><br><span class="line">        */</span></span><br><span class="line">       SpannableString ss = <span class="keyword">new</span> SpannableString(<span class="string">"fromSpan:\t Click here to dial the phone."</span>);</span><br><span class="line">       ss.setSpan(<span class="keyword">new</span> StyleSpan(Typeface.BOLD), <span class="number">0</span>, <span class="number">9</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       ss.setSpan(<span class="keyword">new</span> URLSpan(<span class="string">"tel:4155551212"</span>), <span class="number">17</span>, <span class="number">21</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       linkView2.setText(ss);</span><br><span class="line">       linkView2.setMovementMethod(LinkMovementMethod.getInstance());</span><br><span class="line">       <span class="comment">//----3---标签&lt;a&gt;</span></span><br><span class="line">       linkView3.setMovementMethod(LinkMovementMethod.getInstance());</span><br><span class="line">       <span class="javadoc">/**</span><br><span class="line">        * ------------------------------------------</span><br><span class="line">        * 1.字体样式（斜体，加粗）</span><br><span class="line">        * 2.字体大小（放大和拉伸），颜色（前景色和背景色）</span><br><span class="line">        * 3.下划线、删除线</span><br><span class="line">        * 4.上下标</span><br><span class="line">        * 5.超链接</span><br><span class="line">        * 6.TextView显示图片</span><br><span class="line">        * ------------------------------------------</span><br><span class="line">        */</span></span><br><span class="line">       spanView = (TextView) findViewById(R.id.spanText1);</span><br><span class="line">       span = <span class="keyword">new</span> SpannableString(</span><br><span class="line">               <span class="string">"字体:textVIEW\n"</span> +</span><br><span class="line">                       <span class="string">"样式:正常斜体加粗粗斜体\n"</span> +</span><br><span class="line">                       <span class="string">"大小:单位设置一半两倍横向拉伸\n"</span> +</span><br><span class="line">                       <span class="string">"颜色:前景色背景色\n"</span> +</span><br><span class="line">                       <span class="string">"下划线删除线\n"</span> +</span><br><span class="line">                       <span class="string">"上标x1下标x2\n"</span> +</span><br><span class="line">                       <span class="string">"超链接:电话 邮件 网站 短信 彩信 地图\n"</span> +</span><br><span class="line">                       <span class="string">"图片:abc"</span></span><br><span class="line">       );</span><br><span class="line">       <span class="comment">//字体 android默认有 monospace  normal sans serif</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> TypefaceSpan(<span class="string">"monospace"</span>), <span class="number">3</span>, <span class="number">7</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       span.setSpan(<span class="keyword">new</span> TypefaceSpan(<span class="string">"serif"</span>), <span class="number">7</span>, <span class="number">11</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       <span class="comment">//样式</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> StyleSpan(Typeface.NORMAL), <span class="number">15</span>, <span class="number">17</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);  <span class="comment">//正常</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> StyleSpan(Typeface.ITALIC), <span class="number">17</span>, <span class="number">19</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);  <span class="comment">//斜体</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> StyleSpan(Typeface.BOLD), <span class="number">19</span>, <span class="number">21</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);  <span class="comment">//加粗</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> StyleSpan(Typeface.BOLD_ITALIC), <span class="number">21</span>, <span class="number">24</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);  <span class="comment">//粗斜体</span></span><br><span class="line">       <span class="comment">//大小</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> AbsoluteSizeSpan(<span class="number">20</span>), <span class="number">28</span>, <span class="number">30</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       span.setSpan(<span class="keyword">new</span> AbsoluteSizeSpan(<span class="number">20</span>, <span class="keyword">true</span>), <span class="number">30</span>, <span class="number">32</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       span.setSpan(<span class="keyword">new</span> RelativeSizeSpan(<span class="number">0.5f</span>), <span class="number">32</span>, <span class="number">34</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       span.setSpan(<span class="keyword">new</span> RelativeSizeSpan(<span class="number">2.0f</span>), <span class="number">34</span>, <span class="number">36</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       span.setSpan(<span class="keyword">new</span> ScaleXSpan(<span class="number">1.5f</span>), <span class="number">36</span>, <span class="number">40</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       <span class="comment">//颜色</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> ForegroundColorSpan(Color.RED), <span class="number">44</span>, <span class="number">47</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       span.setSpan(<span class="keyword">new</span> BackgroundColorSpan(Color.CYAN), <span class="number">47</span>, <span class="number">50</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       <span class="comment">//线</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> UnderlineSpan(), <span class="number">51</span>, <span class="number">54</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       span.setSpan(<span class="keyword">new</span> StrikethroughSpan(), <span class="number">54</span>, <span class="number">57</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       <span class="comment">//上下标</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> SuperscriptSpan(), <span class="number">61</span>, <span class="number">62</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       span.setSpan(<span class="keyword">new</span> SubscriptSpan(), <span class="number">65</span>, <span class="number">66</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       <span class="comment">//连接</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> URLSpan(<span class="string">"tel:4155551212"</span>), <span class="number">71</span>, <span class="number">73</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);     <span class="comment">//电话</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> URLSpan(<span class="string">"mailto:macouen@gmail.com"</span>), <span class="number">74</span>, <span class="number">76</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);     <span class="comment">//邮件</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> URLSpan(<span class="string">"http://macouen.github.io"</span>), <span class="number">77</span>, <span class="number">79</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);     <span class="comment">//网络</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> URLSpan(<span class="string">"sms:4155551212"</span>), <span class="number">80</span>, <span class="number">82</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);     <span class="comment">//短信   使用sms:或者smsto:</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> URLSpan(<span class="string">"mms:4155551212"</span>), <span class="number">83</span>, <span class="number">85</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);     <span class="comment">//彩信   使用mms:或者mmsto:</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> URLSpan(<span class="string">"geo:38.899533,-77.036476"</span>), <span class="number">86</span>, <span class="number">88</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);     <span class="comment">//地图</span></span><br><span class="line">       <span class="comment">//图片</span></span><br><span class="line">       span.setSpan(<span class="keyword">new</span> ImageSpan(<span class="keyword">this</span>, R.mipmap.ic_launcher), <span class="number">92</span>, <span class="number">95</span>, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span><br><span class="line">       spanView.setText(span);</span><br><span class="line">       spanView.setMovementMethod(LinkMovementMethod.getInstance());</span><br></pre></td></tr></table></figure>
+<p>效果图：<img src="/image/api03.jpg" alt="Span"></p>
+<ul>
+<li><h3 id="ThumbnailUtils"><a href="http://developer.android.com/intl/zh-cn/reference/android/media/ThumbnailUtils.html" target="_blank" rel="external">ThumbnailUtils</a></h3></li>
+</ul>
+<p>这个类主要是用来处理缩略图相关的，有过这方面需求的，应该是用过这个类的。而且这个类只有3个静态方法，很简单。至于缩略图是怎么生成的 以及源码的实现，有兴趣的可以去看下。</p>
+<ul>
+<li><h4 id="extractThumbnail_(source,_width,_height)">extractThumbnail (source, width, height)</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="javadoc">/** </span><br><span class="line"> *  </span><br><span class="line"> * 创建一个指定大小的缩略图 </span><br><span class="line"> *<span class="javadoctag"> @param</span> source 源文件(Bitmap类型) </span><br><span class="line"> *<span class="javadoctag"> @param</span> width  压缩成的宽度 </span><br><span class="line"> *<span class="javadoctag"> @param</span> height 压缩成的高度 </span><br><span class="line"> */</span>  </span><br><span class="line">ThumbnailUtils.extractThumbnail(source, width, height);</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="extractThumbnail(source,_width,_height,_options)">extractThumbnail(source, width, height, options)</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="javadoc">/** </span><br><span class="line"> * 创建一个指定大小居中的缩略图 </span><br><span class="line"> *  </span><br><span class="line"> *<span class="javadoctag"> @param</span> source 源文件(Bitmap类型) </span><br><span class="line"> *<span class="javadoctag"> @param</span> width  输出缩略图的宽度 </span><br><span class="line"> *<span class="javadoctag"> @param</span> height 输出缩略图的高度 </span><br><span class="line"> *<span class="javadoctag"> @param</span> options 如果options定义为OPTIONS_RECYCLE_INPUT,则回收@param source这个资源文件 </span><br><span class="line"> * (除非缩略图等于@param source) </span><br><span class="line"> *  </span><br><span class="line"> */</span>  </span><br><span class="line">ThumbnailUtils.extractThumbnail(source, width, height, options);</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="createVideoThumbnail(filePath,_kind)">createVideoThumbnail(filePath, kind)</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="javadoc">/** </span><br><span class="line"> * 创建一张视频的缩略图 </span><br><span class="line"> * 如果视频已损坏或者格式不支持可能返回null </span><br><span class="line"> *  </span><br><span class="line"> *<span class="javadoctag"> @param</span> filePath 视频文件路径  如：/sdcard/android.3gp </span><br><span class="line"> *<span class="javadoctag"> @param</span> kind kind可以为MINI_KIND或MICRO_KIND </span><br><span class="line"> *  </span><br><span class="line"> */</span>  </span><br><span class="line">ThumbnailUtils.createVideoThumbnail(filePath, kind);</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="Bitmap-extractAlpha())"><a href="http://developer.android.com/intl/zh-cn/reference/android/graphics/Bitmap.html#extractAlpha(" target="_blank" rel="external">Bitmap.extractAlpha()</a>)</h3></li>
+</ul>
+<blockquote>
+<p>Returns a new bitmap that captures the alpha values of the original. This may be drawn with Canvas.drawBitmap(), where the color(s) will be taken from the paint that is passed to the draw call.</p>
+</blockquote>
+<p>这句话正面翻译过来：<br>返回一个新的位图，该位图从源图中捕获了alpha值。这个方法可能跟Canvas.drawBitmap()一起被画，颜色值从传递过来的画笔中获取。</p>
+<p>有的时候我们需要动态的修改一个元素的背景图片又不希望使用多张图片的时候，通过这个方法，结合Canvas和Paint可以动态的修改一个纯色Bitmap的颜色。也可以在某些情况下对图片处理后给轮廓添加光圈效果等。</p>
+<p>单独这么说，可能很抽象，上个简单Demo大家看下就应该明白了。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">.....</span><br><span class="line"><span class="comment">// 核心代码：</span></span><br><span class="line"></span><br><span class="line">Canvas mCanvas = <span class="keyword">new</span> Canvas(mAlphaBitmap);</span><br><span class="line">Paint mPaint = <span class="keyword">new</span> Paint();</span><br><span class="line">mPaint.setColor(Color.RED);</span><br><span class="line"><span class="comment">// 从原位图中提取只包含alpha的位图</span></span><br><span class="line">Bitmap alphaBitmap = mBitmap.extractAlpha();</span><br><span class="line"><span class="comment">// 在画布上（mAlphaBitmap）绘制alpha位图</span></span><br><span class="line">mCanvas.drawBitmap(alphaBitmap, <span class="number">0</span>, <span class="number">0</span>, mPaint);</span><br><span class="line">.....</span><br></pre></td></tr></table></figure>
+<p>效果图：<img src="/image/api04.gif" alt="Bitmap"></p>
+<h2 id="Summary">Summary</h2><p>我们从第一篇开始大概是提到了这么几个类：</p>
+<ul>
+<li><strong>TextUtils</strong></li>
+<li><strong>Html</strong></li>
+<li><strong>PhoneNumberUtils</strong></li>
+<li><strong>DateUtils</strong></li>
+<li><strong>Formatter</strong></li>
+<li><strong>Linkify</strong></li>
+<li><strong>ThumbnailUtils</strong></li>
+<li><strong>Bitmap</strong></li>
+<li><strong>Spans</strong></li>
+</ul>
+<p>基本上这几个类都是提到了一个或者几个“比较巧妙”的方法。并不是说就那么几个方法是 VeryCool ，而其他的不是。在这些类中还是有好多方法需要花费更多的时间去了解和掌握。<br>尤其是像 Bitmap这样的，其中不乏我们经常使用而且很重要的方法，而且<code>Bitmap</code> 相关的，如，<code>Canvas</code> 、<code>Paint</code>、<code>GradientDrawable</code> 等。尤其是<code>Canvas</code>中 <code>clipRect</code>、<code>clipPath</code>和 <code>clipRegion</code> 这些十分重要的Api。</p>
+<p>预告：第三篇，我准备整理一些很Cool的控件，以及控件的一些很棒的属性；Activity的方法。敬请期待。</p>
+<hr>
+<p>待续。</p>
+<h2 id="声明">声明</h2><ol>
+<li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件<code>macouen@gmail.com</code>说明。 </li>
+<li>欢迎转载，但请注明文章原始出处。 </li>
+</ol>
+<p>作者：Oak_Zmm<br>出处：<a href="http://oakzmm.com/" target="_blank" rel="external">http://oakzmm.com/</a></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag">#Android</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/04/cool-Android-api/" rel="next">Cool Android Apis 整理（一）</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/08/11/cool-Android-api-2/"
+     data-title="Cool Android Apis 整理（二）"
+     data-content=""
+     data-url="http://oakzmm.com/2015/08/11/cool-Android-api-2/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="2015/08/11/cool-Android-api-2/"
+                       data-title="Cool Android Apis 整理（二）" data-url="http://oakzmm.com/2015/08/11/cool-Android-api-2/">
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/author.jpg" alt="Oak_Zmm" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Oak_Zmm</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">oak's blog | java | android |</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/macouen" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/minter01" target="_blank">Weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/zhao-min-xing" target="_blank">ZhiHu</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.cnblogs.com/oakMac/" target="_blank">我的博客园</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.spencer-dev.com/" target="_blank">给立乐的技术博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.cnblogs.com/ct2011" target="_blank">GavinCT</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://liukun.engineer/" target="_blank">LIUKUN的技术博客</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Content"><span class="nav-number">2.</span> <span class="nav-text">Content</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DateUtils-formatDateTime())"><span class="nav-number">2.1.</span> <span class="nav-text">DateUtils.formatDateTime())</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Formatter-formatFileSize()"><span class="nav-number">2.2.</span> <span class="nav-text">Formatter.formatFileSize()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypedValue-applyDimension()"><span class="nav-number">2.3.</span> <span class="nav-text">TypedValue.applyDimension()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pair-create()"><span class="nav-number">2.4.</span> <span class="nav-text">Pair.create()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SparseArray"><span class="nav-number">2.5.</span> <span class="nav-text">SparseArray</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linkify-addLinks()"><span class="nav-number">2.6.</span> <span class="nav-text">Linkify.addLinks()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android-text-Spanned"><span class="nav-number">2.7.</span> <span class="nav-text"> android.text.Spanned</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ThumbnailUtils"><span class="nav-number">2.8.</span> <span class="nav-text">ThumbnailUtils</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#extractThumbnail_(source,_width,_height)"><span class="nav-number">2.8.1.</span> <span class="nav-text">extractThumbnail (source, width, height)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#extractThumbnail(source,_width,_height,_options)"><span class="nav-number">2.8.2.</span> <span class="nav-text">extractThumbnail(source, width, height, options)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#createVideoThumbnail(filePath,_kind)"><span class="nav-number">2.8.3.</span> <span class="nav-text">createVideoThumbnail(filePath, kind)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bitmap-extractAlpha())"><span class="nav-number">2.9.</span> <span class="nav-text">Bitmap.extractAlpha())</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">3.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">4.</span> <span class="nav-text">声明</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Oak_Zmm</span>  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    | - <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Views.
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+   </a>
+
+</div>
+ 
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"oak"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
