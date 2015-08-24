@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://oakzmm.com/2015/08/04/cool-Android-api/</loc>
+    <lastmod>2015-08-24T01:13:33.754Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://oakzmm.com/2015/07/22/okHttp-Volley-Gson/</loc>
     <lastmod>2015-08-11T10:44:45.281Z</lastmod>
   </url>
@@ -19,11 +24,6 @@
   <url>
     <loc>http://oakzmm.com/2015/08/11/cool-Android-api-2/</loc>
     <lastmod>2015-08-11T06:20:10.499Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://oakzmm.com/2015/08/04/cool-Android-api/</loc>
-    <lastmod>2015-08-06T07:42:02.732Z</lastmod>
   </url>
   
   <url>
