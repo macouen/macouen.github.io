@@ -477,7 +477,7 @@ Dan Lew 的Android Tips Round-Up 系列文章。尤其感谢 Gracker 对上">
 <p>我们可以看到在实现回调的时候，传入了一个参数，这个参数是内存使用情况的等级。总共有七种情况，分别是<br><code>TRIM_MEMORY_UI_HIDDEN</code>、<br><code>TRIM_MEMORY_RUNNING_MODERATE</code>、<code>TRIM_MEMORY_RUNNING_LOW</code>、<code>TRIM_MEMORY_RUNNING_CRITICAL</code>、<br><code>TRIM_MEMORY_BACKGROUND</code>、<code>TRIM_MEMORY_MODERATE</code>、<code>TRIM_MEMORY_COMPLETE</code><br>从命名上大家应该能看出一些端倪，具体的在文档中有比较详细的说明和介绍。这里就不多说了，希望大家能够去看下。</p>
 <p>那么我们需要在什么时候OnTrimMemory回调释放哪些资源呢？根据内存使用的等级情况，一般我们会在内存情况很糟糕<code>TRIM_MEMORY_COMPLETE</code>，或者应用所有UI界面被隐藏了<code>TRIM_MEMORY_UI_HIDDEN</code>、我们需要对应的来释放一些缓存资源，以及我们动态添加的使用较少的View，这样来保证应用不会被杀掉。<br>虽然，系统在内存不足的时候杀进程的顺序是按照LRU Cache中从低到高来的，但是它同时也会考虑杀掉那些占用内存较高的应用来让系统更快地获得更多的内存。如果我们应用占用内存较小，就可以增加不被杀掉的几率，从而快速地恢复。</p>
 <p>另外，在api 14之前使用的 <code>OnLowMemory</code>，级别应该和<code>TRIM_MEMORY_COMPLETE</code>是差不多的。从这点也可以看出Google对Android应用内存使用情况越来越多的重视（虽然有些自家应用很Low……）。<br>所以，一个好的应用不仅仅是好看，流畅和快速的体验更加重要。</p>
-<h2 id="Summary">Summary</h2><p>这样，这个系列基本算是结束了，后面如果自己工作中有发现更多好的API，我还是会不定时的过来更新。</p>
+<h2 id="Summary">Summary</h2><p>这样，这个系列基本算是结束了，后面如果自己工作中有发现更多好的API，我还是会不定时的过来更新。另外，如果大家在阅读过程中又发现问题或者有任何的意见或建议，可以在评论区留言。</p>
 <h2 id="声明">声明</h2><ol>
 <li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件<code>macouen@gmail.com</code>说明。 </li>
 <li>欢迎转载，但请注明文章原始出处。 </li>
