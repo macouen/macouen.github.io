@@ -1,0 +1,946 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+  <meta name="google-site-verification" content="7wEQlgTnbMQH0szfXBpWJ241oRPTiUASFH6lxEfDZLw" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+    <meta name="description" content="oak's blog | java | android |" />
+
+
+
+  <meta name="keywords" content="Android," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Oak_Zmm的技术博客" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/oak.ico?v=0.4.4" />
+
+
+<meta name="description" content="Foreword本文主要整理 Cool Android Apis。这是这个系列的第三篇，第一篇 Cool Android Apis 整理（一），第二篇 Cool Android Apis 整理（二） 。非常抱歉，由于工作的原因，第三篇隔了很久才发 （写博客果然不是一件容易的事）。
+
+整理来源 
+
+Dan Lew 的Android Tips Round-Up 系列文章。尤其感谢 Gracker 对上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cool Android Apis 整理（三）">
+<meta property="og:url" content="http://oakzmm.com/2015/09/07/cool-android-api-3/index.html">
+<meta property="og:site_name" content="Oak_Zmm的技术博客">
+<meta property="og:description" content="Foreword本文主要整理 Cool Android Apis。这是这个系列的第三篇，第一篇 Cool Android Apis 整理（一），第二篇 Cool Android Apis 整理（二） 。非常抱歉，由于工作的原因，第三篇隔了很久才发 （写博客果然不是一件容易的事）。
+
+整理来源 
+
+Dan Lew 的Android Tips Round-Up 系列文章。尤其感谢 Gracker 对上">
+<meta property="og:image" content="/image/api05.jpg">
+<meta property="og:image" content="/image/api06.gif">
+<meta property="og:image" content="/image/api07.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cool Android Apis 整理（三）">
+<meta name="twitter:description" content="Foreword本文主要整理 Cool Android Apis。这是这个系列的第三篇，第一篇 Cool Android Apis 整理（一），第二篇 Cool Android Apis 整理（二） 。非常抱歉，由于工作的原因，第三篇隔了很久才发 （写博客果然不是一件容易的事）。
+
+整理来源 
+
+Dan Lew 的Android Tips Round-Up 系列文章。尤其感谢 Gracker 对上">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title> Cool Android Apis 整理（三） // Oak_Zmm的技术博客 </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-65214557-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Oak_Zmm的技术博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'LYep3yGa4a2n65zPtkj9','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Cool Android Apis 整理（三）
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-07T10:00:39+08:00" content="Sep 7 2015">
+            Sep 7 2015
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/09/07/cool-android-api-3/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/07/cool-android-api-3/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。<br>这是这个系列的第三篇，第一篇 <a href="http://oakzmm.com/2015/08/04/cool-Android-api/" target="_blank" rel="external">Cool Android Apis 整理（一）</a>，第二篇 <a href="http://oakzmm.com/2015/08/11/cool-Android-api-2/" target="_blank" rel="external">Cool Android Apis 整理（二）</a> 。<br>非常抱歉，由于工作的原因，第三篇隔了很久才发 （写博客果然不是一件容易的事）。</p>
+<blockquote>
+<p>整理来源 </p>
+<ul>
+<li><p><code>Dan Lew</code> 的<a href="http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/" target="_blank" rel="external">Android Tips Round-Up</a> 系列文章。<br>尤其感谢 <a href="http://www.jianshu.com/users/FK4sc4/latest_articles" target="_blank" rel="external">Gracker</a> 对上面系列文章的 <a href="http://www.jianshu.com/notebooks/571559/latest" target="_blank" rel="external">翻译和部分解释</a>。</p>
+</li>
+<li><p>知乎问题：<a href="http://www.zhihu.com/question/33636939" target="_blank" rel="external">Android开发中，有哪些让你觉得相见恨晚的方法、类或接口？</a> </p>
+</li>
+</ul>
+</blockquote>
+<a id="more"></a>  
+<h2 id="Content">Content</h2><ul>
+<li><h3 id="&lt;_include_/&gt;、&lt;_merge_/&gt;、_&lt;_ViewStub_/&gt;_标签"><a href="http://developer.android.com/intl/zh-cn/training/improving-layouts/reusing-layouts.html#Create" target="_blank" rel="external">&lt; include /&gt;、&lt; merge /&gt;、</a> <a href="http://developer.android.com/intl/zh-cn/reference/android/view/ViewStub.html" target="_blank" rel="external">&lt; ViewStub /&gt;</a> 标签</h3></li>
+</ul>
+<p>这三个布局标签，都是起到布局优化的作用。</p>
+<p><strong> <code>&lt; include /&gt;</code> 重用布局文件 </strong><br>这个大家应该使用还是比较多的。<br>这里还有几个小tip:<br>1.&lt; include /&gt;标签可以只使用layout属性，这个也是必须使用的。<br>2.&lt; include /&gt;标签若指定了ID属性，而你的layout也定义了ID，则你的layout的ID会被覆盖，同样的在include标签中所有的android:layout_* 属性都是可以覆盖使用的。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;include android:layout_width=<span class="string">"fill_parent"</span> layout=<span class="string">"@layout/image_holder"</span> /&gt;</span><br><span class="line">&lt;include android:layout_width=<span class="string">"256dip"</span> layout=<span class="string">"@layout/image_holder"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>  <code>&lt; merge /&gt;</code>  减少视图层级 </strong></p>
+<p>&lt; merge/&gt;标签在UI的结构优化中起着非常重要的作用，它可以删减多余的层级。<merge>多用于替换FrameLayout或者当一个布局包含另一个时，&lt; merge/&gt;标签消除视图层次结构中多余的视图组。例如你的主布局文件是垂直布局，引入了一个垂直布局的include，这是如果include布局使用的LinearLayout就没意义了。这时我们就可以使用&lt; merge/&gt;标签优化。</merge></p>
+<p>单独的这么说可能比较抽象，大家可以看下这篇blog <a href="http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html" target="_blank" rel="external">Android Layout Tricks #3: Optimize by merging</a> 加深理解。</p>
+<p><strong> <code>&lt; ViewStub /&gt;</code> 需要的时候加载 </strong></p>
+<blockquote>
+<p>A ViewStub is an invisible, zero-sized View that can be used to lazily inflate layout resources at runtime. </p>
+</blockquote>
+<p>&lt; ViewStub /&gt;标签最大的优点是当你需要时才会加载，使用他并不会影响UI初始化时的性能。各种不常用的布局比如进度条、显示占位信息等可以使用&lt; ViewStub /&gt;标签，以减少内存使用量，加快渲染速度。&lt; ViewStub /&gt;是一个不可见的，大小为0的View。</p>
+<p>For instance:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;ViewStub </span><br><span class="line">	android:id=<span class="string">"@+id/stub"</span></span><br><span class="line">	android:inflatedId=<span class="string">"@+id/subTree"</span></span><br><span class="line">	android:layout=<span class="string">"@layout/mySubTree"</span></span><br><span class="line">	android:layout_width=<span class="string">"120dip"</span></span><br><span class="line">	android:layout_height=<span class="string">"40dip"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p>当调用 <code>setVisibility(int)</code> or <code>inflate()</code> 时，布局就会加载。</p>
+<p>更多信息：<a href="http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-with.html" target="_blank" rel="external">Android Layout Tricks #3: Optimize with stubs </a></p>
+<ul>
+<li><h3 id="ViewAnimator"><a href="http://developer.android.com/intl/zh-cn/reference/android/widget/ViewAnimator.html" target="_blank" rel="external">ViewAnimator</a></h3></li>
+</ul>
+<p>我们先来看下继承关系：<br><img src="/image/api05.jpg" alt="Bitmap"><br>可以看到<code>ViewAnimator</code> 继承自<code>FrameLayout</code> ，那么也就是会说<code>ViewAnimator</code> 具有<code>FrameLayout</code>的特性，可以将多个View组件叠在一起，然后还能够处理views切换时的动画效果。<br>但是这里不对<code>ViewAnimator</code>做更多的讲解，我们来看他的子类来了解更多，来理解这个类以及子类到底能够起到一个什么样的作用，而且我感觉在后面的Android的版本更新中这几个类就可能会过时。</p>
+<ul>
+<li><h4 id="View_Flipper"><strong> <a href="http://developer.android.com/intl/zh-cn/reference/android/widget/ViewFlipper.html" target="_blank" rel="external">View Flipper</a> </strong></h4></li>
+</ul>
+<p>通过add(View view)向内部添加多个组件，再使用动画控制多个组件之间的切换效果,而且能够自动执行切换。<br>与ViewPager有相似之处，ViewPager长于使用手势滑动进行页面切换。ViewFlipper长于实现子界面的自动切换。</p>
+<p>向ViewFlipper 加入View：<br>静态导入：在layout布局中直接导入（不推荐，不灵活）:<br><figure class="highlight r"><table><tr><td class="code"><pre><span class="line">&lt;ViewFlipper</span><br><span class="line">    <span class="keyword">...</span>&gt;</span><br><span class="line">    &lt; ImageView</span><br><span class="line">          <span class="keyword">...</span> /&gt;</span><br><span class="line">    &lt;ImageView</span><br><span class="line">          <span class="keyword">...</span> /&gt;</span><br><span class="line">    &lt;ImageView</span><br><span class="line">          <span class="keyword">...</span> /&gt;</span><br><span class="line">&lt;/ViewFlipper&gt;</span><br></pre></td></tr></table></figure></p>
+<p>动态导入： addView()方法。</p>
+<p>这里给大家列出几个常用方法和使用demo。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">setInAnimation</td>
+<td style="text-align:left">设置View进入屏幕时使用的动画</td>
+</tr>
+<tr>
+<td style="text-align:left">setOutAnimation</td>
+<td style="text-align:left">设置View退出屏幕时使用的动画</td>
+</tr>
+<tr>
+<td style="text-align:left">showNext</td>
+<td style="text-align:left">调用函数来显示ViewFlipper里的下一张View</td>
+</tr>
+<tr>
+<td style="text-align:left">showPrevious</td>
+<td style="text-align:left">调用函数来显示ViewFlipper里的上一张View</td>
+</tr>
+<tr>
+<td style="text-align:left">setFilpInterval</td>
+<td style="text-align:left">设置View之间切换的时间间隔</td>
+</tr>
+<tr>
+<td style="text-align:left">startFlipping</td>
+<td style="text-align:left">开始View自动播放</td>
+</tr>
+<tr>
+<td style="text-align:left">stopFlipping</td>
+<td style="text-align:left">停止View播放</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">   flipper = (ViewFlipper) findViewById(R.id.flipper);</span><br><span class="line">   <span class="comment">//动态导入的方式为ViewFlipper加入View</span></span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i&lt; res.length; i++)&#123;</span><br><span class="line">       flipper.addView(getImageView(res[i]));</span><br><span class="line">｝</span><br><span class="line">flipper.setInAnimation(<span class="keyword">this</span>, R.anim.push_right_in);</span><br><span class="line">flipper.setOutAnimation(<span class="keyword">this</span>, R.anim.push_right_out);</span><br><span class="line">flipper.setFlipInterval(<span class="number">3000</span>);</span><br><span class="line">flipper.setBackgroundColor(Color.BLACK);</span><br><span class="line">flipper.startFlipping();</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">   <span class="function"><span class="keyword">private</span> ImageView <span class="title">getImageView</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">       ImageView imageView = <span class="keyword">new</span> ImageView(<span class="keyword">this</span>);</span><br><span class="line">       imageView.setImageResource(id);</span><br><span class="line">		imageView.setScaleType(ImageView.ScaleType.FIT_XY);</span><br><span class="line">       <span class="keyword">return</span> imageView;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h4 id="ViewSwitcher"><strong> <a href="http://developer.android.com/intl/zh-cn/reference/android/widget/ViewSwitcher.html" target="_blank" rel="external">ViewSwitcher</a> </strong></h4>  | — <a href="http://developer.android.com/intl/zh-cn/reference/android/widget/ImageSwitcher.html" target="_blank" rel="external">ImageSwitcher</a><br>  | — <a href="http://developer.android.com/intl/zh-cn/reference/android/widget/TextSwitcher.html" target="_blank" rel="external">TextSwitcher</a></li>
+</ul>
+<blockquote>
+<p>A ViewSwitcher can only have two child views, of which only one is shown at a time. </p>
+</blockquote>
+<p>当我在官方文档看到这个的时候基本感觉无爱了，因为这个限制，使用场景就很有限了，但是还是不能排除有合适的应用场景。<br>用法上呢， 其实和 View Flipper 有点相似，但是有个了一个 <code>setFactory</code> 的，当然本质还是<code>addView（）</code> 但是得多了对 <code>LayoutParams</code> 的默认处理。<br>在实际中可能 <code>ImageSwitcher</code> , <code>TextSwitcher</code> 使用要比 <code>ViewSwitcher</code> 更多一些。<br>上一个<code>TextSwitcher</code>的demo。<br>xml：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;TextSwitcher</span><br><span class="line">       android:id="@+id/profileSwitcher"</span><br><span class="line">       android:layout_width="fill_parent"</span><br><span class="line">       android:layout_height="wrap_content"</span><br><span class="line">       android:layout_marginTop="10dp"</span><br><span class="line">       android:background="@color/border_gray"</span><br><span class="line">       android:inAnimation="@anim/push_up_in"</span><br><span class="line">       android:minHeight="30dp"</span><br><span class="line">       android:outAnimation="@anim/push_up_out"&gt;&lt;/TextSwitcher&gt;</span><br></pre></td></tr></table></figure>
+<p>java:<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">textSwitcher.setFactory(<span class="keyword">this</span>);</span><br><span class="line">textSwitcher = (TextSwitcher) findViewById(R.id.profileSwitcher);</span><br><span class="line">textSwitcher.setFactory(<span class="keyword">this</span>);</span><br><span class="line">Looper looper = Looper.myLooper();</span><br><span class="line">bitHandler = <span class="keyword">new</span> bitHandler(looper);</span><br><span class="line"><span class="keyword">new</span> myThread().start();</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"> <span class="annotation">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> View <span class="title">makeView</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       TextView textView = <span class="keyword">new</span> TextView(<span class="keyword">this</span>);</span><br><span class="line">       textView.setSingleLine();</span><br><span class="line">       textView.setTextSize(<span class="number">15</span>);</span><br><span class="line">       textView.setEllipsize(TextUtils.TruncateAt.END);</span><br><span class="line">       FrameLayout.LayoutParams lp = <span class="keyword">new</span> FrameLayout.LayoutParams(</span><br><span class="line">               ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT</span><br><span class="line">       );</span><br><span class="line">       lp.gravity = Gravity.CENTER;</span><br><span class="line">       textView.setLayoutParams(lp);</span><br><span class="line">       <span class="keyword">return</span> textView;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---这么写并不好，只是个demo，大家凑合看吧---//</span></span><br><span class="line">   <span class="class"><span class="keyword">class</span> <span class="title">bitHandler</span> <span class="keyword">extends</span> <span class="title">Handler</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="title">bitHandler</span><span class="params">(Looper looper)</span> </span>&#123;</span><br><span class="line">           <span class="keyword">super</span>(looper);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="annotation">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</span><br><span class="line">           <span class="keyword">super</span>.handleMessage(msg);</span><br><span class="line">           textSwitcher.setText(strings[index]);</span><br><span class="line">           index++;</span><br><span class="line">           <span class="keyword">if</span> (index == strings.length) &#123;</span><br><span class="line">               index = <span class="number">0</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">myThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">       <span class="annotation">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">           <span class="keyword">super</span>.run();</span><br><span class="line">           <span class="keyword">while</span> (index &lt; strings.length) &#123;</span><br><span class="line">               <span class="keyword">try</span> &#123;</span><br><span class="line">                   <span class="keyword">synchronized</span> (<span class="keyword">this</span>) &#123;</span><br><span class="line">                       bitHandler.sendEmptyMessage(<span class="number">0</span>);</span><br><span class="line">                       <span class="keyword">this</span>.sleep(<span class="number">4000</span>);</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                   e.printStackTrace();</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果图：<br><img src="/image/api06.gif" alt="Bitmap"></p>
+<hr>
+<p>view属性部分</p>
+<ul>
+<li><h3 id="android:weightSum_(LinearLayout)">android:weightSum (LinearLayout)</h3></li>
+</ul>
+<p>如果想使用 layout weights，但是却不想填充整个 LinearLayout 的话，就可以用 weightSum 来定义总的 weight 大小。</p>
+<ul>
+<li><h3 id="android:descendantFocusability（ViewGroup）">android:descendantFocusability（ViewGroup）</h3></li>
+</ul>
+<p>在使用ListView时，当item中有Button、CheckBox、RadioButton、TextView等组件时，我们通常会遇到listview的每一项无法响应点击的问题，因为消息还没传回每一项的viewgroup就被其子view消费了。<br>我们可以通过为该ViewGroup设置“android:descendantFocusability”属性来强制获取焦点，以便能够消费android系统传递过来的消息。“android:descendantFocusability”的详细解释如下图所示：<br><img src="/image/api07.jpg" alt="Bitmap"></p>
+<p>属性的值有三种：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">beforeDescendants</td>
+<td style="text-align:left">viewgroup会优先其子类控件而获取到焦点</td>
+</tr>
+<tr>
+<td style="text-align:left">afterDescendants</td>
+<td style="text-align:left">viewgroup只有当其子类控件不需要获取焦点时才获取焦点</td>
+</tr>
+<tr>
+<td style="text-align:left">blocksDescendants</td>
+<td style="text-align:left">viewgroup会覆盖子类控件而直接获得焦点</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><h3 id="android:duplicateParentState（ViewGroup）">android:duplicateParentState（ViewGroup）</h3></li>
+</ul>
+<p>如果设置此属性，将直接从父容器中获取绘图状态（光标，按下，选中等）。比方说是你点一下LinearLayout时Button有被点击的效果，但是button不是相应点击事件，但是状态却随着LinearLayout变化了。这个简直是神技。。。</p>
+<ul>
+<li><h3 id="android:fillViewport_(ScrollView)">android:fillViewport (ScrollView)</h3></li>
+</ul>
+<p>解决在 ScrollView 中当内容不足的时候填不满屏幕的问题。<br>想了解更多,点击 <a href="http://www.curious-creature.com/2010/08/15/scrollviews-handy-trick/" target="_blank" rel="external">ScrollView’s handy trick</a></p>
+<ul>
+<li><h3 id="android:scaleType_(ImageView)">android:scaleType (ImageView)</h3></li>
+</ul>
+<p>定义在 ImageView 中怎么缩放/剪裁图片，ImageView.ScaleType共八种：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ImageView.ScaleType.CENTER</td>
+<td style="text-align:left">图片位于视图中间，但不执行缩放</td>
+</tr>
+<tr>
+<td style="text-align:left">ImageView.ScaleType.CENTER_CROP</td>
+<td style="text-align:left">按统一比例缩放图片（保持图片的尺寸比例）便于图片的两维（宽度和高度）等于或者大于相应的视图的维度</td>
+</tr>
+<tr>
+<td style="text-align:left">ImageView.ScaleType.CENTER_INSIDE</td>
+<td style="text-align:left">按统一比例缩放图片（保持图片的尺寸比例）便于图片的两维（宽度和高度）等于或者小于相应的视图的维度</td>
+</tr>
+<tr>
+<td style="text-align:left">ImageView.ScaleType.FIT_CENTER</td>
+<td style="text-align:left">缩放图片使用center</td>
+</tr>
+<tr>
+<td style="text-align:left">ImageView.ScaleType.FIT_END</td>
+<td style="text-align:left">缩放图片使用END</td>
+</tr>
+<tr>
+<td style="text-align:left">ImageView.ScaleType.FIT_START</td>
+<td style="text-align:left">缩放图片使用START</td>
+</tr>
+<tr>
+<td style="text-align:left">ImageView.ScaleType.FIT_XY</td>
+<td style="text-align:left">缩放图片使用XY</td>
+</tr>
+<tr>
+<td style="text-align:left">ImageView.ScaleType.MATRIX</td>
+<td style="text-align:left">当绘制时使用图片矩阵缩放</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><h3 id="android:imeOptions（EditText）">android:imeOptions（EditText）</h3></li>
+</ul>
+<p>EditText中使用对键盘的action键（一般是右下角）定制，并且通过监听键盘执行相应的操作，但是<code>imeOptions</code>并 不仅仅局限于此，还有很对对键盘控制的属性，比方在横屏的时候，控制键盘不全屏显示等。感兴趣的可以仔细的阅读下官方文档。<br>部分属性：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">android:imeOptions=”actionNone”</td>
+<td style="text-align:left">输入框右侧不带任何提示</td>
+</tr>
+<tr>
+<td style="text-align:left">android:imeOptions=”actionGo”</td>
+<td style="text-align:left">右下角按键内容为’开始’</td>
+</tr>
+<tr>
+<td style="text-align:left">android:imeOptions=”actionSearch”</td>
+<td style="text-align:left">右下角按键为搜索</td>
+</tr>
+<tr>
+<td style="text-align:left">android:imeOptions=”actionSend”</td>
+<td style="text-align:left">右下角按键内容为’发送’</td>
+</tr>
+<tr>
+<td style="text-align:left">android:imeOptions=”actionPrevious”</td>
+<td style="text-align:left">右下角按键内容为’上一步’</td>
+</tr>
+<tr>
+<td style="text-align:left">android:imeOptions=”actionNext”</td>
+<td style="text-align:left">右下角按键内容为’下一步’</td>
+</tr>
+<tr>
+<td style="text-align:left">android:imeOptions=”actionDone”</td>
+<td style="text-align:left">右下角按键内容为’完成’</td>
+</tr>
+</tbody>
+</table>
+<p>For instance:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">etLayoutSearch.setOnEditorActionListener(<span class="keyword">new</span> TextView.OnEditorActionListener() &#123;</span><br><span class="line">            <span class="annotation">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onEditorAction</span><span class="params">(TextView v, <span class="keyword">int</span> actionId, KeyEvent event)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (actionId == EditorInfo.IME_ACTION_SEARCH ) &#123;</span><br><span class="line">                   ...</span><br><span class="line">                &#125;</span><br><span class="line">				...</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h3 id="Activity-onTrimMemory()"><a href="http://developer.android.com/intl/zh-cn/reference/android/content/ComponentCallbacks2.html" target="_blank" rel="external">Activity.onTrimMemory()</a></h3></li>
+</ul>
+<p><code>OnTrimMemory()</code>方法并不仅仅是Activity实现的方法，系统提供包括<code>Application</code>, <code>Fragement</code>, <code>Service</code>, <code>ContentProvider</code>  都可以实现这个回调。是的，回调。<br><code>OnTrimMemory</code>是Android在4.0之后加入的一个回调，任何实现了<code>ComponentCallbacks2</code>接口的类都可以重写实现这个回调方法．OnTrimMemory的主要作用就是指导应用程序在不同的情况下进行自身的内存释放，以避免被系统直接杀掉。<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="annotation">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onTrimMemory</span><span class="params">(<span class="keyword">int</span> level)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">super</span>.onTrimMemory(level);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们可以看到在实现回调的时候，传入了一个参数，这个参数是内存使用情况的等级。总共有七种情况，分别是<br><code>TRIM_MEMORY_UI_HIDDEN</code>、<br><code>TRIM_MEMORY_RUNNING_MODERATE</code>、<code>TRIM_MEMORY_RUNNING_LOW</code>、<code>TRIM_MEMORY_RUNNING_CRITICAL</code>、<br><code>TRIM_MEMORY_BACKGROUND</code>、<code>TRIM_MEMORY_MODERATE</code>、<code>TRIM_MEMORY_COMPLETE</code><br>从命名上大家应该能看出一些端倪，具体的在文档中有比较详细的说明和介绍。这里就不多说了，希望大家能够去看下。</p>
+<p>那么我们需要在什么时候OnTrimMemory回调释放哪些资源呢？根据内存使用的等级情况，一般我们会在内存情况很糟糕<code>TRIM_MEMORY_COMPLETE</code>，或者应用所有UI界面被隐藏了<code>TRIM_MEMORY_UI_HIDDEN</code>、我们需要对应的来释放一些缓存资源，以及我们动态添加的使用较少的View，这样来保证应用不会被杀掉。<br>虽然，系统在内存不足的时候杀进程的顺序是按照LRU Cache中从低到高来的，但是它同时也会考虑杀掉那些占用内存较高的应用来让系统更快地获得更多的内存。如果我们应用占用内存较小，就可以增加不被杀掉的几率，从而快速地恢复。</p>
+<p>另外，在api 14之前使用的 <code>OnLowMemory</code>，级别应该和<code>TRIM_MEMORY_COMPLETE</code>是差不多的。从这点也可以看出Google对Android应用内存使用情况越来越多的重视（虽然有些自家应用很Low……）。<br>所以，一个好的应用不仅仅是好看，流畅和快速的体验更加重要。</p>
+<h2 id="Summary">Summary</h2><p>这样，这个系列基本算是结束了，后面如果自己工作中有发现更多好的API，我还是会不定时的过来更新。</p>
+<h2 id="声明">声明</h2><ol>
+<li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件<code>macouen@gmail.com</code>说明。 </li>
+<li>欢迎转载，但请注明文章原始出处。 </li>
+</ol>
+<p>作者：Oak_Zmm<br>出处：<a href="http://oakzmm.com/" target="_blank" rel="external">http://oakzmm.com/</a> </p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag">#Android</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/11/cool-Android-api-2/" rel="next">Cool Android Apis 整理（二）</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/09/07/cool-android-api-3/"
+     data-title="Cool Android Apis 整理（三）"
+     data-content=""
+     data-url="http://oakzmm.com/2015/09/07/cool-android-api-3/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+                <!-- 多说热评文章-->
+                <p>热评文章</p>
+                <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="2015/09/07/cool-android-api-3/"
+                       data-title="Cool Android Apis 整理（三）" data-url="http://oakzmm.com/2015/09/07/cool-android-api-3/">
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/author.jpg" alt="Oak_Zmm" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Oak_Zmm</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">oak's blog | java | android |</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/macouen" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/minter01" target="_blank">Weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/zhao-min-xing" target="_blank">ZhiHu</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.cnblogs.com/oakMac/" target="_blank">我的博客园</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.cnblogs.com/ct2011" target="_blank">GavinCT</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.jianshu.com/users/df40282480b4/latest_articles" target="_blank">小鄧子的简书</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.spencer-dev.com/" target="_blank">给立乐的技术博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://liukun.engineer/" target="_blank">LIUKUN的技术博客</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Content"><span class="nav-number">2.</span> <span class="nav-text">Content</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#<_include_/>、<_merge_/>、_<_ViewStub_/>_标签"><span class="nav-number">2.1.</span> <span class="nav-text">< include />、< merge />、 < ViewStub /> 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ViewAnimator"><span class="nav-number">2.2.</span> <span class="nav-text">ViewAnimator</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#View_Flipper"><span class="nav-number">2.2.1.</span> <span class="nav-text"> View Flipper </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ViewSwitcher"><span class="nav-number">2.2.2.</span> <span class="nav-text"> ViewSwitcher </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android:weightSum_(LinearLayout)"><span class="nav-number">2.3.</span> <span class="nav-text">android:weightSum (LinearLayout)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android:descendantFocusability（ViewGroup）"><span class="nav-number">2.4.</span> <span class="nav-text">android:descendantFocusability（ViewGroup）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android:duplicateParentState（ViewGroup）"><span class="nav-number">2.5.</span> <span class="nav-text">android:duplicateParentState（ViewGroup）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android:fillViewport_(ScrollView)"><span class="nav-number">2.6.</span> <span class="nav-text">android:fillViewport (ScrollView)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android:scaleType_(ImageView)"><span class="nav-number">2.7.</span> <span class="nav-text">android:scaleType (ImageView)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android:imeOptions（EditText）"><span class="nav-number">2.8.</span> <span class="nav-text">android:imeOptions（EditText）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity-onTrimMemory()"><span class="nav-number">2.9.</span> <span class="nav-text">Activity.onTrimMemory()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">3.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">4.</span> <span class="nav-text">声明</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Oak_Zmm</span>  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    | - <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Views.
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+   </a>
+
+</div>
+ 
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"oak"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
