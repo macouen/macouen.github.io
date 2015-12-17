@@ -5,7 +5,7 @@
   <subtitle><![CDATA[你信不信，我这都是瞎写的。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://oakzmm.com//"/>
-  <updated>2015-09-08T03:44:10.179Z</updated>
+  <updated>2015-12-17T06:50:05.348Z</updated>
   <id>http://oakzmm.com//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://oakzmm.com/2015/09/07/cool-android-api-3/"/>
     <id>http://oakzmm.com/2015/09/07/cool-android-api-3/</id>
     <published>2015-09-07T02:00:39.000Z</published>
-    <updated>2015-09-08T03:44:10.179Z</updated>
+    <updated>2015-12-17T06:50:05.348Z</updated>
     <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。<br>这是这个系列的第三篇，第一篇 <a href="http://oakzmm.com/2015/08/04/cool-Android-api/" target="_blank" rel="external">Cool Android Apis 整理（一）</a>，第二篇 <a href="http://oakzmm.com/2015/08/11/cool-Android-api-2/" target="_blank" rel="external">Cool Android Apis 整理（二）</a> 。<br>非常抱歉，由于工作的原因，第三篇隔了很久才发 （写博客果然不是一件容易的事）。</p>
 <blockquote>
 <p>整理来源 </p>
@@ -271,7 +271,7 @@
     
       <category term="Android" scheme="http://oakzmm.com/tags/Android/"/>
     
-      <category term="Android" scheme="http://oakzmm.com/categories/Android/"/>
+      <category term="android" scheme="http://oakzmm.com/categories/android/"/>
     
   </entry>
   
@@ -280,7 +280,7 @@
     <link href="http://oakzmm.com/2015/08/11/cool-Android-api-2/"/>
     <id>http://oakzmm.com/2015/08/11/cool-Android-api-2/</id>
     <published>2015-08-11T04:27:45.000Z</published>
-    <updated>2015-08-11T06:20:10.499Z</updated>
+    <updated>2015-12-17T06:50:00.179Z</updated>
     <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。<br>这是这个系列的第二篇，第一篇 <a href="http://oakzmm.com/2015/08/04/cool-Android-api/" target="_blank" rel="external">Cool Android Apis 整理（一）</a>。</p>
 <p><strong>多说几句：<br>原本的想法是目前整理的知识点多分几篇来梳理，篇幅短些，这样大家看起来不累。但是也有弊端，就是不利于知识的整理。所以我对这些<code>TIPS</code>做了简单的筛选分类整理，在保证可读性的前提下，尽量的不割裂知识点间的联系。接下来会用两篇来总结完，请大家持续关注。如果有好的<code>tip</code>可以推荐给我。</strong></p>
 <blockquote>
@@ -552,7 +552,7 @@
     
       <category term="Android" scheme="http://oakzmm.com/tags/Android/"/>
     
-      <category term="Android" scheme="http://oakzmm.com/categories/Android/"/>
+      <category term="android" scheme="http://oakzmm.com/categories/android/"/>
     
   </entry>
   
@@ -561,7 +561,7 @@
     <link href="http://oakzmm.com/2015/08/04/cool-Android-api/"/>
     <id>http://oakzmm.com/2015/08/04/cool-Android-api/</id>
     <published>2015-08-04T02:21:59.000Z</published>
-    <updated>2015-08-24T01:13:33.754Z</updated>
+    <updated>2015-12-17T06:49:09.103Z</updated>
     <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。</p>
 <blockquote>
 <p>整理来源 </p>
@@ -682,7 +682,7 @@
     
       <category term="Android" scheme="http://oakzmm.com/tags/Android/"/>
     
-      <category term="Android" scheme="http://oakzmm.com/categories/Android/"/>
+      <category term="android" scheme="http://oakzmm.com/categories/android/"/>
     
   </entry>
   
@@ -691,7 +691,7 @@
     <link href="http://oakzmm.com/2015/07/22/okHttp-Volley-Gson/"/>
     <id>http://oakzmm.com/2015/07/22/okHttp-Volley-Gson/</id>
     <published>2015-07-22T06:24:33.000Z</published>
-    <updated>2015-11-04T08:16:57.826Z</updated>
+    <updated>2015-12-17T06:49:50.721Z</updated>
     <content type="html"><![CDATA[<p>什么？你还不知道这3个货什么东西？<br>好吧，请移步这里 <a href="http://www.cnblogs.com/ct2011/p/4001708.html" target="_blank" rel="external">OkHttp使用介绍</a> 、<a href="https://bxbxbai.github.io/2014/09/14/android-working-with-volley/" target="_blank" rel="external">Android库Volley的使用介绍</a> 、 <a href="http://blog.csdn.net/jackie_xiaonan/article/details/14498187" target="_blank" rel="external">GSON使用的学习笔记，入门篇</a> 。 </p>
 <h2 id="Foreword">Foreword</h2><ul>
 <li><p>这并不是一篇特别有营养的技术博客，对于相关库的使用并没有做深入的解释，因为网上有很多翔实的解析和介绍，我会给出连接。 </p>
@@ -770,7 +770,7 @@
     
       <category term="http" scheme="http://oakzmm.com/tags/http/"/>
     
-      <category term="Android" scheme="http://oakzmm.com/categories/Android/"/>
+      <category term="android" scheme="http://oakzmm.com/categories/android/"/>
     
   </entry>
   
