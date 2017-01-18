@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   
   <title><![CDATA[Oak_Zmm的技术博客]]></title>
-  <subtitle><![CDATA[你信不信，我这都是瞎写的。]]></subtitle>
+  <subtitle><![CDATA[所有的酒，都不如你。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://oakzmm.com//"/>
-  <updated>2015-12-17T06:50:05.348Z</updated>
+  <updated>2017-01-18T09:04:15.344Z</updated>
   <id>http://oakzmm.com//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://oakzmm.com/2015/09/07/cool-android-api-3/"/>
     <id>http://oakzmm.com/2015/09/07/cool-android-api-3/</id>
     <published>2015-09-07T02:00:39.000Z</published>
-    <updated>2015-12-17T06:50:05.348Z</updated>
+    <updated>2017-01-18T09:04:15.344Z</updated>
     <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。<br>这是这个系列的第三篇，第一篇 <a href="http://oakzmm.com/2015/08/04/cool-Android-api/" target="_blank" rel="external">Cool Android Apis 整理（一）</a>，第二篇 <a href="http://oakzmm.com/2015/08/11/cool-Android-api-2/" target="_blank" rel="external">Cool Android Apis 整理（二）</a> 。<br>非常抱歉，由于工作的原因，第三篇隔了很久才发 （写博客果然不是一件容易的事）。</p>
 <blockquote>
 <p>整理来源 </p>
@@ -249,11 +249,6 @@
 <p>那么我们需要在什么时候OnTrimMemory回调释放哪些资源呢？根据内存使用的等级情况，一般我们会在内存情况很糟糕<code>TRIM_MEMORY_COMPLETE</code>，或者应用所有UI界面被隐藏了<code>TRIM_MEMORY_UI_HIDDEN</code>、我们需要对应的来释放一些缓存资源，以及我们动态添加的使用较少的View，这样来保证应用不会被杀掉。<br>虽然，系统在内存不足的时候杀进程的顺序是按照LRU Cache中从低到高来的，但是它同时也会考虑杀掉那些占用内存较高的应用来让系统更快地获得更多的内存。如果我们应用占用内存较小，就可以增加不被杀掉的几率，从而快速地恢复。</p>
 <p>另外，在api 14之前使用的 <code>OnLowMemory</code>，级别应该和<code>TRIM_MEMORY_COMPLETE</code>是差不多的。从这点也可以看出Google对Android应用内存使用情况越来越多的重视（虽然有些自家应用很Low……）。<br>所以，一个好的应用不仅仅是好看，流畅和快速的体验更加重要。</p>
 <h2 id="Summary">Summary</h2><p>这样，这个系列基本算是结束了，后面如果自己工作中有发现更多好的API，我还是会不定时的过来更新。另外，如果大家在阅读过程中又发现问题或者有任何的意见或建议，可以在评论区留言。</p>
-<h2 id="声明">声明</h2><ol>
-<li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件<code>macouen@gmail.com</code>说明。 </li>
-<li>欢迎转载，但请注明文章原始出处。 </li>
-</ol>
-<p>作者：Oak_Zmm<br>出处：<a href="http://oakzmm.com/" target="_blank" rel="external">http://oakzmm.com/</a> </p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。<br>这是这个系列的第三篇，第一篇 <a href="http://oakzmm.com/2015/08/04/cool-Android-api/">Cool Android Apis 整理（一）</a>，第二篇 <a href="http://oakzmm.com/2015/08/11/cool-Android-api-2/">Cool Android Apis 整理（二）</a> 。<br>非常抱歉，由于工作的原因，第三篇隔了很久才发 （写博客果然不是一件容易的事）。</p>
@@ -280,7 +275,7 @@
     <link href="http://oakzmm.com/2015/08/11/cool-Android-api-2/"/>
     <id>http://oakzmm.com/2015/08/11/cool-Android-api-2/</id>
     <published>2015-08-11T04:27:45.000Z</published>
-    <updated>2015-12-17T06:50:00.179Z</updated>
+    <updated>2017-01-18T09:04:00.626Z</updated>
     <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。<br>这是这个系列的第二篇，第一篇 <a href="http://oakzmm.com/2015/08/04/cool-Android-api/" target="_blank" rel="external">Cool Android Apis 整理（一）</a>。</p>
 <p><strong>多说几句：<br>原本的想法是目前整理的知识点多分几篇来梳理，篇幅短些，这样大家看起来不累。但是也有弊端，就是不利于知识的整理。所以我对这些<code>TIPS</code>做了简单的筛选分类整理，在保证可读性的前提下，尽量的不割裂知识点间的联系。接下来会用两篇来总结完，请大家持续关注。如果有好的<code>tip</code>可以推荐给我。</strong></p>
 <blockquote>
@@ -528,11 +523,6 @@
 <p>预告：第三篇，我准备整理一些很Cool的控件，以及控件的一些很棒的属性；Activity的方法。敬请期待。</p>
 <hr>
 <p>待续。</p>
-<h2 id="声明">声明</h2><ol>
-<li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件<code>macouen@gmail.com</code>说明。 </li>
-<li>欢迎转载，但请注明文章原始出处。 </li>
-</ol>
-<p>作者：Oak_Zmm<br>出处：<a href="http://oakzmm.com/" target="_blank" rel="external">http://oakzmm.com/</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。<br>这是这个系列的第二篇，第一篇 <a href="http://oakzmm.com/2015/08/04/cool-Android-api/">Cool Android Apis 整理（一）</a>。</p>
@@ -561,7 +551,7 @@
     <link href="http://oakzmm.com/2015/08/04/cool-Android-api/"/>
     <id>http://oakzmm.com/2015/08/04/cool-Android-api/</id>
     <published>2015-08-04T02:21:59.000Z</published>
-    <updated>2015-12-17T06:49:09.103Z</updated>
+    <updated>2017-01-18T09:03:43.422Z</updated>
     <content type="html"><![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。</p>
 <blockquote>
 <p>整理来源 </p>
@@ -655,11 +645,6 @@
 <p>也就是说这个方法其实是反转动画，如果动画正在播放，这个方法停止动画，并从当前点往回播。如果动画已经播放完毕那就反过来一遍。那么也就是说 “顺畅的取消动画效果” ，是动画还在播放的是时候来调用 <code>reverse</code> 这个方法。</p>
 <hr>
 <p>待续。</p>
-<h2 id="声明">声明</h2><ol>
-<li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件<code>macouen@gmail.com</code>说明。 </li>
-<li>欢迎转载，但请注明文章原始出处。 </li>
-</ol>
-<p>作者：Oak_Zmm<br>出处：<a href="http://oakzmm.com/" target="_blank" rel="external">http://oakzmm.com/</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="Foreword">Foreword</h2><p>本文主要整理 <code>Cool Android Apis</code>。</p>
@@ -691,7 +676,7 @@
     <link href="http://oakzmm.com/2015/07/22/okHttp-Volley-Gson/"/>
     <id>http://oakzmm.com/2015/07/22/okHttp-Volley-Gson/</id>
     <published>2015-07-22T06:24:33.000Z</published>
-    <updated>2015-12-17T06:49:50.721Z</updated>
+    <updated>2017-01-18T09:03:03.650Z</updated>
     <content type="html"><![CDATA[<p>什么？你还不知道这3个货什么东西？<br>好吧，请移步这里 <a href="http://www.cnblogs.com/ct2011/p/4001708.html" target="_blank" rel="external">OkHttp使用介绍</a> 、<a href="https://bxbxbai.github.io/2014/09/14/android-working-with-volley/" target="_blank" rel="external">Android库Volley的使用介绍</a> 、 <a href="http://blog.csdn.net/jackie_xiaonan/article/details/14498187" target="_blank" rel="external">GSON使用的学习笔记，入门篇</a> 。 </p>
 <h2 id="Foreword">Foreword</h2><ul>
 <li><p>这并不是一篇特别有营养的技术博客，对于相关库的使用并没有做深入的解释，因为网上有很多翔实的解析和介绍，我会给出连接。 </p>
@@ -751,11 +736,6 @@
 <li><a href="http://blog.csdn.net/jackie_xiaonan/article/details/14498187" target="_blank" rel="external">GSON使用的学习笔记，入门篇</a> </li>
 <li><a href="https://medium.com/@sotti/android-networking-i-okhttp-volley-and-gson-72004efff196" target="_blank" rel="external">Android Networking I: OkHttp, Volley and Gson</a></li>
 </ul>
-<h2 id="声明">声明</h2><ol>
-<li>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请<a href="http://weibo.com/minter01" target="_blank" rel="external">微博私信</a>或者邮件macouen@gmail.com说明。 </li>
-<li>欢迎转载，但请注明文章原始出处。 </li>
-</ol>
-<p>作者：Oak_Zmm<br>出处：<a href="http://oakzmm.com/" target="_blank" rel="external">http://oakzmm.com/</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>什么？你还不知道这3个货什么东西？<br>好吧，请移步这里 <a href="http://www.cnblogs.com/ct2011/p/4001708.html">OkHttp使用介绍</a> 、<a href="https://bxbxbai.github.io/2014/09/14/android-working-with-volley/">Android库Volley的使用介绍</a> 、 <a href="http://blog.csdn.net/jackie_xiaonan/article/details/14498187">GSON使用的学习笔记，入门篇</a> 。 </p>

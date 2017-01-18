@@ -1,15 +1,21 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
-    
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
   <meta name="google-site-verification" content="7wEQlgTnbMQH0szfXBpWJ241oRPTiUASFH6lxEfDZLw" />
@@ -18,19 +24,55 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
-    <meta name="description" content="oak's blog | java | android |" />
 
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo,Oak_Zmm" />
+
+
 
 
 
@@ -38,7 +80,12 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/oak.ico?v=0.4.4" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
 
 
 <meta name="description" content="oak&apos;s blog | java | android |">
@@ -52,25 +99,44 @@
 <meta name="twitter:description" content="oak&apos;s blog | java | android |">
 
 
-<script type="text/javascript" id="hexo.configuration">
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Mist',
-    sidebar: 'post'
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '11335060',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
 
-    <title> Oak_Zmm的技术博客 </title>
+
+
+  <link rel="canonical" href="http://oakzmm.com/"/>
+
+
+
+
+
+  <title> Oak_Zmm的技术博客 </title>
 </head>
+
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-<!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
+
+  
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -84,21 +150,36 @@
 
 
 
-<div class="container one-column 
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
+
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="header-inner"><h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand" rel="start">
-      <span class="logo">
-        <i class="icon-logo"></i>
-      </span>
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
       <span class="site-title">Oak_Zmm的技术博客</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">所有的酒，都不如你。</h1>
+    
+</div>
 
 <div class="site-nav-toggle">
   <button>
@@ -112,12 +193,14 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon icon-home"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
@@ -125,7 +208,9 @@
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-archives"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
             归档
           </a>
         </li>
@@ -133,7 +218,9 @@
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-categories"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
             分类
           </a>
         </li>
@@ -141,8 +228,23 @@
         
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
-            <i class="menu-item-icon icon-about"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
             关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
           </a>
         </li>
       
@@ -152,10 +254,10 @@
   
     <div class="site-search">
       
-  
-<form class="site-search-form">
+  <form class="site-search-form">
   <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
 </form>
+
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
     (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
@@ -165,77 +267,149 @@
   _st('install', 'LYep3yGa4a2n65zPtkj9','2.0.0');
 </script>
 
-<div class="site-search-toggle"></div>
+
+
     </div>
   
 </nav>
 
 
-        </div>
+
+ </div>
     </header>
 
     <main id="main" class="main">
-        <div class="main-inner">
-            <div id="content" class="content">
-                
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
     
       
 
+  
+
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  <link itemprop="mainEntityOfPage" href="http://oakzmm.com/2015/09/07/cool-android-api-3/">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/09/07/cool-android-api-3/" itemprop="url">
-                Cool Android Apis 整理（三）
-              </a>
-            
-          
-        </h1>
-      
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Oak_Zmm">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/author.jpg">
+  </span>
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-09-07T10:00:39+08:00" content="Sep 7 2015">
-            Sep 7 2015
-          </time>
-        </span>
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Oak_Zmm的技术博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Oak_Zmm的技术博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h2 class="post-title" itemprop="name headline">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
+            
+              
+                
+                <a class="post-title-link" href="/2015/09/07/cool-android-api-3/" itemprop="url">
+                  Cool Android Apis 整理（三）
+                </a>
+              
+            
+          </h2>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-09-07T10:00:39+08:00">
+                Sep 7 2015
+              </time>
+            
+
+            
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/09/07/cool-android-api-3/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/07/cool-android-api-3/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-		
-		
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/09/07/cool-android-api-3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/07/cool-android-api-3/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2015/09/07/cool-android-api-3/" class="leancloud_visitors" data-flag-title="Cool Android Apis 整理（三）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -252,15 +426,30 @@
 </li>
 </ul>
 </blockquote>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/09/07/cool-android-api-3/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+	
+	<div>
+	  
+	</div>
+	
+    <div>
+      
+    </div>
 
+    <div>
+      
+    </div>
+
+	
     <footer class="post-footer">
       
 
@@ -277,60 +466,129 @@
     
       
 
+  
+
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  <link itemprop="mainEntityOfPage" href="http://oakzmm.com/2015/08/11/cool-Android-api-2/">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/08/11/cool-Android-api-2/" itemprop="url">
-                Cool Android Apis 整理（二）
-              </a>
-            
-          
-        </h1>
-      
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Oak_Zmm">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/author.jpg">
+  </span>
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-08-11T12:27:45+08:00" content="Aug 11 2015">
-            Aug 11 2015
-          </time>
-        </span>
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Oak_Zmm的技术博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Oak_Zmm的技术博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h2 class="post-title" itemprop="name headline">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
+            
+              
+                
+                <a class="post-title-link" href="/2015/08/11/cool-Android-api-2/" itemprop="url">
+                  Cool Android Apis 整理（二）
+                </a>
+              
+            
+          </h2>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-08-11T12:27:45+08:00">
+                Aug 11 2015
+              </time>
+            
+
+            
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/08/11/cool-Android-api-2/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/11/cool-Android-api-2/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-		
-		
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/08/11/cool-Android-api-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/11/cool-Android-api-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2015/08/11/cool-Android-api-2/" class="leancloud_visitors" data-flag-title="Cool Android Apis 整理（二）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -349,15 +607,30 @@
 </ul>
 </blockquote>
 <p>所以说严格来讲这篇文章基本不是原创，但是我对每个Tip都加入或官方文档或使用方法或效果之类的补充。整个来说算是 <strong>“把书读厚”</strong> 的过程吧。<br>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/08/11/cool-Android-api-2/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+	
+	<div>
+	  
+	</div>
+	
+    <div>
+      
+    </div>
 
+    <div>
+      
+    </div>
+
+	
     <footer class="post-footer">
       
 
@@ -374,60 +647,129 @@
     
       
 
+  
+
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  <link itemprop="mainEntityOfPage" href="http://oakzmm.com/2015/08/04/cool-Android-api/">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/08/04/cool-Android-api/" itemprop="url">
-                Cool Android Apis 整理（一）
-              </a>
-            
-          
-        </h1>
-      
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Oak_Zmm">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/author.jpg">
+  </span>
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-08-04T10:21:59+08:00" content="Aug 4 2015">
-            Aug 4 2015
-          </time>
-        </span>
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Oak_Zmm的技术博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Oak_Zmm的技术博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h2 class="post-title" itemprop="name headline">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
+            
+              
+                
+                <a class="post-title-link" href="/2015/08/04/cool-Android-api/" itemprop="url">
+                  Cool Android Apis 整理（一）
+                </a>
+              
+            
+          </h2>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-08-04T10:21:59+08:00">
+                Aug 4 2015
+              </time>
+            
+
+            
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/08/04/cool-Android-api/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/04/cool-Android-api/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-		
-		
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/08/04/cool-Android-api/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/04/cool-Android-api/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2015/08/04/cool-Android-api/" class="leancloud_visitors" data-flag-title="Cool Android Apis 整理（一）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -449,15 +791,30 @@
 <li><h3 id="Activity-startActivities()"><a href="http://developer.android.com/intl/zh-cn/reference/android/app/Activity.html#startActivities(android.content.Intent[]">Activity.startActivities()</a></h3></li>
 </ul>
 <p>   其实我们绝大多数的开发者可能是没有用过这个方法的，根据我个人理解，用的到场景并不多。这个方法最直接的理解就是使用intent开启多个Activity，我在Google的关于<code>Activity.startActivities()</code>文档说明中，并没有获取到除了StartActivity之外更多的信息。于是我继续扒源码，果然在<code>Contex</code>t和<code>ContextCompat</code> 下找到了更加详细的说明和解释。<br>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/08/04/cool-Android-api/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+	
+	<div>
+	  
+	</div>
+	
+    <div>
+      
+    </div>
 
+    <div>
+      
+    </div>
+
+	
     <footer class="post-footer">
       
 
@@ -474,60 +831,129 @@
     
       
 
+  
+
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  <link itemprop="mainEntityOfPage" href="http://oakzmm.com/2015/07/22/okHttp-Volley-Gson/">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/22/okHttp-Volley-Gson/" itemprop="url">
-                使用okHttp、Volley、Gson快速组装HttpClinet
-              </a>
-            
-          
-        </h1>
-      
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Oak_Zmm">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/author.jpg">
+  </span>
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-07-22T14:24:33+08:00" content="Jul 22 2015">
-            Jul 22 2015
-          </time>
-        </span>
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Oak_Zmm的技术博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Oak_Zmm的技术博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h2 class="post-title" itemprop="name headline">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/22/okHttp-Volley-Gson/" itemprop="url">
+                  使用okHttp、Volley、Gson快速组装HttpClinet
+                </a>
+              
+            
+          </h2>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-07-22T14:24:33+08:00">
+                Jul 22 2015
+              </time>
+            
+
+            
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/22/okHttp-Volley-Gson/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/22/okHttp-Volley-Gson/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-		
-		
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/07/22/okHttp-Volley-Gson/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/22/okHttp-Volley-Gson/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2015/07/22/okHttp-Volley-Gson/" class="leancloud_visitors" data-flag-title="使用okHttp、Volley、Gson快速组装HttpClinet">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -541,15 +967,30 @@
 <li><p>服务端返回的是是json格式的数据。使用Android Studio 1.2.2 &amp; Gradle。</p>
 </li>
 </ul>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/07/22/okHttp-Volley-Gson/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+	
+	<div>
+	  
+	</div>
+	
+    <div>
+      
+    </div>
 
+    <div>
+      
+    </div>
+
+	
     <footer class="post-footer">
       
 
@@ -566,60 +1007,129 @@
     
       
 
+  
+
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  <link itemprop="mainEntityOfPage" href="http://oakzmm.com/2015/07/16/live-templates/">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/16/live-templates/" itemprop="url">
-                常用的Android studio的live templates汇总
-              </a>
-            
-          
-        </h1>
-      
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Oak_Zmm">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/author.jpg">
+  </span>
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-07-16T16:47:27+08:00" content="Jul 16 2015">
-            Jul 16 2015
-          </time>
-        </span>
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Oak_Zmm的技术博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Oak_Zmm的技术博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h2 class="post-title" itemprop="name headline">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/Android-Studio/" itemprop="url" rel="index"><span itemprop="name">Android Studio</span></a></span>
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/16/live-templates/" itemprop="url">
+                  常用的Android studio的live templates汇总
+                </a>
+              
+            
+          </h2>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-07-16T16:47:27+08:00">
+                Jul 16 2015
+              </time>
+            
+
+            
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/16/live-templates/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/16/live-templates/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android-Studio/" itemprop="url" rel="index">
+                    <span itemprop="name">Android Studio</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-		
-		
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/07/16/live-templates/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/16/live-templates/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2015/07/16/live-templates/" class="leancloud_visitors" data-flag-title="常用的Android studio的live templates汇总">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -628,15 +1138,30 @@
         
           <p><em>Android studio 默认的是按Tab 自动生成代码块的，用户可以自己在setting—&gt;Live Templates里面进行设置expand style</em></p>
 <h2 id="下面是一常用的Live_Templates的汇总说明">下面是一常用的Live Templates的汇总说明</h2>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/07/16/live-templates/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+	
+	<div>
+	  
+	</div>
+	
+    <div>
+      
+    </div>
 
+    <div>
+      
+    </div>
+
+	
     <footer class="post-footer">
       
 
@@ -653,60 +1178,129 @@
     
       
 
+  
+
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  <link itemprop="mainEntityOfPage" href="http://oakzmm.com/2015/07/16/hello-world/">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/16/hello-world/" itemprop="url">
-                Hello World
-              </a>
-            
-          
-        </h1>
-      
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Oak_Zmm">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/author.jpg">
+  </span>
 
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-07-16T16:44:36+08:00" content="Jul 16 2015">
-            Jul 16 2015
-          </time>
-        </span>
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Oak_Zmm的技术博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Oak_Zmm的技术博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h2 class="post-title" itemprop="name headline">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/16/hello-world/" itemprop="url">
+                  Hello World
+                </a>
+              
+            
+          </h2>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-07-16T16:44:36+08:00">
+                Jul 16 2015
+              </time>
+            
+
+            
 
             
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/16/hello-world/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/16/hello-world/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
             </span>
           
-        
-		
-		
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/07/16/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/16/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2015/07/16/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -714,15 +1308,30 @@
       
         
           <p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/07/16/hello-world/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+	
+	<div>
+	  
+	</div>
+	
+    <div>
+      
+    </div>
 
+    <div>
+      
+    </div>
+
+	
     <footer class="post-footer">
       
 
@@ -741,14 +1350,16 @@
 
   
 
-            </div>
+          
+          </div>
+          
 
-            
 
-            
+          
+
         </div>
-
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -763,40 +1374,51 @@
 
       
 
-      <section class="site-overview">
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/author.jpg" alt="Oak_Zmm" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="/images/author.jpg"
+               alt="Oak_Zmm" />
           <p class="site-author-name" itemprop="name">Oak_Zmm</p>
+          <p class="site-description motion-element" itemprop="description">oak's blog | java | android |</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">oak's blog | java | android |</p>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">分类</span>
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            
-              <span class="site-state-item-count">4</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
               
-          </div>
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
 
         </nav>
 
         
           <div class="feed-link motion-element">
             <a href="/atom.xml" rel="alternate">
-              <i class="menu-item-icon icon-feed"></i>
+              <i class="fa fa-rss"></i>
               RSS
             </a>
           </div>
@@ -806,15 +1428,24 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/macouen" target="_blank">GitHub</a>
+                <a href="https://github.com/macouen" target="_blank" title="GitHub">
+                  
+                  GitHub
+                </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/minter01" target="_blank">Weibo</a>
+                <a href="http://weibo.com/minter01" target="_blank" title="Weibo">
+                  
+                  Weibo
+                </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/zhao-min-xing" target="_blank">ZhiHu</a>
+                <a href="http://www.zhihu.com/people/zhao-min-xing" target="_blank" title="ZhiHu">
+                  
+                  ZhiHu
+                </a>
               </span>
             
           
@@ -823,38 +1454,47 @@
         
         
           <div class="cc-license motion-element" itemprop="license">
-            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
               <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">Links</p>
-            
-              <span class="links-of-author-item">
-              <a href="http://www.cnblogs.com/oakMac/" target="_blank">我的博客园</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://www.cnblogs.com/ct2011" target="_blank">GavinCT</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://www.jianshu.com/users/df40282480b4/latest_articles" target="_blank">小鄧子的简书</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://www.spencer-dev.com/" target="_blank">给立乐的技术博客</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://liukun.engineer/" target="_blank">LIUKUN的技术博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/oakMac/" title="我的博客园" target="_blank">我的博客园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/ct2011" title="GavinCT" target="_blank">GavinCT</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jianshu.com/users/df40282480b4/latest_articles" title="小鄧子的简书" target="_blank">小鄧子的简书</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.spencer-dev.com/" title="给立乐的技术博客" target="_blank">给立乐的技术博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://liukun.engineer/" title="LIUKUN的技术博客" target="_blank">LIUKUN的技术博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
 
       </section>
 
@@ -864,51 +1504,122 @@
   </aside>
 
 
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
-        <div class="footer-inner">
-            <div class="copyright" >
+      <div class="footer-inner">
+        <div class="copyright" >
   
-  &copy; &nbsp;  2015 - 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="icon-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Oak_Zmm</span>  
+  <span class="author" itemprop="copyrightHolder">Oak_Zmm</span>
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
     &nbsp; | &nbsp;
 	本站总访问量 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
-   </a>
-
+  </a>
 </div>
- 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+  
+</div>
 
 
 
-        </div>
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
-</div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
 
-<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
 
   
   
+
   
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
   
 
   
@@ -920,6 +1631,7 @@
     (function() {
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
       ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
@@ -928,70 +1640,269 @@
   </script>
 
   
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
 
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
 
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
 
-
-
-  <script type="text/javascript" src="/js/search-toggle.js"></script>
-
-
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        if (CONFIG.sidebar === 'always') {
-            displaySidebar();
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
         }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
     });
-</script>
 
-
-
-
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"oak"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
   </script>
 
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("86f15Djo3yQiMCA9lMQaIqT5-gzGzoHsz", "6glo8HMG1iwzCasL5wfUHwPE");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
   
 
 
-
-
-
-<!-- lazyload -->
-<script type="text/javascript" src="/js/lazyload.js"></script>
-<script type="text/javascript">
-    jQuery(function () {
-        jQuery("#posts img").lazyload({
-            placeholder: "/images/loading.gif",
-            effect: "fadeIn"
-        });
-    });
-</script>
 </body>
 </html>

@@ -2,10 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
-    
   <url>
     <loc>http://oakzmm.com/2015/09/07/cool-android-api-3/</loc>
-    <lastmod>2015-12-17T06:50:05.348Z</lastmod>
+    <lastmod>2017-01-18T09:04:15.344Z</lastmod>
     <data>
         <display>
         <title>Cool Android Apis 整理（三）</title>
@@ -25,7 +24,7 @@
     
   <url>
     <loc>http://oakzmm.com/2015/08/11/cool-Android-api-2/</loc>
-    <lastmod>2015-12-17T06:50:00.179Z</lastmod>
+    <lastmod>2017-01-18T09:04:00.626Z</lastmod>
     <data>
         <display>
         <title>Cool Android Apis 整理（二）</title>
@@ -44,8 +43,28 @@
 
     
   <url>
+    <loc>http://oakzmm.com/2015/08/04/cool-Android-api/</loc>
+    <lastmod>2017-01-18T09:03:43.422Z</lastmod>
+    <data>
+        <display>
+        <title>Cool Android Apis 整理（一）</title>
+        <pubTime>2015-08-04T02:21:59.000Z</pubTime>
+        
+        <tag>Android </tag>
+         
+         
+           
+             
+              <breadCrumb title="android" url="http://oakzmm.com/categories/android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://oakzmm.com/2015/07/22/okHttp-Volley-Gson/</loc>
-    <lastmod>2015-12-17T06:49:50.721Z</lastmod>
+    <lastmod>2017-01-18T09:03:03.650Z</lastmod>
     <data>
         <display>
         <title>使用okHttp、Volley、Gson快速组装HttpClinet</title>
@@ -63,25 +82,7 @@
     </url>
 
     
-  <url>
-    <loc>http://oakzmm.com/2015/08/04/cool-Android-api/</loc>
-    <lastmod>2015-12-17T06:49:09.103Z</lastmod>
-    <data>
-        <display>
-        <title>Cool Android Apis 整理（一）</title>
-        <pubTime>2015-08-04T02:21:59.000Z</pubTime>
-        
-        <tag>Android </tag>
-         
-         
-           
-             
-              <breadCrumb title="android" url="http://oakzmm.com/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
+    
     
   <url>
     <loc>http://oakzmm.com/2015/07/16/live-templates/</loc>
@@ -122,7 +123,6 @@
     </data>
     </url>
 
-    
     
     
     
