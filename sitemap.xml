@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://oakzmm.com/about/index.html</loc>
+    <lastmod>2017-01-19T05:17:21.689Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://oakzmm.com/2015/09/07/cool-android-api-3/</loc>
     <lastmod>2017-01-18T09:04:15.344Z</lastmod>
   </url>
@@ -24,11 +29,6 @@
   <url>
     <loc>http://oakzmm.com/404.html</loc>
     <lastmod>2017-01-18T05:40:59.229Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://oakzmm.com/about/index.html</loc>
-    <lastmod>2015-12-23T09:02:26.904Z</lastmod>
   </url>
   
   <url>
