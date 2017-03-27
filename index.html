@@ -109,7 +109,7 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '11335060',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
@@ -378,7 +378,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2015/09/07/cool-android-api-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/07/cool-android-api-3/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/09/07/cool-android-api-3/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,7 +557,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2015/08/11/cool-Android-api-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/11/cool-Android-api-2/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/11/cool-Android-api-2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -738,7 +738,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2015/08/04/cool-Android-api/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/04/cool-Android-api/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/04/cool-Android-api/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -922,7 +922,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2015/07/22/okHttp-Volley-Gson/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/22/okHttp-Volley-Gson/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/22/okHttp-Volley-Gson/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1098,7 +1098,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2015/07/16/live-templates/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/16/live-templates/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/16/live-templates/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1269,7 +1269,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2015/07/16/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/16/hello-world/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/16/hello-world/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1622,36 +1622,31 @@
 
   
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"oak"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
+
+    <script type="text/javascript">
+      var disqus_shortname = 'oakzmm';
+      var disqus_identifier = 'index.html';
+
+      var disqus_title = "";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
       
-      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+    </script>
   
-
-
-
 
 
 
