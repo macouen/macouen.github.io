@@ -396,7 +396,8 @@ logo添加文字样式
 
 <form id="search_form" onsubmit="return search()" class="search_bar">
 <input type="image" id="search_submit" value="搜索" src="img/search.png">
-<span><i id="clear" onclick="clear_seach()"></i><div class="si"><input class="search" type="text" value="" onkeyup="get_suggest()" onfocus="get_suggest()" onpaste="get_suggest()" autocomplete="off" id="search_input" placeholder="输入关键字"></div>
+<span><i id="clear" onclick="clear_seach()"></i><div class="si">
+<input class="search" type="text" value="" onpaste="get_suggest()" autocomplete="off" id="search_input" placeholder="输入关键字"></div>
 </span>
 <div id="suggest" style="display:none">
 	<ul id="suglist"></ul>
@@ -507,8 +508,8 @@ function clear_seach() {
 	input.focus();
 }
 function search(){if(document.getElementById("search_input").value != ""){
-//window.location.href = "http://m.baidu.com/s?ie=utf-8&rn=30&tn=baiduhome_pg&oq=%E5%BC%A0%E7%B1%BD%E6%B2%90&rsv_enter=0&wd=" + encodeURIComponent(document.getElementById("search_input").value);
-window.location.href = "http://m.sm.cn/s?q=" + encodeURIComponent(document.getElementById("search_input").value) + "&from=smor&safe=1&snum=1";
+window.location.href = "http://m.baidu.com/s?ie=utf-8&rn=30&tn=baiduhome_pg&oq=%E5%BC%A0%E7%B1%BD%E6%B2%90&rsv_enter=0&wd=" + encodeURIComponent(document.getElementById("search_input").value);
+<!-- window.location.href = "http://m.sm.cn/s?q=" + encodeURIComponent(document.getElementById("search_input").value) + "&from=smor&safe=1&snum=1"; -->
 document.getElementById("search_input").value = "";}return false;}
 
 document.getElementById('suglist').addEventListener('click', function(e) {
