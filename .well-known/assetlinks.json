@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.ctrip.jr",
+    "sha256_cert_fingerprints":
+    ["27:50:EA:BA:47:4A:F2:C5:B3:1F:D1:EC:0C:0A:D7:50:05:D5:EA:FF:E4:5E:D4:14:7E:5E:74:1D:9C:4F:DD:E3"]
+  }
+}]
