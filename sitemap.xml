@@ -10,6 +10,10 @@
     <loc>http://oakzmm.com/about/index.html</loc>
     <lastmod>2017-01-19T05:17:21.689Z</lastmod>
   </url>
+  <url>
+    <loc>http://oakzmm.com/.well-known/index.html</loc>
+    <lastmod>2017-01-19T05:17:21.689Z</lastmod>
+  </url>
   
   <url>
     <loc>http://oakzmm.com/2015/09/07/cool-android-api-3/</loc>
